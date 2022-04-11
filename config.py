@@ -1,3 +1,5 @@
+import pandas as pd
+
         ##################################################
         #                     Settings                   #
         ##################################################
@@ -40,4 +42,6 @@ path_crossmatch = "/home/bego/GARROTXA/satelites_crossmatch/"
 path_figures_acceleration = "/home/bego/GARROTXA/aceleration_figures/"
 path_figures = "/home/bego/GARROTXA/GalaDyn/"
 path_acceleration = "/home/bego/GARROTXA/acceleration/"
+path_disk = "//home/bego/GARROTXA/disco/"
 #----------------------------------------------------------------------------
+

@@ -6,6 +6,8 @@ from multiprocessing import Pool
 from config import *
 import matplotlib.pyplot as plt
 
+from config import*
+
 G= 1.3273e11
 kpc_to_km= 3.086e16
 
@@ -31,6 +33,7 @@ def snapshot_to_grid ():
     return mesh_x[res], mesh_y[res], mesh_z[res], mesh_r[res]
 
 #----------------------FOR COMPONENTS-----------------------------
+
 def force_in_mesh (x_bin, y_bin, z_bin, x_sat0, y_sat0, z_sat0, mass_sat0):
     #a = GM/(r²)     <----
 
@@ -168,7 +171,8 @@ def plot_acceleration_components (name, mode, mesh_x, mesh_y, az, ar,aphi, rango
     gc.collect()
 
 #-----------------------FOR SATELLITES AS POINTS -----------------------------------------
-def acceleration_satellite_as_point (x_bin, y_bin, z_bin, sat, satelite, name):
+
+def acceleration_satellite_as_point (x_bin, y_bin, z_bin, sat, satelite, name, tidal = True):
 
     G = 1.3273e11
     kpc_to_km = 3.086e16
@@ -181,27 +185,18 @@ def acceleration_satellite_as_point (x_bin, y_bin, z_bin, sat, satelite, name):
     z_sat0 = sat.loc[sat['Snapshot'] == name, 'Z'].iloc[0]
     masa = sat_mass.loc[sat_mass['Snapshot'] == name, 'Mass'].iloc[0]
 
-    X_resta = (x_sat0 - x_bin)
-    Y_resta = (y_sat0 - y_bin)
-    Z_resta = (z_sat0 - z_bin) 
-    dist_sat_part = np.sqrt(X_resta**2 + Y_resta**2 + Z_resta**2)
-    R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
-
     #a = GM/(r² Npart)     <----
+    ax_re, ay_re, az_re = force_in_mesh (x_bin, y_bin, z_bin, x_sat0, y_sat0, z_sat0, masa)
+    if tidal == True:
+        ax_0 = G* masa*x_sat0/((R**3)*(kpc_to_km**2))
+        ay_0 =  G*masa*y_sat0/((R**3)*(kpc_to_km**2))
+        az_0 = G*masa*z_sat0/((R**3)*(kpc_to_km**2))
 
-    R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
-    ax_0 = G* masa*x_sat0/((R**3)*(kpc_to_km**2))
-    ay_0 =  G*masa*y_sat0/((R**3)*(kpc_to_km**2))
-    az_0 = G*masa*z_sat0/((R**3)*(kpc_to_km**2))
-
-    a_x = G*masa*X_resta/((dist_sat_part**3)*(kpc_to_km**2))
-    a_y = G*masa*Y_resta/((dist_sat_part**3)*(kpc_to_km**2))
-    a_z = G*masa*Z_resta/((dist_sat_part**3)*(kpc_to_km**2))
-
-    ax_re = a_x - ax_0
-    ay_re = a_y - ay_0
-    az_re = a_z - az_0
+        ax_re = ax_re - ax_0
+        ay_re = ay_re - ay_0
+        az_re = az_re - az_0
  
+    
     a_r = ax_re*np.cos(mesh_phi) + ay_re*np.sin(mesh_phi)
     a_phi = +ax_re*(np.sin(mesh_phi)) - ay_re*np.cos(mesh_phi)
     
@@ -322,7 +317,7 @@ def satellites_acceleration_id (name, sat, plot = True):
                 'ar_stream':ar_stream , 'aphi_stream':aphi_stream }
 
     mesh_completa = pd.DataFrame(data)
-    mesh_completa.to_csv(path_aceleracion + "mesh_aceleracion_%s_%s_satellites_id_ytRS.csv" %(name, sat), sep = ",")
+    mesh_completa.to_csv(path_acceleration + "mesh_aceleracion_%s_%s_satellites_id_ytRS.csv" %(name, sat), sep = ",")
     gc.collect()
 
     if plot== True:
@@ -372,39 +367,179 @@ def satellites_acceleration_id (name, sat, plot = True):
             ax[m,k].set_xlim(-ancho,ancho)
             ax[m,k].set_ylim(-ancho,ancho)
 
-        plt.savefig(path_figuras +  "%s_core_streams_%s.png"%(sat,name), dpi = 100)
+        plt.savefig(path_figures +  "%s_core_streams_%s.png"%(sat,name), dpi = 100)
         plt.close()
 
 
 #-----------------FOURIER -----------------------------------------------
 
-def fourier(r,phi,nbins=20,maxmod=4,rmax=20.,rmin=0.,weight=None):
-    # ring selection   
-    stepr=(rmax-rmin)/nbins
-    binsr=np.arange(rmin,rmax+stepr,stepr)
-    rcenter = (binsr[:-1] + binsr[1:]) / 2
-    #defining final matrices
-    amp=np.zeros((maxmod+1,nbins,3))
-    phase=np.zeros((maxmod+1,nbins))
-    indr=np.digitize(r,binsr)-1
-    for i in range(nbins):
-        phir=phi[indr==i] #Take the angle in which vector phi follows the same position of those of index i in indr
-        for m in range(maxmod+1):
-            if weight is None:
-                A = np.sum(np.cos(m*phir)) #per al m=0 això dona el num d'estrelles del bin
-                                                   #a l'histograma en lo que comparem, hem dividit el num d'estrelles del bin en nbins(=20)
-                                                   #haurem de normalitzar la sèrie (no ho acabo d'entendre)
-                B = np.sum(np.sin(m*phir)) #i això dona 0
+
+def fourier(X,Y, peso=None, maximo = 22, minimo = 0,nbins = 22 ):
+    maximo = 22
+    minimo =0
+    #paso = 1
+    #nbins = (maximo-minimo)//paso
+    AA =  np.zeros((3,nbins))
+    armangle =  np.zeros((3,nbins))
+    steparm = (maximo-minimo)/nbins
+    radarm = np.arange(minimo,maximo + steparm, steparm )
+    #nparticles = len(X)
+    #peso_final = np.mean(peso)
+    A = np.zeros(6)
+    B = np.zeros(6)
+
+    #dd = X**2 + Y**2
+    dd = np.sqrt(X**2 + Y**2)
+    indr=np.digitize(dd,radarm)-1
+    nparticles = np.zeros(nbins)
+    for m in range(0,5):
+       for i in range(1,nbins):
+            X_i=X[indr==i] 
+            Y_i=Y[indr==i]
+
+            A[m] = 0
+            B[m] = 0
+            a = []
+            b = []
+            a = np.arctan2(Y_i, X_i)
+            b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
+            if peso is None:
+                if m == 0:
+                    A[m] = np.sum(np.cos(m*a))
+                    B[m] = np.sum(np.sin(m*a))
+                else :
+                    A[m] = np.sum(2*np.cos(m*a))
+                    B[m] = np.sum(2*np.sin(m*a))
+
             else:
-                weightr=weight[indr==i]
-                A = np.sum(weightr*np.cos(m*phir))
-                B = np.sum(weightr*np.sin(m*phir))
-            amp[m,i,0]=A
-            amp[m,i,1]=B
-            if m>0:
-                amp[m,i,0]=2.*amp[m,i,0]
-                amp[m,i,1]=2.*amp[m,i,1] 
-            amp[m,i,2]=np.sqrt(amp[m,i,0]*amp[m,i,0]+amp[m,i,1]*amp[m,i,1])
-            if m > 0:phase[m,i] = np.arctan2(B,A)/m*1.
-            if m == 0:phase[m,i] = 0.
-    return amp[:,:,2],phase,rcenter
+                peso_i=peso[indr==i]
+                if m ==0:
+                    A[m] = np.sum(peso_i*np.cos(m*a))
+                    B[m] = np.sum(peso_i*np.sin(m*a))
+                else :
+                    A[m] = np.sum(2*peso_i*np.cos(m*a))
+                    B[m] = np.sum(2*peso_i*np.sin(m*a))
+            
+            AA[m,i] = np.sqrt(A[m]**2+ B[m]**2)
+            if m > 0:
+                armangle[m,i] = np.arctan2(B[m],A[m])
+            elif m == 0:
+                armangle[m,i] = 0
+            if m ==0:
+                nparticles[i]= len(a)
+
+
+    Amp0 = AA[0,:]
+    Amp1 = AA[1,:]
+    Amp2 = AA[2,:]
+    return radarm[:-1], nparticles, Amp0, Amp1, Amp2
+
+
+def apply_fourier(modo, nbins = 22):
+    datos_ = np.zeros((1,5))
+    datos = datos_[1:]
+    for t,name in enumerate(snapshots_analysis):
+        df = pd.read_csv(path_acceleration + "mesh_aceleracion_%s_%s_ytRS.csv"%(modo, name) ,sep = ",")
+        Rcenters, Amp0, Amp1, Amp2 =fourier(df["X"],df["Y"],peso=df["az"])
+        for i in range(nbins):
+            datos = np.append(datos,[[snapshots_analysis[t],Rcenters[i],Amp0[i],
+            Amp1[i], Amp2[i]]], axis = 0)
+    return datos
+
+def apply_fourier_sat(nbins = 22):
+    datos_c_ = np.zeros((1,5))
+    datos_c = datos_c_[1:]
+    datos_s_ = np.zeros((1,5))
+    datos_s = datos_s_[1:]
+    for t,name in enumerate(snapshots_analysis):
+        df = pd.read_csv(path_acceleration + "mesh_aceleracion_%s_all_satellites_id_ytRS.csv"%(name) ,sep = ",")
+        Rcenters_s, Amp0_s, Amp1_s, Amp2_s =fourier(df["X"],df["Y"],peso=df["az_stream"])
+        Rcenters_c, Amp0_c, Amp1_c, Amp2_c=fourier(df["X"],df["Y"],peso=df["az_core"])
+        for i in range(nbins):
+        #print(len(Amp0[i]))
+            datos_c = np.append(datos_c,[[snapshots_analysis[t],Rcenters_c[i],Amp0_c[i],
+            Amp1_c[i], Amp2_c[i]]], axis = 0)
+            datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],Amp0_s[i],
+            Amp1_s[i], Amp2_s[i]]], axis = 0)
+    return datos_c, datos_s
+
+def acceleration_fourier (mode=1, plot_means=False, nbins = 22, maximo=22, minimo=0):
+    stepr=(maximo-minimo)/nbins
+    binsr=np.arange(minimo,maximo+stepr,stepr)
+    Rcenters = (binsr[:-1] + binsr[1:]) / 2
+    data =pd.read_csv(path_datos + "acceleration_mean_comparison_inter.csv", sep = ",", index_col = 0)
+    modos = ["dm", "gas", "stars_disk", "stars_nodisk"]
+
+    modos_gal = ["dm", "gas", "disk_stars", "nodisk_stars"]
+    modos_sat = ["progenitor", "stream"]
+    modos_completos = modos_gal + modos_sat
+
+    plt.figure()
+    fig, ax = plt.subplots(nrows=6, figsize=(12,18))
+    fig.subplots_adjust(hspace=0.38)
+    for index, modo in enumerate(modos):
+        print(modo)
+        FAMP= apply_fourier(modo)
+        AMP_0 = FAMP[:,2].reshape(len(snapshots_analysis), nbins)
+        AMP_1 = FAMP[:,3].reshape(len(snapshots_analysis), nbins)
+        ax[index].pcolormesh(lookback,Rcenters, (AMP_1/AMP_0).T, 
+                            vmin =  5e-17, vmax = 5e-15)
+    FAMP_c, FAMP_s= apply_fourier_sat()
+    AMP0_c = FAMP_c[:,2].reshape(len(snapshots_analysis), nbins)
+    AMP0_s = FAMP_s[:,2].reshape(len(snapshots_analysis), nbins)
+    if modo ==1:
+        AMP1_c = FAMP_c[:,3].reshape(len(snapshots_analysis), nbins)
+        AMP1_s = FAMP_s[:,3].reshape(len(snapshots_analysis), nbins)
+    if modo ==2:
+        AMP1_c = FAMP_c[:,4].reshape(len(snapshots_analysis), nbins)
+        AMP1_s = FAMP_s[:,4].reshape(len(snapshots_analysis), nbins)
+
+    ax[4].pcolormesh(lookback,Rcenters,(AMP1_c/AMP0_c).T, 
+                    vmin = 3e-19, vmax = 5e-17)
+    ax[5].pcolormesh(lookback,Rcenters,(AMP1_s/AMP0_s).T,
+                    vmin = 3e-19, vmax = 5e-17)
+    for index, aa in enumerate(ax):
+        ax[index].set_xlim(6.3,0.1)
+        ax[index].set_ylim(2,20)
+        ax[index].set_title(modos_completos[index])
+    if plot_means ==True:
+        for index, modo in enumerate(modos_completos):
+            ax2 = ax[index].twinx()
+            ax2.plot( data["Lookback"],np.log10(data["az_%s_mean"%modo]),':',marker='o', 
+                        markerfacecolor="white",
+                    markeredgecolor='black', markeredgewidth=1, 
+                        linewidth=2, ms = 6, color = 'cyan', label =modo)
+            ax2.legend()
+    ax[5].set_ylabel('Radius [kpc]',fontsize = 12)
+    ax[5].set_xlabel('Lookback time [Gyr]',fontsize = 12)
+
+    plt.savefig("Figuras/fourier_acceleration_components.png", dpi = 100, facecolor = "white",bbox_inches='tight')
+    #plt.show()
+
+def bending_fourier (mode=1, nbins = 22, maximo=22, minimo=0):
+    for t,name in enumerate(snapshots_analysis):
+        print(name)
+        dfB = pd.read_csv(path_csv + "%s_stars_Rvir.csv"%name ,sep = ",")
+        disco = pd.read_csv(path_disk + "Stars_disco_%s.csv" %name)
+        dfA = dfB[dfB['ID'].isin(disco["ID"])]
+        #dfC = dfA[(dfA['Age']>age1 )& (dfA['Age']< age2)].copy()
+    # df=  dfC[(dfC['Z']>-z_lim)& (dfC['Z']< z_lim) &(dfC['R']< 25)].copy()
+        df = dfA[(dfA['R']< 25)].copy()
+        df["Phi"] = np.mod(np.arctan2(df["Y"], df["X"]), 2*np.pi)
+        df["R"] = np.sqrt(df["X"]**2 + df["Y"]**2)
+
+        df.loc[df['Phi']>np.pi,'Phi']=df.loc[df['Phi']>np.pi,'Phi']-2.*np.pi
+        
+    #  FAMP[t,:,:],FPHA[t,:,:],Rcenters=fourier(df["R"],df["Phi"],nbins=nbins,maxmod=maxmod,
+    #                                           rmax=rmax,rmin=rmin,weight=df["Z"])
+        Rcenters, nparticles, Amp0, Amp1, Amp2 =fourier(df["X"],df["Y"],df["Z"])
+        
+        
+        for i in range(nbins):
+            datos = np.append(datos,[[snapshots_analysis[t],lookback[t],Rcenters[i],nparticles[i],Amp0[i],
+            Amp1[i], Amp2[i]]], axis = 0)
+
+    column_names = ['snapshot_t','lookbacktime','Rcenters','Nparticles','amp0','amp1','amp2']
+    datos_df = pd.DataFrame(datos, columns = column_names)
+
+    datos_df.to_csv('fourier_z_11bins_all.csv', sep = ',', index = False)

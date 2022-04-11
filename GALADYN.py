@@ -61,20 +61,35 @@ import ConfigParser
 #----------------------------------------------------------------------------
 
 def main():
-    
+    global lookback
+    lookback = np.zeros(len(snapshots_analysis))
+    for i,name in enumerate(snapshots_analysis):
+        lb = datos_edades.loc[datos_edades['Snapshot'] == name, 'Lookback'].iloc[0]
+        lookback[i]=lb
+    global datos_edades
+    datos_edades = pd.read_csv(path_datos + "edades.csv", sep = ",",index_col = 0)
     #TO DO: INICIALIZACION, COMPROBAR QUE EXISTEN TODOS LOS DIRECTORIOS 
     #TO DO: LEER LA CONFIGURACIÓN 
 #    read_parameters()
     #COMPROBAR QUE EXISTE EL CROSSMATCHS Y ARCHIVOS DE CADA COMPONENTE
     for name in snapshots_analysis:
-    #First steps accelerations
-   # accelerations ()
-        acceleration_in_mesh_comp (name,"dm",None, path_disk, plot = True, tidal = False)
-        acceleration_in_mesh_comp (name,"gas",None, path_disk, plot = True, tidal = False)
-        acceleration_in_mesh_comp (name,"stars","disk", path_disk, plot = True, tidal = False)
-        acceleration_in_mesh_comp (name,"stars","nodisk", path_disk, plot = True, tidal = False)
+    #First step accelerations
 
-    #Second steps: fourier
+        if ac_dm == 1:  
+            acceleration_in_mesh_comp (name,"dm",None, plot = True, tidal = False)
+        if ac_gas == 1:  
+            acceleration_in_mesh_comp (name,"gas",None, plot = True, tidal = False)
+        if ac_stars == 1: 
+            acceleration_in_mesh_comp (name,"stars","disk", plot = True, tidal = False)
+            acceleration_in_mesh_comp (name,"stars","nodisk", plot = True, tidal = False)
+
+
+    #Second step: fourier on accelerations
+    acceleration_fourier()
+
+    #Thirs step: fourier on z and vz
+
+    bending_fourier()
 
 
     #Third step: comparison
