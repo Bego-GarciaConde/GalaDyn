@@ -33,6 +33,8 @@ snapshots_analysis = [ 602,604, 608, 610, 612, 614, 616, 618, 620, 622, 624, 626
 958, 961, 963, 965, 966, 968, 970, 972, 974, 976, 979,
  980, 982, 984, 989, 990, 993, 994, 996 ]
 
+#snapshots_analysis = [ 602,604]
+
 # ---------------------------------------------------------------------------
 #path_satellite_models = "/media/temp1/bego/snapshots/modelos_satelites/"
 path_csv = "/home/bego/GARROTXA/snapshots/"

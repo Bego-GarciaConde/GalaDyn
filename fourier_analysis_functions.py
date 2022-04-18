@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 import gc
@@ -9,24 +10,24 @@ import matplotlib.pyplot as plt
 #-----------------FOURIER -----------------------------------------------
 
 def fourier(X,Y, peso=None, maximo = 22, minimo = 0,nbins = 22, maxmode = 2):
-    maximo = 22
-    minimo =0
-    #paso = 1
-    #nbins = (maximo-minimo)//paso
-    AA =  np.zeros((maxmode+1,nbins))
+    """  This function divides the disk in radial and operates fourier modes from 0 to maxmode 
+        in galactic disks, minimo and maximo measured in kpc  """
+
+    # Matrix of values of amplitudes for each mode and radial bin
+    AA =  np.zeros((maxmode+1,nbins), dtype=np.float32)
     armangle =  np.zeros((maxmode+1,nbins))
     steparm = (maximo-minimo)/nbins
     radarm = np.arange(minimo,maximo + steparm, steparm )
-    #nparticles = len(X)
-    #peso_final = np.mean(peso)
-    A = np.zeros(maxmode+1)
-    B = np.zeros(maxmode+1)
+    rcenter = (radarm[:-1] + radarm[1:]) / 2
+    A = np.zeros(maxmode+1, dtype=np.float32)
+    B = np.zeros(maxmode+1, dtype=np.float32)
 
-    #dd = X**2 + Y**2
     dd = np.sqrt(X**2 + Y**2)
     indr=np.digitize(dd,radarm)-1
     nparticles = np.zeros(nbins)
-    for m in range(0,maxmode):
+    #Iterating over fourier modes
+    for m in range(0,maxmode+1):
+       #Iterating over radial bins
        for i in range(1,nbins):
             X_i=X[indr==i] 
             Y_i=Y[indr==i]
@@ -63,38 +64,35 @@ def fourier(X,Y, peso=None, maximo = 22, minimo = 0,nbins = 22, maxmode = 2):
                 nparticles[i]= len(a)
 
 
-    Amp0 = AA[0,:]
-    Amp1 = AA[1,:]
-    Amp2 = AA[2,:]
-    return radarm[:-1], nparticles, Amp0, Amp1, Amp2
+    return rcenter, nparticles, AA
 
 
-def apply_fourier_accelerations(modo, nbins = 22):
-    datos_ = np.zeros((1,5))
-    datos = datos_[1:]
+def apply_fourier_accelerations(modo, nbins = 22, maxmode = 2):
+    datos = np.zeros((len(snapshots_analysis)*nbins, 5 +maxmode))
+    index = 0
     for t,name in enumerate(snapshots_analysis):
         df = pd.read_csv(path_acceleration + "mesh_aceleracion_%s_%s_ytRS.csv"%(modo, name) ,sep = ",")
-        Rcenters, Amp0, Amp1, Amp2 =fourier(df["X"],df["Y"],peso=df["az"])
+        Rcenters, npart, amplitudes =fourier(df["X"],df["Y"],peso=df["az"], maxmode = 2)
         for i in range(nbins):
-            datos = np.append(datos,[[snapshots_analysis[t],Rcenters[i],Amp0[i],
-            Amp1[i], Amp2[i]]], axis = 0)
+            datos[index] = [snapshots_analysis[t],Rcenters[i],npart[i]]+ list(amplitudes[:,i])
+            index = index + 1
     return datos
 
-def apply_fourier_sat(nbins = 22):
-    datos_c_ = np.zeros((1,5))
-    datos_c = datos_c_[1:]
-    datos_s_ = np.zeros((1,5))
-    datos_s = datos_s_[1:]
+def apply_fourier_sat(nbins = 22, maxmode=2):
+    datos_c = np.zeros((len(snapshots_analysis)*nbins, 5 +maxmode))
+    datos_s = np.zeros((len(snapshots_analysis)*nbins, 5 +maxmode))
+
+    index = 0
     for t,name in enumerate(snapshots_analysis):
         df = pd.read_csv(path_acceleration + "mesh_aceleracion_%s_all_satellites_id_ytRS.csv"%(name) ,sep = ",")
-        Rcenters_s, Amp0_s, Amp1_s, Amp2_s =fourier(df["X"],df["Y"],peso=df["az_stream"])
-        Rcenters_c, Amp0_c, Amp1_c, Amp2_c=fourier(df["X"],df["Y"],peso=df["az_core"])
+        Rcenters_s, npart_s, Amp_s =fourier(df["X"],df["Y"],peso=df["az_stream"])
+        Rcenters_c, npart_c, Amp_c=fourier(df["X"],df["Y"],peso=df["az_core"])
         for i in range(nbins):
-        #print(len(Amp0[i]))
-            datos_c = np.append(datos_c,[[snapshots_analysis[t],Rcenters_c[i],Amp0_c[i],
-            Amp1_c[i], Amp2_c[i]]], axis = 0)
-            datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],Amp0_s[i],
-            Amp1_s[i], Amp2_s[i]]], axis = 0)
+            datos_c[index] = [snapshots_analysis[t],lookback[t],Rcenters_c[i],npart_s[i]]+ list(Amp_c[:,i])
+            datos_s[index] = [snapshots_analysis[t],lookback[t],Rcenters_s[i],npart_c[i]]+ list(Amp_s[:,i])
+          #  datos_c = np.append(datos_c,[[snapshots_analysis[t],Rcenters_c[i],npart_s[i], Amp_c[:,i]]], axis = 0)
+          #  datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],npart_c[i], Amp_s[:,i]]], axis = 0)
+            index = index +1
     return datos_c, datos_s
 
 def fourier_analysis_accelerations (mode=1, plot_means=False, nbins = 22, maximo=22, minimo=0):
@@ -153,38 +151,48 @@ def fourier_analysis_accelerations (mode=1, plot_means=False, nbins = 22, maximo
 #------------------Z and VZ-------------------
 
 def filter_disk_particles(name):
-    dfB = pd.read_csv(path_csv + "%s_stars_Rvir.csv"%name ,sep = ",")
-    disco = pd.read_csv(path_disk + "Stars_disco_%s.csv" %name)
+    dfB = pd.read_csv(path_csv + f"{name}_stars_Rvir.csv",sep = ",")
+    disco = pd.read_csv(path_disk + f"Stars_disco_{name}.csv")
     dfA = dfB[dfB['ID'].isin(disco["ID"])]
     df = dfA[(dfA['R']< 25)].copy()
     df["Phi"] = np.mod(np.arctan2(df["Y"], df["X"]), 2*np.pi)
     df["R"] = np.sqrt(df["X"]**2 + df["Y"]**2)
     return df
 
-def fourier_analysis_bending (mode=1, nbins = 22, maximo=22, minimo=0, plot=True):
+
+def fourier_analysis_bending (maxmode=3, nbins=22, maximo=22, minimo=0, plot=True):
     print("Searching for bending waves!")
     print("Analyzing fourierograms of Z and VZ")
+    #Initializing data 
+    datos_z = np.zeros((len(snapshots_analysis)*nbins, 5 +maxmode), dtype = np.float32)
+    datos_vz = np.zeros((len(snapshots_analysis)*nbins, 5 +maxmode), dtype = np.float32)
+ 
+    index = 0
+    #Iterating over snapshots
     for t,name in enumerate(snapshots_analysis):
         print(name)
-        etiqueta = "%s_prueba"%nbins
-
+        etiqueta = f"{nbins}_prueba"
         df = filter_disk_particles(name)
-        Rcenters, nparticles, Amp0_z, Amp1_z, Amp2_z =fourier(df["X"],df["Y"],df["Z"], maxmode = 2)
-        Rcenters, nparticles, Amp0_vz, Amp1_vz, Amp2_vz =fourier(df["X"],df["Y"],df["VZ"], maxmode = 2)
-        datos_ = np.zeros((1,7))
-        datos_z, datos_vz = datos_[1:],datos_[1:]
 
+        #Apply fourier
+        Rcenters, nparticles, amplitudes_z =fourier(df["X"],df["Y"],peso=df["Z"], maxmode=maxmode)
+        Rcenters, nparticles, amplitudes_vz =fourier(df["X"],df["Y"],peso=df["VZ"], maxmode=maxmode)
+
+        #Preparing data to save into csv, iterating over bins
         for i in range(nbins):
-            datos_z = np.append(datos_z,[[snapshots_analysis[t],lookback[t],Rcenters[i],nparticles[i],Amp0_z[i],
-            Amp1_z[i], Amp2_z[i]]], axis = 0)
-            datos_vz = np.append(datos_vz,[[snapshots_analysis[t],lookback[t],Rcenters[i],nparticles[i],Amp0_vz[i],
-            Amp1_vz[i], Amp2_vz[i]]], axis = 0)
+            datos_z[index] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes_z[:,i])
+            datos_vz[index] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes_vz[:,i])
+            index = index +1
 
-    column_names = ['snapshot_t','lookbacktime','Rcenters','Nparticles','amp0','amp1','amp2']
-    datos_z_df = pd.DataFrame(datos_z, columns = column_names)
-    datos_vz_df = pd.DataFrame(datos_vz, columns = column_names)
+    #Saving data
+    column_names = ['snapshot_t','lookbacktime','Rcenters','Nparticles']
+    for numero_modo in range(0, maxmode +1):
+        column_names.append(f"amp{numero_modo}")
 
-    datos_z_df.to_csv('fourier_z_%s.csv'%etiqueta, sep = ',', index = False)
-    datos_vz_df.to_csv('fourier_vz_%s.csv'%etiqueta, sep = ',', index = False)
+    datos_z_df = pd.DataFrame(datos_z, columns=column_names)
+    datos_vz_df = pd.DataFrame(datos_vz, columns=column_names)
+
+    datos_z_df.to_csv(f'fourier_z_{etiqueta}.csv', sep = ',', index = False)
+    datos_vz_df.to_csv(f'fourier_vz_{etiqueta}.csv', sep = ',', index = False)
 
     
