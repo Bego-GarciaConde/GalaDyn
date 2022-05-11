@@ -76,19 +76,22 @@ class Fourier:
         return rcenter, nparticles, AA, armangle
 
 
-
+    #------------------accelerations-------------------
+    
     def apply_fourier_accelerations(self, comp):
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         index = 0
         for t,name in enumerate(snapshots_analysis):
-            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS.csv",sep = ",")
+            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_40.csv",sep = ",")
             Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
             for i in range(self.nbins):
                 datos[index] = [snapshots_analysis[t],Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index + 1
-        self.save_fourierogram(datos, etiqueta=f"{self.nbins}_acceleration_{comp}", peso = "az")
+        self.save_fourierogram(datos, etiqueta=f"acceleration_{comp}", peso = "az")
 
 
+    #------------------satellites-------------------
+    
     def apply_fourier_sat(self):
         datos_c = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         datos_s = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
@@ -105,8 +108,8 @@ class Fourier:
             #  datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],npart_c[i], Amp_s[:,i]]], axis = 0)
                 index = index +1
 
-        self.save_fourierogram(datos_c, etiqueta=f"{self.nbins}_sat_prog", peso = "az_core")
-        self.save_fourierogram(datos_s, etiqueta=f"{self.nbins}_sat_streams", peso = "az_stream")
+        self.save_fourierogram(datos_c, etiqueta=f"sat_prog", peso = "az_core")
+        self.save_fourierogram(datos_s, etiqueta=f"sat_streams", peso = "az_stream")
        # return datos_c, datos_s
 
 

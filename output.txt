@@ -1,0 +1,441 @@
+690
+Number of particles w/o substractig satellites  6081658
+Number of particles after substractig satellites  6066706
+Calculating force
+/home/bego/anaconda3/lib/python3.8/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /home/bego/.config/yt/ytrc is deprecated in favor of /home/bego/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+692
+Number of particles w/o substractig satellites  6092974
+Number of particles after substractig satellites  6078040
+Calculating force
+694
+Number of particles w/o substractig satellites  6098159
+Number of particles after substractig satellites  6083230
+Calculating force
+698
+Number of particles w/o substractig satellites  6107845
+Number of particles after substractig satellites  6092929
+Calculating force
+704
+Number of particles w/o substractig satellites  5739649
+Number of particles after substractig satellites  5725346
+Calculating force
+706
+Number of particles w/o substractig satellites  5740415
+Number of particles after substractig satellites  5726095
+Calculating force
+708
+Number of particles w/o substractig satellites  5747694
+Number of particles after substractig satellites  5733366
+Calculating force
+711
+Number of particles w/o substractig satellites  5760633
+Number of particles after substractig satellites  5746270
+Calculating force
+712
+Number of particles w/o substractig satellites  5739713
+Number of particles after substractig satellites  5725370
+Calculating force
+714
+Number of particles w/o substractig satellites  5982008
+Number of particles after substractig satellites  5967342
+Calculating force
+716
+Number of particles w/o substractig satellites  5991806
+Number of particles after substractig satellites  5977127
+Calculating force
+718
+Number of particles w/o substractig satellites  6010666
+Number of particles after substractig satellites  5995968
+Calculating force
+720
+Number of particles w/o substractig satellites  6022164
+Number of particles after substractig satellites  6007452
+Calculating force
+722
+Number of particles w/o substractig satellites  6032212
+Number of particles after substractig satellites  6017488
+Calculating force
+724
+Number of particles w/o substractig satellites  6046990
+Number of particles after substractig satellites  6032239
+Calculating force
+726
+Number of particles w/o substractig satellites  6053856
+Number of particles after substractig satellites  6039084
+Calculating force
+728
+Number of particles w/o substractig satellites  6061711
+Number of particles after substractig satellites  6046915
+Calculating force
+731
+Number of particles w/o substractig satellites  6069626
+Number of particles after substractig satellites  6054810
+Calculating force
+732
+Number of particles w/o substractig satellites  6072371
+Number of particles after substractig satellites  6057543
+Calculating force
+734
+Number of particles w/o substractig satellites  6077546
+Number of particles after substractig satellites  6062701
+Calculating force
+736
+Number of particles w/o substractig satellites  6084246
+Number of particles after substractig satellites  6069376
+Calculating force
+739
+Number of particles w/o substractig satellites  6090789
+Number of particles after substractig satellites  6075893
+Calculating force
+/home/bego/GARROTXA/GalaDyn/mesh_utils.py:185: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig, ax = plt.subplots(1, 3, sharex=False, sharey=True,figsize = (15,4))
+740
+Number of particles w/o substractig satellites  6093149
+Number of particles after substractig satellites  6078240
+Calculating force
+742
+Number of particles w/o substractig satellites  6099344
+Number of particles after substractig satellites  6084409
+Calculating force
+744
+Number of particles w/o substractig satellites  6103197
+Number of particles after substractig satellites  6088248
+Calculating force
+746
+Number of particles w/o substractig satellites  6111045
+Number of particles after substractig satellites  6096073
+Calculating force
+748
+Number of particles w/o substractig satellites  6115121
+Number of particles after substractig satellites  6100129
+Calculating force
+751
+Number of particles w/o substractig satellites  6123656
+Number of particles after substractig satellites  6108635
+Calculating force
+752
+Number of particles w/o substractig satellites  6128687
+Number of particles after substractig satellites  6113652
+Calculating force
+755
+Number of particles w/o substractig satellites  6137173
+Number of particles after substractig satellites  6122100
+Calculating force
+756
+Number of particles w/o substractig satellites  6142633
+Number of particles after substractig satellites  6127545
+Calculating force
+758
+Number of particles w/o substractig satellites  6148632
+Number of particles after substractig satellites  6133528
+Calculating force
+761
+Number of particles w/o substractig satellites  6159745
+Number of particles after substractig satellites  6144600
+Calculating force
+763
+Number of particles w/o substractig satellites  6164181
+Number of particles after substractig satellites  6149019
+Calculating force
+764
+Number of particles w/o substractig satellites  6168867
+Number of particles after substractig satellites  6153694
+Calculating force
+766
+Number of particles w/o substractig satellites  6173925
+Number of particles after substractig satellites  6158737
+Calculating force
+768
+Number of particles w/o substractig satellites  5985610
+Number of particles after substractig satellites  5970565
+Calculating force
+770
+Number of particles w/o substractig satellites  5984763
+Number of particles after substractig satellites  5969695
+Calculating force
+772
+Number of particles w/o substractig satellites  5990649
+Number of particles after substractig satellites  5975553
+Calculating force
+774
+Number of particles w/o substractig satellites  5996506
+Number of particles after substractig satellites  5981390
+Calculating force
+776
+Number of particles w/o substractig satellites  6003204
+Number of particles after substractig satellites  5988063
+Calculating force
+778
+Number of particles w/o substractig satellites  6010583
+Number of particles after substractig satellites  5995422
+Calculating force
+780
+Number of particles w/o substractig satellites  6016154
+Number of particles after substractig satellites  6000970
+Calculating force
+782
+Number of particles w/o substractig satellites  6020356
+Number of particles after substractig satellites  6005147
+Calculating force
+784
+Number of particles w/o substractig satellites  6024873
+Number of particles after substractig satellites  6009641
+Calculating force
+786
+Number of particles w/o substractig satellites  6026040
+Number of particles after substractig satellites  6010798
+Calculating force
+788
+Number of particles w/o substractig satellites  6030881
+Number of particles after substractig satellites  6015621
+Calculating force
+790
+Number of particles w/o substractig satellites  6037618
+Number of particles after substractig satellites  6022330
+Calculating force
+792
+Number of particles w/o substractig satellites  6041885
+Number of particles after substractig satellites  6026580
+Calculating force
+794
+Number of particles w/o substractig satellites  6053732
+Number of particles after substractig satellites  6038405
+Calculating force
+797
+Number of particles w/o substractig satellites  6069679
+Number of particles after substractig satellites  6054320
+Calculating force
+798
+Number of particles w/o substractig satellites  6075816
+Number of particles after substractig satellites  6060440
+Calculating force
+802
+Number of particles w/o substractig satellites  6087095
+Number of particles after substractig satellites  6071668
+Calculating force
+805
+Number of particles w/o substractig satellites  6095191
+Number of particles after substractig satellites  6079735
+Calculating force
+806
+Number of particles w/o substractig satellites  6100529
+Number of particles after substractig satellites  6085053
+Calculating force
+808
+Number of particles w/o substractig satellites  6104023
+Number of particles after substractig satellites  6088533
+Calculating force
+810
+Number of particles w/o substractig satellites  6109094
+Number of particles after substractig satellites  6093570
+Calculating force
+812
+Number of particles w/o substractig satellites  6112065
+Number of particles after substractig satellites  6096525
+Calculating force
+814
+Number of particles w/o substractig satellites  6114841
+Number of particles after substractig satellites  6099280
+Calculating force
+816
+Number of particles w/o substractig satellites  6120345
+Number of particles after substractig satellites  6104765
+Calculating force
+818
+Number of particles w/o substractig satellites  6124198
+Number of particles after substractig satellites  6108598
+Calculating force
+820
+Number of particles w/o substractig satellites  6131224
+Number of particles after substractig satellites  6115604
+Calculating force
+822
+Number of particles w/o substractig satellites  6138022
+Number of particles after substractig satellites  6122382
+Calculating force
+824
+Number of particles w/o substractig satellites  6146271
+Number of particles after substractig satellites  6130616
+Calculating force
+826
+Number of particles w/o substractig satellites  6373972
+Number of particles after substractig satellites  6358171
+Calculating force
+828
+Number of particles w/o substractig satellites  6378191
+Number of particles after substractig satellites  6362370
+Calculating force
+830
+Number of particles w/o substractig satellites  6380688
+Number of particles after substractig satellites  6364863
+Calculating force
+832
+Number of particles w/o substractig satellites  6386729
+Number of particles after substractig satellites  6370884
+Calculating force
+834
+Number of particles w/o substractig satellites  6392439
+Number of particles after substractig satellites  6376567
+Calculating force
+836
+Number of particles w/o substractig satellites  6398838
+Number of particles after substractig satellites  6382943
+Calculating force
+839
+Number of particles w/o substractig satellites  6407404
+Number of particles after substractig satellites  6391486
+Calculating force
+840
+Number of particles w/o substractig satellites  6411398
+Number of particles after substractig satellites  6395474
+Calculating force
+842
+Number of particles w/o substractig satellites  6418758
+Number of particles after substractig satellites  6402810
+Calculating force
+844
+Number of particles w/o substractig satellites  6422201
+Number of particles after substractig satellites  6406247
+Calculating force
+846
+Number of particles w/o substractig satellites  6429949
+Number of particles after substractig satellites  6413979
+Calculating force
+848
+Number of particles w/o substractig satellites  6433493
+Number of particles after substractig satellites  6417517
+Calculating force
+850
+Number of particles w/o substractig satellites  6441973
+Number of particles after substractig satellites  6425983
+Calculating force
+853
+Number of particles w/o substractig satellites  6449065
+Number of particles after substractig satellites  6433062
+Calculating force
+855
+Number of particles w/o substractig satellites  6453186
+Number of particles after substractig satellites  6437172
+Calculating force
+856
+Number of particles w/o substractig satellites  6457182
+Number of particles after substractig satellites  6441157
+Calculating force
+858
+Number of particles w/o substractig satellites  6462127
+Number of particles after substractig satellites  6446096
+Calculating force
+860
+Number of particles w/o substractig satellites  6471555
+Number of particles after substractig satellites  6455498
+Calculating force
+862
+Number of particles w/o substractig satellites  6477231
+Number of particles after substractig satellites  6461163
+Calculating force
+864
+Number of particles w/o substractig satellites  6481883
+Number of particles after substractig satellites  6465809
+Calculating force
+867
+Number of particles w/o substractig satellites  6490514
+Number of particles after substractig satellites  6474423
+Calculating force
+870
+Number of particles w/o substractig satellites  6499333
+Number of particles after substractig satellites  6483219
+Calculating force
+872
+Number of particles w/o substractig satellites  6503793
+Number of particles after substractig satellites  6487671
+Calculating force
+875
+Number of particles w/o substractig satellites  6512026
+Number of particles after substractig satellites  6495881
+Calculating force
+877
+Number of particles w/o substractig satellites  6516070
+Number of particles after substractig satellites  6499918
+Calculating force
+879
+Number of particles w/o substractig satellites  6519780
+Number of particles after substractig satellites  6503619
+Calculating force
+881
+Number of particles w/o substractig satellites  6523379
+Number of particles after substractig satellites  6507209
+Calculating force
+883
+Number of particles w/o substractig satellites  6526463
+Number of particles after substractig satellites  6510277
+Calculating force
+884
+Number of particles w/o substractig satellites  6528908
+Number of particles after substractig satellites  6512711
+Calculating force
+888
+Number of particles w/o substractig satellites  6534973
+Number of particles after substractig satellites  6518759
+Calculating force
+890
+Number of particles w/o substractig satellites  6538313
+Number of particles after substractig satellites  6522089
+Calculating force
+892
+Number of particles w/o substractig satellites  6541392
+Number of particles after substractig satellites  6525161
+Calculating force
+894
+Number of particles w/o substractig satellites  6545401
+Number of particles after substractig satellites  6529159
+Calculating force
+898
+Number of particles w/o substractig satellites  6553701
+Number of particles after substractig satellites  6537441
+Calculating force
+900
+Number of particles w/o substractig satellites  6563547
+Number of particles after substractig satellites  6547274
+Calculating force
+902
+Number of particles w/o substractig satellites  6571079
+Number of particles after substractig satellites  6554799
+Calculating force
+904
+Number of particles w/o substractig satellites  6579070
+Number of particles after substractig satellites  6562781
+Calculating force
+907
+Number of particles w/o substractig satellites  6585333
+Number of particles after substractig satellites  6569031
+Calculating force
+908
+Number of particles w/o substractig satellites  6587932
+Number of particles after substractig satellites  6571623
+Calculating force
+910
+Number of particles w/o substractig satellites  6594272
+Number of particles after substractig satellites  6577950
+Calculating force
+912
+Number of particles w/o substractig satellites  6600002
+Number of particles after substractig satellites  6583673
+Calculating force
+915
+Number of particles w/o substractig satellites  6609229
+Number of particles after substractig satellites  6592890
+Calculating force
+916
+Number of particles w/o substractig satellites  6613645
+Number of particles after substractig satellites  6597297
+Calculating force
+918
+Number of particles w/o substractig satellites  6617789
+Number of particles after substractig satellites  6601436
+Calculating force
+921
+Number of particles w/o substractig satellites  6631149
+Number of particles after substractig satellites  6614782
+Calculating force

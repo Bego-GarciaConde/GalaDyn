@@ -41,32 +41,48 @@ def main ():
             mesh_snapshot.ac_dm = [gas_z, gas_r, gas_phi]
             mesh_snapshot.plot_acceleration_components("ac_gas")
 
+        if ac_all_sat == 1:
+            mesh_snapshot.satellites_acceleration_id("all")
+            mesh_snapshot.satellites_acceleration_id("arania")
+            mesh_snapshot.satellites_acceleration_id("grillo")
+            mesh_snapshot.satellites_acceleration_id("mosquito")
 
 
 
-        # if ac_dm == 1:  
-        #     acceleration_in_mesh_comp (name, "dm",None, plot=True, tidal=False)
-        # if ac_gas == 1:  
-        #     acceleration_in_mesh_comp (name, "gas", None, plot=True, tidal=False)
-        # if ac_stars == 1: 
-        #     acceleration_in_mesh_comp (name, "stars", "disk", plot=True, tidal=False)
-        #     acceleration_in_mesh_comp (name, "stars", "nodisk", plot=True, tidal=False)
-         
        # if ac_satellites_as_points == 1:
         # if ac_satellites_ids ==1 :
         #    satellites_acceleration_id (name, "all", plot = True)
-    #Second step: fourier on accelerations
-    # if fourier_accelerations == 1:
-    #     fourier= fourier()
-    #     fourier.apply_fourier_on_disk()
 
-    #Thirs step: fourier on z and vz
+
+    #Thirs step: fourier 
+    fourier_ac= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=40, minimo = 0, nbins = 40)
+    if fourier_acceleration_dm ==1:
+        fourier_ac.apply_fourier_accelerations(comp="dm")
+
+    if fourier_acceleration_gas ==1:
+        fourier_ac.apply_fourier_accelerations(comp="gas")
+
+    if fourier_acceleration_satellites ==1:
+        fourier_ac.apply_fourier_sat()
+
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)
-    if fourier_z == 1:
-        fourier.apply_fourier_on_disk(peso = "VZ")
-        fourier.apply_fourier_on_disk(peso = "Z")
     if fourier_density == 1:
         fourier.apply_fourier_on_disk()
+
+    if fourier_z == 1:
+        fourier.apply_fourier_on_disk(peso = "Z")
+
+    if fourier_vz ==1: 
+        fourier.apply_fourier_on_disk(peso = "VZ")
+
+    if fourier_vr ==1: 
+        fourier.apply_fourier_on_disk(peso = "Vr")
+
+    if fourier_vphi ==1: 
+        fourier.apply_fourier_on_disk(peso = "Vphi")
+
+
+
 
 
     #Third step: comparison
