@@ -38,7 +38,7 @@ def main ():
 
         if ac_gas == 1:
             gas_z, gas_r, gas_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "gas", mode_stars = None, tidal = False)
-            mesh_snapshot.ac_dm = [gas_z, gas_r, gas_phi]
+            mesh_snapshot.ac_gas = [gas_z, gas_r, gas_phi]
             mesh_snapshot.plot_acceleration_components("ac_gas")
 
         if ac_all_sat == 1:

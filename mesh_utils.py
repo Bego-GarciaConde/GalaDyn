@@ -12,8 +12,7 @@ import multiprocessing
 import sys
 import uuid
 
-G= 1.3273e11
-kpc_to_km= 3.086e16
+
 
 def force_in_mesh_gen (coord, x_sat0, y_sat0, z_sat0, mass_sat0):
     #a = GM/(r²)     <----
@@ -25,9 +24,13 @@ def force_in_mesh_gen (coord, x_sat0, y_sat0, z_sat0, mass_sat0):
     dist_sat_part = np.sqrt(X_resta**2 + Y_resta**2 + Z_resta**2)
 
 
-    ax = (mass_sat0*X_resta/np.power(dist_sat_part,3)).astype(np.float64)
-    ay = (mass_sat0*Y_resta/np.power(dist_sat_part,3)).astype(np.float64)
-    az = (mass_sat0*Z_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    #ax = (mass_sat0*X_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    #ay = (mass_sat0*Y_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    #az = (mass_sat0*Z_resta/np.power(dist_sat_part,3)).astype(np.float64)
+
+    ax = (mass_sat0*X_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
+    ay = (mass_sat0*Y_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
+    az = (mass_sat0*Z_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
 
     return G*np.sum(ax)/(kpc_to_km**2),G*np.sum(ay)/(kpc_to_km**2),G*np.sum(az)/(kpc_to_km**2)
 
@@ -105,9 +108,13 @@ class mesh:
         if tidal ==1:
             #----Acceleration in 0,0 ------
             R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
-            ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
-            ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
-            az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
+          #  ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
+          #  ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
+          #  az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
+
+            ax_0 = np.sum(G*mass_sat0*x_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
+            ay_0 = np.sum(G*mass_sat0*y_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
+            az_0 = np.sum(G*mass_sat0*z_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
 
             #------------------------------
             ax_halo = ax_halo - ax_0
@@ -157,11 +164,11 @@ class mesh:
         if mode_stars is not None:
             mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.csv", sep = ",")
         else:
-            mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{self.name}_ytRS_{limit}.csv" , sep = ",")
+            mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{self.name}_ytRS_{limit}_soft.csv" , sep = ",")
         return mesh_completa["az"], mesh_completa["ar"], mesh_completa["aphi"]
 
             
-    def plot_acceleration_components (self, comp, rango_z=1e-14, rango_r=1e-13, rango_phi=1e-12, mode_stars=None):
+    def plot_acceleration_components (self, comp, rango_z=1e-14, rango_r=1e-13, rango_phi=1e-14, mode_stars=None):
         acceleration_values = getattr(self, f"{comp}" )
         plt.style.use('dark_background')
         size = 5
@@ -195,7 +202,7 @@ class mesh:
         if mode_stars is not None:
             plt.savefig(path_figures + f"acceleration_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
         else:
-            plt.savefig(path_figures + f"acceleration_{comp}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
+            plt.savefig(path_figures + f"acceleration_{comp}_{self.name}_ytRS_{limit}_soft.png", format='png', dpi=150, bbox_inches='tight')
         
         gc.collect()
 
