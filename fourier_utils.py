@@ -75,17 +75,19 @@ class Fourier:
 
         return rcenter, nparticles, AA, armangle
 
-
     #------------------accelerations-------------------
     
     def apply_fourier_accelerations(self, comp):
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
+        #print(np.shape(datos))
         index = 0
         for t,name in enumerate(snapshots_analysis):
-            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_40.csv",sep = ",")
+            print(name)
+            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_40_soft.csv",sep = ",")
             Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
             for i in range(self.nbins):
-                datos[index] = [snapshots_analysis[t],Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i])
+             #   print([snapshots_analysis[t],lookback[t], Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i]))
+                datos[index] = [snapshots_analysis[t],lookback[t],Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index + 1
         self.save_fourierogram(datos, etiqueta=f"acceleration_{comp}", peso = "az")
 
@@ -127,7 +129,7 @@ class Fourier:
             etiqueta = "disc"
             snapshot = Snapshot(name)
             snapshot.load_stars()
-            snapshot.load_disk()
+          #  snapshot.load_disk()
             df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 3)&(snapshot.stars["Z"]> -3)]
             #df = snapshot.filter_disk_particles()
             print("Snapshot loaded!")

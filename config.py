@@ -9,7 +9,7 @@ import numpy as np
 ac_satellites_as_points =     0 
 ac_satellites_ids =           0  
 ac_dm =                       0  
-ac_gas =                      1  
+ac_gas =                      0  
 ac_stars =                    0 
 ac_all_sat =                  0
 
@@ -17,26 +17,30 @@ limit = 40 #limit for acceleration mesh
 G= 1.3273e11
 kpc_to_km= 3.086e16
 softening = 0.7
+
 #-------
 fourier_acceleration_dm=      0
-fourier_acceleration_gas=      0
+fourier_acceleration_gas=     0
 fourier_acceleration_satellites = 0
 
 #--------
-fourier_density =             0
-fourier_z =                   0
-fourier_vz =                  0
-fourier_vr =                  0 
-fourier_vphi =                0  
+fourier_density =             1
+fourier_z =                   1
+fourier_vz =                  1
+fourier_vr =                  1 
+fourier_vphi =                1  
 
 #-------
 comparison_plots =            0
 
-snapshots_analysis = [ 604, 608, 610, 612, 614, 616, 618, 620, 622, 624, 626, 
+
+snapshots_analysis = [520,523,525, 527,530,532,535, 537,539,541,
+543, 545,547, 550, 553, 555,557, 560, 563, 565, 567,570,573, 575, 577, 580,
+583, 585,587,590, 592,594,596,598,600, 602, 604, 608, 610, 612, 614, 616, 618, 620, 622, 624, 626, 
 629, 630, 632, 634, 636, 639, 640, 642, 644, 646, 648, 650, 652, 654, 656, 658, 660, 662, 
 664, 666, 668,670, 672, 674, 676, 679, 681, 682, 684, 687, 689,
-690, 692, 694, 698, 704,  706, 708,711, 712,714, 716, 718, 720, 
-722, 724, 726, 728, 731, 732, 734, 736, 739, 740, 742, 744, 746, 748, 751,752,
+690, 692, 694, 698, 704,  706, 708,711, 712,714, 716,
+718, 720, 722, 724, 726, 728, 731, 732, 734, 736, 739, 740, 742, 744, 746, 748, 751,752,
 755, 756, 758, 761,763, 764, 766, 768, 770, 772, 774, 776, 778, 780, 
 782, 784, 786, 788, 790, 792, 794, 797, 798, 802, 805, 806, 808, 810, 812, 814, 816,
 818, 820, 822, 824, 826, 828, 830, 832, 834, 836, 839, 840, 842, 844, 846, 848, 850,
@@ -46,13 +50,12 @@ snapshots_analysis = [ 604, 608, 610, 612, 614, 616, 618, 620, 622, 624, 626,
 958, 961, 963, 965, 966, 968, 970, 972, 974, 976, 979,
 980, 982, 984, 989, 990, 993, 994, 996]
 
-#snapshots_analysis = [772, 774, 776]
 
 # ---------------------------------------------------------------------------
 #path_satellite_models = "/media/temp1/bego/snapshots/modelos_satelites/"
-path_csv = "/home/bego/GARROTXA/snapshots/"
+path_csv = "/run/media/bego/VANIR/snapshots/"
 path_datos = "/home/bego/GARROTXA_copia/datos_GARROTXA_resim/"
-path_crossmatch = "/home/bego/GARROTXA/satelites_crossmatch/"
+path_crossmatch = "/run/media/bego/VANIR/satelites_crossmatch/"
 path_figures_acceleration = "/home/bego/GARROTXA/aceleration_figures/"
 path_figures = "/home/bego/GARROTXA/acceleration_figures/"
 path_acceleration = "/home/bego/GARROTXA/acceleration/"
