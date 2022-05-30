@@ -46,8 +46,8 @@ class mesh:
         self.phi = None
         self.ac_dm = None
         self.ac_gas = None
-        self.stars_disk = None
-        self.stars_nodisk = None
+        self.ac_stars_disk = None
+        self.ac_stars_nodisk = None
         self.ac_sat = None
 
         def snapshot_to_grid (nbins = 100):
@@ -164,12 +164,16 @@ class mesh:
         if mode_stars is not None:
             mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.csv", sep = ",")
         else:
-            mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{self.name}_ytRS_{limit}_soft.csv" , sep = ",")
+            mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{self.name}_ytRS_{limit}.csv" , sep = ",")
         return mesh_completa["az"], mesh_completa["ar"], mesh_completa["aphi"]
 
             
     def plot_acceleration_components (self, comp, rango_z=1e-14, rango_r=1e-13, rango_phi=1e-14, mode_stars=None):
-        acceleration_values = getattr(self, f"{comp}" )
+        if mode_stars is not None:
+            acceleration_values = getattr(self, f"{comp}_{mode_stars}" )
+        else:
+            acceleration_values = getattr(self, f"{comp}" )
+        
         plt.style.use('dark_background')
         size = 5
         ancho = limit + 5
@@ -202,7 +206,7 @@ class mesh:
         if mode_stars is not None:
             plt.savefig(path_figures + f"acceleration_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
         else:
-            plt.savefig(path_figures + f"acceleration_{comp}_{self.name}_ytRS_{limit}_soft.png", format='png', dpi=150, bbox_inches='tight')
+            plt.savefig(path_figures + f"acceleration_{comp}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
         
         gc.collect()
 

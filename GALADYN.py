@@ -40,6 +40,11 @@ def main ():
             gas_z, gas_r, gas_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "gas", mode_stars = None, tidal = False)
             mesh_snapshot.ac_gas = [gas_z, gas_r, gas_phi]
             mesh_snapshot.plot_acceleration_components("ac_gas")
+        
+        if ac_stars == 1:
+            stars_z, stars_r, stars_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars = "disk", tidal = False)
+            mesh_snapshot.ac_stars_disk= [stars_z, stars_r, stars_phi]
+            mesh_snapshot.plot_acceleration_components("ac_stars", mode_stars="disk")
 
         if ac_all_sat == 1:
             mesh_snapshot.satellites_acceleration_id("all")
@@ -61,6 +66,9 @@ def main ():
 
     if fourier_acceleration_gas ==1:
         fourier_ac.apply_fourier_accelerations(comp="gas")
+    
+    if fourier_acceleration_stars ==1:
+        fourier_ac.apply_fourier_accelerations(comp="stars_disk")
 
     if fourier_acceleration_satellites ==1:
         fourier_ac.apply_fourier_sat()

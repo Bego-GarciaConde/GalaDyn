@@ -10,33 +10,35 @@ ac_satellites_as_points =     0
 ac_satellites_ids =           0  
 ac_dm =                       0  
 ac_gas =                      0  
-ac_stars =                    0 
+ac_stars =                    1 
 ac_all_sat =                  0
 
-limit = 40 #limit for acceleration mesh
+limit = 22 #limit for acceleration mesh
 G= 1.3273e11
 kpc_to_km= 3.086e16
-softening = 0.7
+softening = 0
 
 #-------
 fourier_acceleration_dm=      0
 fourier_acceleration_gas=     0
+fourier_acceleration_stars=     0
 fourier_acceleration_satellites = 0
 
 #--------
-fourier_density =             1
-fourier_z =                   1
-fourier_vz =                  1
-fourier_vr =                  1 
-fourier_vphi =                1  
+fourier_density =             0
+fourier_z =                   0
+fourier_vz =                  0
+fourier_vr =                  0 
+fourier_vphi =                0  
 
 #-------
 comparison_plots =            0
 
 
-snapshots_analysis = [520,523,525, 527,530,532,535, 537,539,541,
-543, 545,547, 550, 553, 555,557, 560, 563, 565, 567,570,573, 575, 577, 580,
-583, 585,587,590, 592,594,596,598,600, 602, 604, 608, 610, 612, 614, 616, 618, 620, 622, 624, 626, 
+snapshots_analysis = [#520,523,525, 527,530,532,535, 537,539,541,
+# 543, 545,547, 550, 553, 555,557, 560, 563, 565, 567,570,573, 575, 577, 580,
+# 583, 585,587,590, 592,594,596,598,600]
+602, 604, 608, 610, 612, 614, 616, 618, 620, 622, 624, 626, 
 629, 630, 632, 634, 636, 639, 640, 642, 644, 646, 648, 650, 652, 654, 656, 658, 660, 662, 
 664, 666, 668,670, 672, 674, 676, 679, 681, 682, 684, 687, 689,
 690, 692, 694, 698, 704,  706, 708,711, 712,714, 716,
@@ -73,5 +75,6 @@ datos_edades = pd.read_csv(path_datos + "edades.csv", sep = ",",index_col = 0)
 for i,name in enumerate(snapshots_analysis):
         lb = datos_edades.loc[datos_edades['Snapshot'] == name, 'Lookback'].iloc[0]
         lookback[i]=lb
+
 
 
