@@ -41,11 +41,13 @@ class Satellite:
             self.dm = pd.read_csv(path_crossmatch + f"{sat}_{name}_crossmatch_dm.csv", sep = ",")
 
         print(f"Initializing snapshot {name}")
+        
         read_lb()
         
         if sat != "all":
             read_coord_mass_tidal()
             find_crossmatch()
+            print(self.tidalR)
         
 
     def separate_stream_remanent(self):

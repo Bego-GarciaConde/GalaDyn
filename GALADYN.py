@@ -67,11 +67,13 @@ def main ():
     if fourier_acceleration_gas ==1:
         fourier_ac.apply_fourier_accelerations(comp="gas")
     
-    if fourier_acceleration_stars ==1:
-        fourier_ac.apply_fourier_accelerations(comp="stars_disk")
-
     if fourier_acceleration_satellites ==1:
         fourier_ac.apply_fourier_sat()
+
+    fourier_ac_stars= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=22, minimo = 0, nbins = 22)
+    if fourier_acceleration_stars ==1:
+        fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk")
+
 
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)
     if fourier_density == 1:

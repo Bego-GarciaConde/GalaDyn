@@ -24,13 +24,33 @@ def force_in_mesh_gen (coord, x_sat0, y_sat0, z_sat0, mass_sat0):
     dist_sat_part = np.sqrt(X_resta**2 + Y_resta**2 + Z_resta**2)
 
 
-    #ax = (mass_sat0*X_resta/np.power(dist_sat_part,3)).astype(np.float64)
-    #ay = (mass_sat0*Y_resta/np.power(dist_sat_part,3)).astype(np.float64)
-    #az = (mass_sat0*Z_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    ax = (mass_sat0*X_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    ay = (mass_sat0*Y_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    az = (mass_sat0*Z_resta/np.power(dist_sat_part,3)).astype(np.float64)
 
-    ax = (mass_sat0*X_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
-    ay = (mass_sat0*Y_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
-    az = (mass_sat0*Z_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
+ #   ax = (mass_sat0*X_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
+ #   ay = (mass_sat0*Y_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
+ #   az = (mass_sat0*Z_resta/(np.power(dist_sat_part + softening,2)*dist_sat_part)).astype(np.float64)
+
+    return G*np.sum(ax)/(kpc_to_km**2),G*np.sum(ay)/(kpc_to_km**2),G*np.sum(az)/(kpc_to_km**2)
+def force_in_mesh (x_sat0, y_sat0, z_sat0, mass_sat0,  x_bin, y_bin, z_bin):
+    # ToDo: meter las otras variables en la def
+
+    #In this version:
+    #a = GM/(r²)   #weighed by Npart  <----
+    #F = GMm/(r²)   #weighed by Npart
+  #  x_bin = mesh_x[i]
+  #  y_bin = mesh_y[i]
+  #  z_bin  = mesh_z[i]
+    X_resta = (x_sat0 - x_bin)
+    Y_resta = (y_sat0 - y_bin)
+    Z_resta = (z_sat0 - z_bin)
+    
+    dist_sat_part = np.sqrt(X_resta**2 + Y_resta**2 + Z_resta**2)
+
+    ax = (mass_sat0*X_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    ay = (mass_sat0*Y_resta/np.power(dist_sat_part,3)).astype(np.float64)
+    az =(mass_sat0*Z_resta/np.power(dist_sat_part,3)).astype(np.float64)
 
     return G*np.sum(ax)/(kpc_to_km**2),G*np.sum(ay)/(kpc_to_km**2),G*np.sum(az)/(kpc_to_km**2)
 
@@ -75,6 +95,38 @@ class mesh:
 
         snapshot_to_grid()
 
+    def calculate_force_sat (self, DM):
+        ax_halo = np.zeros(len(self.y), dtype = np.float64)
+        ay_halo = np.zeros(len(self.y), dtype = np.float64)
+        az_halo = np.zeros(len(self.y), dtype = np.float64)
+
+        x_sat0 = np.array(DM["X"], dtype = np.float64)
+        y_sat0 = np.array(DM["Y"], dtype = np.float64)
+        z_sat0 = np.array(DM["Z"], dtype = np.float64)
+        mass_sat0 = np.array(DM["Mass"], dtype = np.float64)
+
+
+        print("Calculating acceleration in the center")
+        R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
+        ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
+        ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
+        az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
+
+        for i in range(len(self.y)):
+        #    for i in range(20):
+            ax_halo[i],ay_halo[i],az_halo[i] =force_in_mesh(x_sat0, y_sat0, z_sat0, mass_sat0,  self.x[i], self.y[i],  self.z[i])
+
+        ax_halo = ax_halo -ax_0
+        ay_halo = ay_halo -ay_0
+        az_halo = az_halo -az_0
+        a_r_halo = ax_halo*np.cos(self.phi) + ay_halo*np.sin(self.phi)
+        a_phi_halo = ax_halo*(np.sin(self.phi)) -ay_halo*np.cos(self.phi)
+
+        data ={'X':self.x, 'Y':self.y,  'Z':self.z, 'R':self.R,'Phi':self.phi,  
+                    'ax':ax_halo, 'ay':ay_halo, 'az': az_halo,
+                    'ar':a_r_halo , 'aphi':a_phi_halo}
+        mesh_completa = pd.DataFrame(data)
+        return mesh_completa
 
     def calculate_force(self, DM, tidal=False, multiprocess = False):
 
@@ -105,16 +157,16 @@ class mesh:
         pool.close()
         pool.join()
 
-        if tidal ==1:
+        if tidal ==True:
             #----Acceleration in 0,0 ------
             R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
-          #  ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
-          #  ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
-          #  az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
+            ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
+            ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
+            az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
 
-            ax_0 = np.sum(G*mass_sat0*x_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
-            ay_0 = np.sum(G*mass_sat0*y_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
-            az_0 = np.sum(G*mass_sat0*z_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
+          #  ax_0 = np.sum(G*mass_sat0*x_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
+          #  ay_0 = np.sum(G*mass_sat0*y_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
+          #  az_0 = np.sum(G*mass_sat0*z_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
 
             #------------------------------
             ax_halo = ax_halo - ax_0
@@ -252,12 +304,12 @@ class mesh:
                 DM_stream_i = satelite.stream
 
         #---------------------PROGENITOR------------------------------------
-            mesh_core = self.calculate_force(DM_core_i, tidal=True)
+            mesh_core = self.calculate_force_sat(DM_core_i)
             #az_mean_prog = np.mean(np.abs(az_core))
 
         #---------------------STREAMS------------------------------
 
-            mesh_stream= self.calculate_force(DM_stream_i, tidal = True)
+            mesh_stream= self.calculate_force_sat(DM_stream_i)
         # az_mean_stream = np.mean(np.abs(az_stream))
 
 
