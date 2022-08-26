@@ -62,17 +62,17 @@ def main ():
     #Thirs step: fourier 
     fourier_ac= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=40, minimo = 0, nbins = 40)
     if fourier_acceleration_dm ==1:
-        fourier_ac.apply_fourier_accelerations(comp="dm")
+        fourier_ac.apply_fourier_accelerations(comp="dm", nbins=40)
 
     if fourier_acceleration_gas ==1:
-        fourier_ac.apply_fourier_accelerations(comp="gas")
+        fourier_ac.apply_fourier_accelerations(comp="gas", nbins=40)
     
     if fourier_acceleration_satellites ==1:
         fourier_ac.apply_fourier_sat()
 
     fourier_ac_stars= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=22, minimo = 0, nbins = 22)
     if fourier_acceleration_stars ==1:
-        fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk")
+        fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk", nbins=22)
 
 
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)

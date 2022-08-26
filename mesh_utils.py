@@ -187,9 +187,8 @@ class mesh:
 
     def acceleration_in_mesh_comp (self, comp, mode_stars, tidal = False):
         print(self.name)
-        #TODO: read paths
         if comp == "dm" or comp=="stars":
-            DM = pd.read_csv(path_csv + f"{self.name}_{comp}_Rvir.csv", sep = ",", dtype = np.float32)
+            DM = pd.read_csv(path_csv + f"{self.name}_{comp}_Rvir.csv", sep = ",")
             arania = pd.read_csv(path_crossmatch + f"arania_{self.name}_crossmatch_{comp}.csv", sep = ",")
             grillo = pd.read_csv(path_crossmatch + f"grillo_{self.name}_crossmatch_{comp}.csv", sep = ",")
             mosquito = pd.read_csv(path_crossmatch + f"mosquito_{self.name}_crossmatch_{comp}.csv", sep = ",")
@@ -201,14 +200,17 @@ class mesh:
 
         
         else:
-          DM = pd.read_csv(path_csv + f"Gas_{self.name}.csv", sep = ",", dtype = np.float32)
+          DM = pd.read_csv(path_csv + f"Gas_{self.name}.csv", sep = ",")
 
         if mode_stars =="disk":
             disc_IDs = pd.read_csv(path_disk + f"Stars_disco_{self.name}.csv", sep = ",")
             DM  = DM[DM['ID'].isin(disc_IDs["ID"])]
+          #  DM = DM[np.abs(DM["Z"]<3)&np.abs(DM["R"]<25)]
         elif mode_stars == "nodisk":
             disc_IDs = pd.read_csv(path_disk + f"Stars_disco_{self.name}.csv", sep = ",")
-            DM  = DM[~ DM['ID'].isin(disc_IDs["ID"])]
+           # DM_r  = DM[DM['ID'].isin(disc_IDs["ID"])]
+           # DM_r = DM_r[np.abs(DM_r["Z"]<3)&np.abs(DM_r["R"]<25)]
+            DM = DM[~DM['ID'].isin(disc_IDs["ID"])]
         
         mesh_completa = self.calculate_force(DM,multiprocess = True)        
 

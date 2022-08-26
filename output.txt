@@ -1,3843 +1,901 @@
-Initializing snapshot 596
-5.218999999999999
-Initializing snapshot 596
-2.0311
-Initializing snapshot 596
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 596
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 596
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 596
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 598
-5.218999999999999
-Initializing snapshot 598
-2.0311
-Initializing snapshot 598
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 598
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 598
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 598
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 600
-5.218999999999999
-Initializing snapshot 600
-2.0311
-Initializing snapshot 600
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 600
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 600
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 600
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 602
-5.218999999999999
-Initializing snapshot 602
-2.0311
-Initializing snapshot 602
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 602
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 602
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 602
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 604
-5.218999999999999
-Initializing snapshot 604
-2.0311
-Initializing snapshot 604
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 604
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 604
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 604
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 608
-5.218999999999999
-Initializing snapshot 608
-2.0311
-Initializing snapshot 608
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 608
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 608
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 608
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 610
-5.218999999999999
-Initializing snapshot 610
-2.0311
-Initializing snapshot 610
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 610
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 610
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 610
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 612
-5.218999999999999
-Initializing snapshot 612
-2.0311
-Initializing snapshot 612
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 612
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 612
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 612
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 614
-5.218999999999999
-Initializing snapshot 614
-2.0311
-Initializing snapshot 614
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 614
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 614
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 614
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 616
-5.218999999999999
-Initializing snapshot 616
-2.0311
-Initializing snapshot 616
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 616
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 616
-2.0311
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 616
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 618
-5.218999999999999
-Initializing snapshot 618
-1.42
-Initializing snapshot 618
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 618
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 618
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 618
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 620
-5.218999999999999
-Initializing snapshot 620
-1.42
-Initializing snapshot 620
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 620
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 620
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 620
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 622
-5.218999999999999
-Initializing snapshot 622
-1.42
-Initializing snapshot 622
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 622
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 622
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 622
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 624
-5.218999999999999
-Initializing snapshot 624
-1.42
-Initializing snapshot 624
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 624
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 624
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 624
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 626
-5.218999999999999
-Initializing snapshot 626
-1.42
-Initializing snapshot 626
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 626
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 626
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 626
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 629
-5.218999999999999
-Initializing snapshot 629
-1.42
-Initializing snapshot 629
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 629
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 629
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 629
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 630
-5.218999999999999
-Initializing snapshot 630
-1.42
-Initializing snapshot 630
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 630
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 630
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 630
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 632
-5.218999999999999
-Initializing snapshot 632
-1.42
-Initializing snapshot 632
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 632
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 632
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 632
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 634
-5.218999999999999
-Initializing snapshot 634
-1.42
-Initializing snapshot 634
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 634
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 634
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 634
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 636
-5.218999999999999
-Initializing snapshot 636
-1.42
-Initializing snapshot 636
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 636
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 636
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 636
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 639
-5.218999999999999
-Initializing snapshot 639
-1.42
-Initializing snapshot 639
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 639
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 639
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 639
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 640
-5.218999999999999
-Initializing snapshot 640
-1.42
-Initializing snapshot 640
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 640
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 640
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 640
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 642
-5.218999999999999
-Initializing snapshot 642
-1.42
-Initializing snapshot 642
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 642
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 642
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 642
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 644
-5.218999999999999
-Initializing snapshot 644
-1.42
-Initializing snapshot 644
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 644
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 644
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 644
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 646
-5.218999999999999
-Initializing snapshot 646
-1.42
-Initializing snapshot 646
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 646
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 646
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 646
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 648
-5.218999999999999
-Initializing snapshot 648
-1.42
-Initializing snapshot 648
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 648
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 648
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 648
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 650
-5.218999999999999
-Initializing snapshot 650
-1.42
-Initializing snapshot 650
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 650
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 650
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 650
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 652
-5.218999999999999
-Initializing snapshot 652
-1.42
-Initializing snapshot 652
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 652
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 652
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 652
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 654
-5.218999999999999
-Initializing snapshot 654
-1.42
-Initializing snapshot 654
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 654
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 654
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 654
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 656
-5.218999999999999
-Initializing snapshot 656
-1.42
-Initializing snapshot 656
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 656
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 656
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 656
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 658
-5.218999999999999
-Initializing snapshot 658
-1.42
-Initializing snapshot 658
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 658
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 658
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 658
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 660
-5.218999999999999
-Initializing snapshot 660
-1.42
-Initializing snapshot 660
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 660
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 660
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 660
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 662
-5.218999999999999
-Initializing snapshot 662
-1.42
-Initializing snapshot 662
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 662
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 662
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 662
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 664
-5.218999999999999
-Initializing snapshot 664
-1.42
-Initializing snapshot 664
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 664
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 664
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 664
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 666
-5.218999999999999
-Initializing snapshot 666
-1.42
-Initializing snapshot 666
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 666
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 666
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 666
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 668
-5.218999999999999
-Initializing snapshot 668
-1.42
-Initializing snapshot 668
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 668
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 668
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 668
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 670
-5.218999999999999
-Initializing snapshot 670
-1.42
-Initializing snapshot 670
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 670
-5.218999999999999
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 670
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 670
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 672
-3.043
-Initializing snapshot 672
-1.42
-Initializing snapshot 672
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 672
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 672
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 672
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 674
-3.043
-Initializing snapshot 674
-1.42
-Initializing snapshot 674
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 674
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 674
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 674
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 676
-3.043
-Initializing snapshot 676
-1.42
-Initializing snapshot 676
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 676
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 676
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 676
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 679
-3.043
-Initializing snapshot 679
-1.42
-Initializing snapshot 679
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 679
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 679
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 679
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 681
-3.043
-Initializing snapshot 681
-1.42
-Initializing snapshot 681
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 681
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 681
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 681
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 682
-3.043
-Initializing snapshot 682
-1.42
-Initializing snapshot 682
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 682
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 682
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 682
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 684
-3.043
-Initializing snapshot 684
-1.42
-Initializing snapshot 684
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 684
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 684
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 684
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 687
-3.043
-Initializing snapshot 687
-1.42
-Initializing snapshot 687
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 687
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 687
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 687
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 689
-3.043
-Initializing snapshot 689
-1.42
-Initializing snapshot 689
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 689
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 689
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 689
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 690
-3.043
-Initializing snapshot 690
-1.42
-Initializing snapshot 690
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 690
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 690
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 690
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 692
-3.043
-Initializing snapshot 692
-1.42
-Initializing snapshot 692
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 692
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 692
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 692
-1.018
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 694
-3.043
-Initializing snapshot 694
-1.42
-Initializing snapshot 694
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 694
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 694
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 694
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 698
-3.043
-Initializing snapshot 698
-1.42
-Initializing snapshot 698
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 698
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 698
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 698
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 704
-3.043
-Initializing snapshot 704
-1.42
-Initializing snapshot 704
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 704
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 704
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 704
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 706
-3.043
-Initializing snapshot 706
-1.42
-Initializing snapshot 706
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 706
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 706
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 706
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 708
-3.043
-Initializing snapshot 708
-1.42
-Initializing snapshot 708
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 708
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 708
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 708
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 711
-3.043
-Initializing snapshot 711
-1.42
-Initializing snapshot 711
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 711
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 711
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 711
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 712
-3.043
-Initializing snapshot 712
-1.42
-Initializing snapshot 712
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 712
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 712
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 712
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 714
-3.043
-Initializing snapshot 714
-1.42
-Initializing snapshot 714
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 714
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 714
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 714
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 716
-3.043
-Initializing snapshot 716
-1.42
-Initializing snapshot 716
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 716
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 716
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 716
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 718
-3.043
-Initializing snapshot 718
-1.42
-Initializing snapshot 718
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 718
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 718
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 718
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 720
-3.043
-Initializing snapshot 720
-1.42
-Initializing snapshot 720
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 720
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 720
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 720
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 722
-3.043
-Initializing snapshot 722
-1.42
-Initializing snapshot 722
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 722
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 722
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 722
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 724
-3.043
-Initializing snapshot 724
-1.42
-Initializing snapshot 724
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 724
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 724
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 724
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 726
-3.043
-Initializing snapshot 726
-1.42
-Initializing snapshot 726
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 726
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 726
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 726
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 728
-3.043
-Initializing snapshot 728
-1.42
-Initializing snapshot 728
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 728
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 728
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 728
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 731
-3.043
-Initializing snapshot 731
-1.42
-Initializing snapshot 731
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 731
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 731
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 731
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 732
-3.043
-Initializing snapshot 732
-1.42
-Initializing snapshot 732
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 732
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 732
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 732
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 734
-3.043
-Initializing snapshot 734
-1.42
-Initializing snapshot 734
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 734
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 734
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 734
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 736
-3.043
-Initializing snapshot 736
-1.42
-Initializing snapshot 736
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 736
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 736
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 736
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 739
-3.043
-Initializing snapshot 739
-1.42
-Initializing snapshot 739
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 739
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 739
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 739
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 740
-3.043
-Initializing snapshot 740
-1.42
-Initializing snapshot 740
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 740
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 740
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 740
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 742
-3.043
-Initializing snapshot 742
-1.42
-Initializing snapshot 742
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 742
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 742
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 742
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 744
-3.043
-Initializing snapshot 744
-1.42
-Initializing snapshot 744
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 744
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 744
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 744
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 746
-3.043
-Initializing snapshot 746
-1.42
-Initializing snapshot 746
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 746
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 746
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 746
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 748
-3.043
-Initializing snapshot 748
-1.42
-Initializing snapshot 748
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 748
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 748
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 748
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 751
-3.043
-Initializing snapshot 751
-1.42
-Initializing snapshot 751
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 751
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 751
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 751
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 752
-3.043
-Initializing snapshot 752
-1.42
-Initializing snapshot 752
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 752
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 752
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 752
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 755
-3.043
-Initializing snapshot 755
-1.42
-Initializing snapshot 755
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 755
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 755
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 755
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 756
-3.043
-Initializing snapshot 756
-1.42
-Initializing snapshot 756
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 756
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 756
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 756
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 758
-3.043
-Initializing snapshot 758
-1.42
-Initializing snapshot 758
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 758
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 758
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 758
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 761
-3.043
-Initializing snapshot 761
-1.42
-Initializing snapshot 761
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 761
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 761
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 761
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 763
-3.043
-Initializing snapshot 763
-1.42
-Initializing snapshot 763
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 763
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 763
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 763
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 764
-3.043
-Initializing snapshot 764
-1.42
-Initializing snapshot 764
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 764
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 764
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 764
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 766
-3.043
-Initializing snapshot 766
-1.42
-Initializing snapshot 766
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 766
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 766
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 766
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 768
-3.043
-Initializing snapshot 768
-1.42
-Initializing snapshot 768
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 768
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 768
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 768
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 770
-3.043
-Initializing snapshot 770
-1.42
-Initializing snapshot 770
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 770
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 770
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 770
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 772
-3.043
-Initializing snapshot 772
-1.42
-Initializing snapshot 772
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 772
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 772
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 772
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 774
-3.043
-Initializing snapshot 774
-1.42
-Initializing snapshot 774
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 774
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 774
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 774
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 776
-3.043
-Initializing snapshot 776
-1.42
-Initializing snapshot 776
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 776
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 776
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 776
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 778
-3.043
-Initializing snapshot 778
-1.42
-Initializing snapshot 778
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 778
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 778
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 778
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 780
-3.043
-Initializing snapshot 780
-1.42
-Initializing snapshot 780
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 780
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 780
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 780
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 782
-3.043
-Initializing snapshot 782
-1.42
-Initializing snapshot 782
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 782
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 782
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 782
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 784
-3.043
-Initializing snapshot 784
-1.42
-Initializing snapshot 784
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 784
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 784
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 784
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 786
-3.043
-Initializing snapshot 786
-1.42
-Initializing snapshot 786
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 786
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 786
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 786
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 788
-3.043
-Initializing snapshot 788
-1.42
-Initializing snapshot 788
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 788
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 788
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 788
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 790
-3.043
-Initializing snapshot 790
-1.42
-Initializing snapshot 790
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 790
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 790
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 790
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 792
-3.043
-Initializing snapshot 792
-1.42
-Initializing snapshot 792
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 792
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 792
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 792
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 794
-3.043
-Initializing snapshot 794
-1.42
-Initializing snapshot 794
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 794
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 794
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 794
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 797
-3.043
-Initializing snapshot 797
-1.42
-Initializing snapshot 797
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 797
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 797
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 797
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 798
-3.043
-Initializing snapshot 798
-1.42
-Initializing snapshot 798
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 798
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 798
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 798
-0.7245
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 802
-3.043
-Initializing snapshot 802
-1.42
-Initializing snapshot 802
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 802
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 802
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 802
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 805
-3.043
-Initializing snapshot 805
-1.42
-Initializing snapshot 805
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 805
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 805
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 805
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 806
-3.043
-Initializing snapshot 806
-1.42
-Initializing snapshot 806
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 806
-3.043
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 806
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 806
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 808
-2.301
-Initializing snapshot 808
-1.42
-Initializing snapshot 808
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 808
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 808
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 808
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 810
-2.301
-Initializing snapshot 810
-1.42
-Initializing snapshot 810
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 810
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 810
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 810
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 812
-2.301
-Initializing snapshot 812
-1.42
-Initializing snapshot 812
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 812
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 812
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 812
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 814
-2.301
-Initializing snapshot 814
-1.42
-Initializing snapshot 814
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 814
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 814
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 814
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 816
-2.301
-Initializing snapshot 816
-1.42
-Initializing snapshot 816
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 816
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 816
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 816
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 818
-2.301
-Initializing snapshot 818
-1.42
-Initializing snapshot 818
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 818
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 818
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 818
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 820
-2.301
-Initializing snapshot 820
-1.42
-Initializing snapshot 820
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 820
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 820
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 820
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 822
-2.301
-Initializing snapshot 822
-1.42
-Initializing snapshot 822
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 822
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 822
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 822
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 824
-2.301
-Initializing snapshot 824
-1.42
-Initializing snapshot 824
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 824
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 824
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 824
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 826
-2.301
-Initializing snapshot 826
-1.42
-Initializing snapshot 826
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 826
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 826
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 826
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 828
-2.301
-Initializing snapshot 828
-1.42
-Initializing snapshot 828
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 828
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 828
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 828
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 830
-2.301
-Initializing snapshot 830
-1.42
-Initializing snapshot 830
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 830
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 830
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 830
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 832
-2.301
-Initializing snapshot 832
-1.42
-Initializing snapshot 832
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 832
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 832
-1.42
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 832
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 834
-2.301
-Initializing snapshot 834
-1.01
-Initializing snapshot 834
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 834
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 834
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 834
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 836
-2.301
-Initializing snapshot 836
-1.01
-Initializing snapshot 836
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 836
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 836
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 836
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 839
-2.301
-Initializing snapshot 839
-1.01
-Initializing snapshot 839
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 839
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 839
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 839
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 840
-2.301
-Initializing snapshot 840
-1.01
-Initializing snapshot 840
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 840
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 840
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 840
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 842
-2.301
-Initializing snapshot 842
-1.01
-Initializing snapshot 842
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 842
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 842
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 842
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 844
-2.301
-Initializing snapshot 844
-1.01
-Initializing snapshot 844
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 844
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 844
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 844
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 846
-2.301
-Initializing snapshot 846
-1.01
-Initializing snapshot 846
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 846
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 846
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 846
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 848
-2.301
-Initializing snapshot 848
-1.01
-Initializing snapshot 848
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 848
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 848
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 848
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 850
-2.301
-Initializing snapshot 850
-1.01
-Initializing snapshot 850
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 850
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 850
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 850
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 853
-2.301
-Initializing snapshot 853
-1.01
-Initializing snapshot 853
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 853
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 853
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 853
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 855
-2.301
-Initializing snapshot 855
-1.01
-Initializing snapshot 855
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 855
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 855
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 855
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 856
-2.301
-Initializing snapshot 856
-1.01
-Initializing snapshot 856
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 856
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 856
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 856
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 858
-2.301
-Initializing snapshot 858
-1.01
-Initializing snapshot 858
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 858
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 858
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 858
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 860
-2.301
-Initializing snapshot 860
-1.01
-Initializing snapshot 860
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 860
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 860
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 860
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 862
-2.301
-Initializing snapshot 862
-1.01
-Initializing snapshot 862
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 862
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 862
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 862
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 864
-2.301
-Initializing snapshot 864
-1.01
-Initializing snapshot 864
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 864
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 864
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 864
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 867
-2.301
-Initializing snapshot 867
-1.01
-Initializing snapshot 867
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 867
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 867
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 867
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 870
-2.301
-Initializing snapshot 870
-1.01
-Initializing snapshot 870
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 870
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 870
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 870
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 872
-2.301
-Initializing snapshot 872
-1.01
-Initializing snapshot 872
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 872
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 872
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 872
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 875
-2.301
-Initializing snapshot 875
-1.01
-Initializing snapshot 875
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 875
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 875
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 875
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 877
-2.301
-Initializing snapshot 877
-1.01
-Initializing snapshot 877
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 877
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 877
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 877
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 879
-2.301
-Initializing snapshot 879
-1.01
-Initializing snapshot 879
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 879
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 879
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 879
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 881
-2.301
-Initializing snapshot 881
-1.01
-Initializing snapshot 881
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 881
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 881
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 881
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 883
-2.301
-Initializing snapshot 883
-1.01
-Initializing snapshot 883
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 883
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 883
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 883
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 884
-2.301
-Initializing snapshot 884
-1.01
-Initializing snapshot 884
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 884
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 884
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 884
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 888
-2.301
-Initializing snapshot 888
-1.01
-Initializing snapshot 888
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 888
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 888
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 888
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 890
-2.301
-Initializing snapshot 890
-1.01
-Initializing snapshot 890
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 890
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 890
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 890
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 892
-2.301
-Initializing snapshot 892
-1.01
-Initializing snapshot 892
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 892
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 892
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 892
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 894
-2.301
-Initializing snapshot 894
-1.01
-Initializing snapshot 894
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 894
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 894
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 894
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 898
-2.301
-Initializing snapshot 898
-1.01
-Initializing snapshot 898
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 898
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 898
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 898
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 900
-2.301
-Initializing snapshot 900
-1.01
-Initializing snapshot 900
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 900
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 900
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 900
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 902
-2.301
-Initializing snapshot 902
-1.01
-Initializing snapshot 902
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 902
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 902
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 902
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 904
-2.301
-Initializing snapshot 904
-1.01
-Initializing snapshot 904
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 904
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 904
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 904
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 907
-2.301
-Initializing snapshot 907
-1.01
-Initializing snapshot 907
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 907
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 907
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 907
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 908
-2.301
-Initializing snapshot 908
-1.01
-Initializing snapshot 908
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 908
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 908
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 908
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 910
-2.301
-Initializing snapshot 910
-1.01
-Initializing snapshot 910
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 910
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 910
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 910
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 912
-2.301
-Initializing snapshot 912
-1.01
-Initializing snapshot 912
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 912
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 912
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 912
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 915
-2.301
-Initializing snapshot 915
-1.01
-Initializing snapshot 915
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 915
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 915
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 915
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 916
-2.301
-Initializing snapshot 916
-1.01
-Initializing snapshot 916
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 916
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 916
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 916
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 918
-2.301
-Initializing snapshot 918
-1.01
-Initializing snapshot 918
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 918
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 918
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 918
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 921
-2.301
-Initializing snapshot 921
-1.01
-Initializing snapshot 921
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 921
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 921
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 921
-1.0014
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 922
-2.301
-Initializing snapshot 922
-1.01
-Initializing snapshot 922
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 922
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 922
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 922
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 924
-2.301
-Initializing snapshot 924
-1.01
-Initializing snapshot 924
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 924
-2.301
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 924
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 924
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 927
-2.031
-Initializing snapshot 927
-1.01
-Initializing snapshot 927
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 927
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 927
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 927
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 929
-2.031
-Initializing snapshot 929
-1.01
-Initializing snapshot 929
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 929
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 929
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 929
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 930
-2.031
-Initializing snapshot 930
-1.01
-Initializing snapshot 930
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 930
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 930
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 930
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 932
-2.031
-Initializing snapshot 932
-1.01
-Initializing snapshot 932
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 932
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 932
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 932
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 934
-2.031
-Initializing snapshot 934
-1.01
-Initializing snapshot 934
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 934
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 934
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 934
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 937
-2.031
-Initializing snapshot 937
-1.01
-Initializing snapshot 937
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 937
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 937
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 937
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 939
-2.031
-Initializing snapshot 939
-1.01
-Initializing snapshot 939
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 939
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 939
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 939
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 941
-2.031
-Initializing snapshot 941
-1.01
-Initializing snapshot 941
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 941
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 941
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 941
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 942
-2.031
-Initializing snapshot 942
-1.01
-Initializing snapshot 942
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 942
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 942
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 942
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 944
-2.031
-Initializing snapshot 944
-1.01
-Initializing snapshot 944
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 944
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 944
-1.01
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 944
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 946
-2.031
-Initializing snapshot 946
-0.1414
-Initializing snapshot 946
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 946
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 946
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 946
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 948
-2.031
-Initializing snapshot 948
-0.1414
-Initializing snapshot 948
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 948
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 948
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 948
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 950
-2.031
-Initializing snapshot 950
-0.1414
-Initializing snapshot 950
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 950
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 950
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 950
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 952
-2.031
-Initializing snapshot 952
-0.1414
-Initializing snapshot 952
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 952
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 952
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 952
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 954
-2.031
-Initializing snapshot 954
-0.1414
-Initializing snapshot 954
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 954
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 954
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 954
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 956
-2.031
-Initializing snapshot 956
-0.1414
-Initializing snapshot 956
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 956
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 956
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 956
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 958
-2.031
-Initializing snapshot 958
-0.1414
-Initializing snapshot 958
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 958
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 958
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 958
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 961
-2.031
-Initializing snapshot 961
-0.1414
-Initializing snapshot 961
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 961
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 961
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 961
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 963
-2.031
-Initializing snapshot 963
-0.1414
-Initializing snapshot 963
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 963
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 963
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 963
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 965
-2.031
-Initializing snapshot 965
-0.1414
-Initializing snapshot 965
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 965
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 965
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 965
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 966
-2.031
-Initializing snapshot 966
-0.1414
-Initializing snapshot 966/home/bego/anaconda3/lib/python3.8/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /home/bego/.config/yt/ytrc is deprecated in favor of /home/bego/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+520
+Number of particles w/o substractig satellites  1609695
+Number of particles after substractig satellites  1609181
+Calculating force
+/home/bego/anaconda3/lib/python3.8/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /home/bego/.config/yt/ytrc is deprecated in favor of /home/bego/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
 Deprecated since v4.0.0. This feature will be removed in v4.1.0
   from yt.config import ytcfg
-
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 966
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 966
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 966
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 968
-2.031
-Initializing snapshot 968
-0.1414
-Initializing snapshot 968
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 968
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 968
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 968
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 970
-2.031
-Initializing snapshot 970
-0.1414
-Initializing snapshot 970
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 970
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 970
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 970
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 972
-2.031
-Initializing snapshot 972
-0.1414
-Initializing snapshot 972
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 972
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 972
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 972
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 974
-2.031
-Initializing snapshot 974
-0.1414
-Initializing snapshot 974
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 974
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 974
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 974
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 976
-2.031
-Initializing snapshot 976
-0.1414
-Initializing snapshot 976
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 976
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 976
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 976
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 979
-2.031
-Initializing snapshot 979
-0.1414
-Initializing snapshot 979
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 979
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 979
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 979
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 980
-2.031
-Initializing snapshot 980
-0.1414
-Initializing snapshot 980
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 980
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 980
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 980
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 982
-2.031
-Initializing snapshot 982
-0.1414
-Initializing snapshot 982
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 982
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 982
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 982
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 984
-2.031
-Initializing snapshot 984
-0.1414
-Initializing snapshot 984
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 984
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 984
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 984
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 989
-2.031
-Initializing snapshot 989
-0.1414
-Initializing snapshot 989
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 989
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 989
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 989
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 990
-2.031
-Initializing snapshot 990
-0.1414
-Initializing snapshot 990
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 990
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 990
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 990
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 993
-2.031
-Initializing snapshot 993
-0.1414
-Initializing snapshot 993
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 993
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 993
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 993
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 994
-2.031
-Initializing snapshot 994
-0.1414
-Initializing snapshot 994
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 994
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 994
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 994
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 996
-2.031
-Initializing snapshot 996
-0.1414
-Initializing snapshot 996
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 996
-2.031
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 996
-0.1414
-Calculating acceleration in the center
-Calculating acceleration in the center
-Initializing snapshot 996
-0.95133
-Calculating acceleration in the center
-Calculating acceleration in the center
+523
+Number of particles w/o substractig satellites  1632698
+Number of particles after substractig satellites  1632184
+Calculating force
+525
+Number of particles w/o substractig satellites  1650268
+Number of particles after substractig satellites  1649752
+Calculating force
+527
+Number of particles w/o substractig satellites  1660482
+Number of particles after substractig satellites  1659965
+Calculating force
+530
+Number of particles w/o substractig satellites  1667105
+Number of particles after substractig satellites  1666577
+Calculating force
+532
+Number of particles w/o substractig satellites  1675462
+Number of particles after substractig satellites  1674923
+Calculating force
+535
+Number of particles w/o substractig satellites  1692846
+Number of particles after substractig satellites  1688084
+Calculating force
+537
+Number of particles w/o substractig satellites  1691510
+Number of particles after substractig satellites  1690914
+Calculating force
+539
+Number of particles w/o substractig satellites  1707348
+Number of particles after substractig satellites  1706623
+Calculating force
+541
+Number of particles w/o substractig satellites  1716404
+Number of particles after substractig satellites  1715329
+Calculating force
+543
+Number of particles w/o substractig satellites  1739852
+Number of particles after substractig satellites  1735346
+Calculating force
+545
+Number of particles w/o substractig satellites  1753767
+Number of particles after substractig satellites  1748838
+Calculating force
+547
+Number of particles w/o substractig satellites  1767850
+Number of particles after substractig satellites  1762838
+Calculating force
+550
+Number of particles w/o substractig satellites  1793068
+Number of particles after substractig satellites  1788009
+Calculating force
+553
+Number of particles w/o substractig satellites  1821005
+Number of particles after substractig satellites  1815938
+Calculating force
+555
+Number of particles w/o substractig satellites  1827626
+Number of particles after substractig satellites  1822557
+Calculating force
+557
+Number of particles w/o substractig satellites  1842593
+Number of particles after substractig satellites  1837521
+Calculating force
+560
+Number of particles w/o substractig satellites  1854773
+Number of particles after substractig satellites  1849698
+Calculating force
+563
+Number of particles w/o substractig satellites  1857932
+Number of particles after substractig satellites  1852857
+Calculating force
+565
+Number of particles w/o substractig satellites  1864532
+Number of particles after substractig satellites  1859455
+Calculating force
+567
+Number of particles w/o substractig satellites  1873529
+Number of particles after substractig satellites  1868452
+Calculating force
+570
+Number of particles w/o substractig satellites  1903358
+Number of particles after substractig satellites  1898281
+Calculating force
+/home/bego/GARROTXA/GalaDyn/mesh_utils.py:234: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig, ax = plt.subplots(1, 3, sharex=False, sharey=True,figsize = (15,4))
+573
+Number of particles w/o substractig satellites  1916406
+Number of particles after substractig satellites  1911329
+Calculating force
+575
+Number of particles w/o substractig satellites  1928686
+Number of particles after substractig satellites  1923608
+Calculating force
+577
+Number of particles w/o substractig satellites  1935311
+Number of particles after substractig satellites  1930233
+Calculating force
+580
+Number of particles w/o substractig satellites  1947349
+Number of particles after substractig satellites  1942271
+Calculating force
+583
+Number of particles w/o substractig satellites  1963794
+Number of particles after substractig satellites  1958716
+Calculating force
+585
+Number of particles w/o substractig satellites  1974425
+Number of particles after substractig satellites  1969346
+Calculating force
+587
+Number of particles w/o substractig satellites  1979762
+Number of particles after substractig satellites  1974683
+Calculating force
+590
+Number of particles w/o substractig satellites  1989545
+Number of particles after substractig satellites  1984466
+Calculating force
+592
+Number of particles w/o substractig satellites  1994899
+Number of particles after substractig satellites  1989820
+Calculating force
+594
+Number of particles w/o substractig satellites  2005997
+Number of particles after substractig satellites  2000918
+Calculating force
+596
+Number of particles w/o substractig satellites  2012735
+Number of particles after substractig satellites  2007656
+Calculating force
+598
+Number of particles w/o substractig satellites  2025188
+Number of particles after substractig satellites  2020109
+Calculating force
+600
+Number of particles w/o substractig satellites  2037194
+Number of particles after substractig satellites  2031134
+Calculating force
+602
+Number of particles w/o substractig satellites  2044935
+Number of particles after substractig satellites  2039139
+Calculating force
+604
+Number of particles w/o substractig satellites  2051929
+Number of particles after substractig satellites  2046133
+Calculating force
+608
+Number of particles w/o substractig satellites  2059172
+Number of particles after substractig satellites  2053376
+Calculating force
+610
+Number of particles w/o substractig satellites  2061408
+Number of particles after substractig satellites  2055612
+Calculating force
+612
+Number of particles w/o substractig satellites  2063321
+Number of particles after substractig satellites  2057525
+Calculating force
+614
+Number of particles w/o substractig satellites  2067307
+Number of particles after substractig satellites  2061511
+Calculating force
+616
+Number of particles w/o substractig satellites  2071991
+Number of particles after substractig satellites  2066195
+Calculating force
+618
+Number of particles w/o substractig satellites  2081746
+Number of particles after substractig satellites  2075950
+Calculating force
+620
+Number of particles w/o substractig satellites  2089784
+Number of particles after substractig satellites  2083988
+Calculating force
+622
+Number of particles w/o substractig satellites  2094816
+Number of particles after substractig satellites  2089020
+Calculating force
+624
+Number of particles w/o substractig satellites  2098232
+Number of particles after substractig satellites  2092436
+Calculating force
+626
+Number of particles w/o substractig satellites  2104579
+Number of particles after substractig satellites  2098782
+Calculating force
+629
+Number of particles w/o substractig satellites  2111174
+Number of particles after substractig satellites  2105377
+Calculating force
+630
+Number of particles w/o substractig satellites  2112568
+Number of particles after substractig satellites  2106771
+Calculating force
+632
+Number of particles w/o substractig satellites  2115413
+Number of particles after substractig satellites  2109616
+Calculating force
+634
+Number of particles w/o substractig satellites  2117935
+Number of particles after substractig satellites  2112138
+Calculating force
+636
+Number of particles w/o substractig satellites  2119673
+Number of particles after substractig satellites  2113876
+Calculating force
+639
+Number of particles w/o substractig satellites  2124887
+Number of particles after substractig satellites  2119090
+Calculating force
+640
+Number of particles w/o substractig satellites  2126350
+Number of particles after substractig satellites  2120553
+Calculating force
+642
+Number of particles w/o substractig satellites  2129909
+Number of particles after substractig satellites  2124112
+Calculating force
+644
+Number of particles w/o substractig satellites  2135179
+Number of particles after substractig satellites  2129384
+Calculating force
+646
+Number of particles w/o substractig satellites  2142912
+Number of particles after substractig satellites  2137126
+Calculating force
+648
+Number of particles w/o substractig satellites  2146827
+Number of particles after substractig satellites  2141053
+Calculating force
+650
+Number of particles w/o substractig satellites  2154196
+Number of particles after substractig satellites  2148434
+Calculating force
+652
+Number of particles w/o substractig satellites  2156993
+Number of particles after substractig satellites  2151246
+Calculating force
+654
+Number of particles w/o substractig satellites  2158474
+Number of particles after substractig satellites  2152734
+Calculating force
+656
+Number of particles w/o substractig satellites  2162277
+Number of particles after substractig satellites  2156541
+Calculating force
+658
+Number of particles w/o substractig satellites  2162522
+Number of particles after substractig satellites  2156786
+Calculating force
+660
+Number of particles w/o substractig satellites  2165927
+Number of particles after substractig satellites  2160192
+Calculating force
+662
+Number of particles w/o substractig satellites  2168503
+Number of particles after substractig satellites  2162787
+Calculating force
+664
+Number of particles w/o substractig satellites  2170904
+Number of particles after substractig satellites  2165190
+Calculating force
+666
+Number of particles w/o substractig satellites  2174444
+Number of particles after substractig satellites  2168735
+Calculating force
+668
+Number of particles w/o substractig satellites  2175832
+Number of particles after substractig satellites  2170127
+Calculating force
+670
+Number of particles w/o substractig satellites  2178772
+Number of particles after substractig satellites  2173074
+Calculating force
+672
+Number of particles w/o substractig satellites  2180496
+Number of particles after substractig satellites  2174808
+Calculating force
+674
+Number of particles w/o substractig satellites  2183345
+Number of particles after substractig satellites  2177663
+Calculating force
+676
+Number of particles w/o substractig satellites  2184757
+Number of particles after substractig satellites  2179076
+Calculating force
+679
+Number of particles w/o substractig satellites  2189594
+Number of particles after substractig satellites  2183914
+Calculating force
+681
+Number of particles w/o substractig satellites  2192722
+Number of particles after substractig satellites  2187042
+Calculating force
+682
+Number of particles w/o substractig satellites  2195263
+Number of particles after substractig satellites  2189585
+Calculating force
+684
+Number of particles w/o substractig satellites  2197652
+Number of particles after substractig satellites  2191974
+Calculating force
+687
+Number of particles w/o substractig satellites  2203277
+Number of particles after substractig satellites  2197602
+Calculating force
+689
+Number of particles w/o substractig satellites  2207554
+Number of particles after substractig satellites  2201882
+Calculating force
+690
+Number of particles w/o substractig satellites  2208711
+Number of particles after substractig satellites  2203039
+Calculating force
+692
+Number of particles w/o substractig satellites  2213125
+Number of particles after substractig satellites  2207453
+Calculating force
+694
+Number of particles w/o substractig satellites  2216193
+Number of particles after substractig satellites  2210521
+Calculating force
+698
+Number of particles w/o substractig satellites  2221083
+Number of particles after substractig satellites  2215410
+Calculating force
+704
+Number of particles w/o substractig satellites  2221436
+Number of particles after substractig satellites  2215763
+Calculating force
+706
+Number of particles w/o substractig satellites  2224868
+Number of particles after substractig satellites  2219195
+Calculating force
+708
+Number of particles w/o substractig satellites  2225457
+Number of particles after substractig satellites  2219784
+Calculating force
+711
+Number of particles w/o substractig satellites  2227698
+Number of particles after substractig satellites  2222022
+Calculating force
+712
+Number of particles w/o substractig satellites  2227562
+Number of particles after substractig satellites  2221887
+Calculating force
+714
+Number of particles w/o substractig satellites  2229566
+Number of particles after substractig satellites  2223878
+Calculating force
+716
+Number of particles w/o substractig satellites  2230064
+Number of particles after substractig satellites  2224376
+Calculating force
+718
+Number of particles w/o substractig satellites  2230670
+Number of particles after substractig satellites  2224981
+Calculating force
+720
+Number of particles w/o substractig satellites  2231268
+Number of particles after substractig satellites  2225576
+Calculating force
+722
+Number of particles w/o substractig satellites  2232087
+Number of particles after substractig satellites  2226394
+Calculating force
+724
+Number of particles w/o substractig satellites  2234928
+Number of particles after substractig satellites  2229235
+Calculating force
+726
+Number of particles w/o substractig satellites  2237009
+Number of particles after substractig satellites  2231315
+Calculating force
+728
+Number of particles w/o substractig satellites  2237126
+Number of particles after substractig satellites  2231432
+Calculating force
+731
+Number of particles w/o substractig satellites  2239283
+Number of particles after substractig satellites  2233588
+Calculating force
+732
+Number of particles w/o substractig satellites  2239675
+Number of particles after substractig satellites  2233980
+Calculating force
+734
+Number of particles w/o substractig satellites  2240488
+Number of particles after substractig satellites  2234793
+Calculating force
+736
+Number of particles w/o substractig satellites  2241218
+Number of particles after substractig satellites  2235521
+Calculating force
+739
+Number of particles w/o substractig satellites  2242334
+Number of particles after substractig satellites  2236637
+Calculating force
+740
+Number of particles w/o substractig satellites  2243398
+Number of particles after substractig satellites  2237698
+Calculating force
+742
+Number of particles w/o substractig satellites  2246171
+Number of particles after substractig satellites  2240467
+Calculating force
+744
+Number of particles w/o substractig satellites  2246816
+Number of particles after substractig satellites  2241111
+Calculating force
+746
+Number of particles w/o substractig satellites  2247733
+Number of particles after substractig satellites  2242027
+Calculating force
+748
+Number of particles w/o substractig satellites  2248714
+Number of particles after substractig satellites  2243007
+Calculating force
+751
+Number of particles w/o substractig satellites  2249350
+Number of particles after substractig satellites  2243643
+Calculating force
+752
+Number of particles w/o substractig satellites  2249494
+Number of particles after substractig satellites  2243787
+Calculating force
+755
+Number of particles w/o substractig satellites  2250361
+Number of particles after substractig satellites  2244652
+Calculating force
+756
+Number of particles w/o substractig satellites  2250632
+Number of particles after substractig satellites  2244922
+Calculating force
+758
+Number of particles w/o substractig satellites  2251428
+Number of particles after substractig satellites  2245718
+Calculating force
+761
+Number of particles w/o substractig satellites  2253975
+Number of particles after substractig satellites  2248262
+Calculating force
+763
+Number of particles w/o substractig satellites  2254548
+Number of particles after substractig satellites  2248836
+Calculating force
+764
+Number of particles w/o substractig satellites  2255194
+Number of particles after substractig satellites  2249480
+Calculating force
+766
+Number of particles w/o substractig satellites  2256149
+Number of particles after substractig satellites  2250433
+Calculating force
+768
+Number of particles w/o substractig satellites  2256627
+Number of particles after substractig satellites  2250911
+Calculating force
+770
+Number of particles w/o substractig satellites  2257732
+Number of particles after substractig satellites  2252016
+Calculating force
+772
+Number of particles w/o substractig satellites  2258294
+Number of particles after substractig satellites  2252577
+Calculating force
+774
+Number of particles w/o substractig satellites  2258950
+Number of particles after substractig satellites  2253233
+Calculating force
+776
+Number of particles w/o substractig satellites  2259689
+Number of particles after substractig satellites  2253971
+Calculating force
+778
+Number of particles w/o substractig satellites  2260522
+Number of particles after substractig satellites  2254804
+Calculating force
+780
+Number of particles w/o substractig satellites  2261500
+Number of particles after substractig satellites  2255782
+Calculating force
+782
+Number of particles w/o substractig satellites  2263019
+Number of particles after substractig satellites  2257301
+Calculating force
+784
+Number of particles w/o substractig satellites  2263794
+Number of particles after substractig satellites  2258075
+Calculating force
+786
+Number of particles w/o substractig satellites  2264244
+Number of particles after substractig satellites  2258524
+Calculating force
+788
+Number of particles w/o substractig satellites  2265164
+Number of particles after substractig satellites  2259444
+Calculating force
+790
+Number of particles w/o substractig satellites  2265771
+Number of particles after substractig satellites  2260047
+Calculating force
+792
+Number of particles w/o substractig satellites  2266248
+Number of particles after substractig satellites  2260524
+Calculating force
+794
+Number of particles w/o substractig satellites  2267952
+Number of particles after substractig satellites  2262228
+Calculating force
+797
+Number of particles w/o substractig satellites  2268924
+Number of particles after substractig satellites  2263200
+Calculating force
+798
+Number of particles w/o substractig satellites  2270389
+Number of particles after substractig satellites  2264665
+Calculating force
+802
+Number of particles w/o substractig satellites  2272906
+Number of particles after substractig satellites  2267182
+Calculating force
+805
+Number of particles w/o substractig satellites  2274507
+Number of particles after substractig satellites  2268781
+Calculating force
+806
+Number of particles w/o substractig satellites  2275033
+Number of particles after substractig satellites  2269307
+Calculating force
+808
+Number of particles w/o substractig satellites  2275195
+Number of particles after substractig satellites  2269469
+Calculating force
+810
+Number of particles w/o substractig satellites  2276134
+Number of particles after substractig satellites  2270406
+Calculating force
+812
+Number of particles w/o substractig satellites  2276821
+Number of particles after substractig satellites  2271093
+Calculating force
+814
+Number of particles w/o substractig satellites  2277997
+Number of particles after substractig satellites  2272269
+Calculating force
+816
+Number of particles w/o substractig satellites  2278488
+Number of particles after substractig satellites  2272762
+Calculating force
+818
+Number of particles w/o substractig satellites  2278853
+Number of particles after substractig satellites  2273127
+Calculating force
+820
+Number of particles w/o substractig satellites  2279886
+Number of particles after substractig satellites  2274161
+Calculating force
+822
+Number of particles w/o substractig satellites  2281060
+Number of particles after substractig satellites  2275335
+Calculating force
+824
+Number of particles w/o substractig satellites  2283157
+Number of particles after substractig satellites  2277438
+Calculating force
+826
+Number of particles w/o substractig satellites  2286801
+Number of particles after substractig satellites  2281061
+Calculating force
+828
+Number of particles w/o substractig satellites  2287517
+Number of particles after substractig satellites  2281776
+Calculating force
+830
+Number of particles w/o substractig satellites  2287960
+Number of particles after substractig satellites  2282220
+Calculating force
+832
+Number of particles w/o substractig satellites  2288333
+Number of particles after substractig satellites  2282594
+Calculating force
+834
+Number of particles w/o substractig satellites  2289952
+Number of particles after substractig satellites  2284213
+Calculating force
+836
+Number of particles w/o substractig satellites  2292430
+Number of particles after substractig satellites  2286691
+Calculating force
+839
+Number of particles w/o substractig satellites  2295064
+Number of particles after substractig satellites  2289326
+Calculating force
+840
+Number of particles w/o substractig satellites  2296152
+Number of particles after substractig satellites  2290413
+Calculating force
+842
+Number of particles w/o substractig satellites  2298929
+Number of particles after substractig satellites  2293190
+Calculating force
+844
+Number of particles w/o substractig satellites  2299864
+Number of particles after substractig satellites  2294127
+Calculating force
+846
+Number of particles w/o substractig satellites  2301190
+Number of particles after substractig satellites  2295452
+Calculating force
+848
+Number of particles w/o substractig satellites  2301319
+Number of particles after substractig satellites  2295579
+Calculating force
+850
+Number of particles w/o substractig satellites  2301575
+Number of particles after substractig satellites  2295835
+Calculating force
+853
+Number of particles w/o substractig satellites  2302596
+Number of particles after substractig satellites  2296856
+Calculating force
+855
+Number of particles w/o substractig satellites  2302933
+Number of particles after substractig satellites  2297193
+Calculating force
+856
+Number of particles w/o substractig satellites  2303213
+Number of particles after substractig satellites  2297476
+Calculating force
+858
+Number of particles w/o substractig satellites  2303667
+Number of particles after substractig satellites  2297930
+Calculating force
+860
+Number of particles w/o substractig satellites  2304229
+Number of particles after substractig satellites  2298492
+Calculating force
+862
+Number of particles w/o substractig satellites  2304589
+Number of particles after substractig satellites  2298852
+Calculating force
+864
+Number of particles w/o substractig satellites  2305047
+Number of particles after substractig satellites  2299309
+Calculating force
+867
+Number of particles w/o substractig satellites  2306170
+Number of particles after substractig satellites  2300424
+Calculating force
+870
+Number of particles w/o substractig satellites  2307054
+Number of particles after substractig satellites  2301307
+Calculating force
+872
+Number of particles w/o substractig satellites  2307901
+Number of particles after substractig satellites  2302153
+Calculating force
+875
+Number of particles w/o substractig satellites  2309823
+Number of particles after substractig satellites  2304074
+Calculating force
+877
+Number of particles w/o substractig satellites  2310626
+Number of particles after substractig satellites  2304877
+Calculating force
+879
+Number of particles w/o substractig satellites  2311646
+Number of particles after substractig satellites  2305897
+Calculating force
+881
+Number of particles w/o substractig satellites  2312629
+Number of particles after substractig satellites  2306874
+Calculating force
+883
+Number of particles w/o substractig satellites  2313350
+Number of particles after substractig satellites  2307595
+Calculating force
+884
+Number of particles w/o substractig satellites  2313731
+Number of particles after substractig satellites  2307976
+Calculating force
+888
+Number of particles w/o substractig satellites  2315224
+Number of particles after substractig satellites  2309466
+Calculating force
+890
+Number of particles w/o substractig satellites  2315990
+Number of particles after substractig satellites  2310232
+Calculating force
+892
+Number of particles w/o substractig satellites  2316537
+Number of particles after substractig satellites  2310779
+Calculating force
+894
+Number of particles w/o substractig satellites  2316903
+Number of particles after substractig satellites  2311144
+Calculating force
+898
+Number of particles w/o substractig satellites  2317942
+Number of particles after substractig satellites  2312179
+Calculating force
+900
+Number of particles w/o substractig satellites  2318424
+Number of particles after substractig satellites  2312661
+Calculating force
+902
+Number of particles w/o substractig satellites  2318733
+Number of particles after substractig satellites  2312970
+Calculating force
+904
+Number of particles w/o substractig satellites  2319432
+Number of particles after substractig satellites  2313668
+Calculating force
+907
+Number of particles w/o substractig satellites  2320089
+Number of particles after substractig satellites  2314324
+Calculating force
+908
+Number of particles w/o substractig satellites  2320615
+Number of particles after substractig satellites  2314850
+Calculating force
+910
+Number of particles w/o substractig satellites  2321050
+Number of particles after substractig satellites  2315282
+Calculating force
+912
+Number of particles w/o substractig satellites  2321269
+Number of particles after substractig satellites  2315501
+Calculating force
+915
+Number of particles w/o substractig satellites  2321295
+Number of particles after substractig satellites  2315527
+Calculating force
+916
+Number of particles w/o substractig satellites  2321059
+Number of particles after substractig satellites  2315291
+Calculating force
+918
+Number of particles w/o substractig satellites  2321334
+Number of particles after substractig satellites  2315566
+Calculating force
+921
+Number of particles w/o substractig satellites  2321942
+Number of particles after substractig satellites  2316172
+Calculating force
+922
+Number of particles w/o substractig satellites  2322182
+Number of particles after substractig satellites  2316410
+Calculating force
+924
+Number of particles w/o substractig satellites  2323101
+Number of particles after substractig satellites  2317329
+Calculating force
+927
+Number of particles w/o substractig satellites  2323896
+Number of particles after substractig satellites  2318124
+Calculating force
+929
+Number of particles w/o substractig satellites  2324072
+Number of particles after substractig satellites  2318300
+Calculating force
+930
+Number of particles w/o substractig satellites  2324196
+Number of particles after substractig satellites  2318421
+Calculating force
+932
+Number of particles w/o substractig satellites  2324489
+Number of particles after substractig satellites  2318714
+Calculating force
+934
+Number of particles w/o substractig satellites  2325111
+Number of particles after substractig satellites  2319336
+Calculating force
+937
+Number of particles w/o substractig satellites  2326055
+Number of particles after substractig satellites  2320280
+Calculating force
+939
+Number of particles w/o substractig satellites  2327506
+Number of particles after substractig satellites  2321731
+Calculating force
+941
+Number of particles w/o substractig satellites  2328029
+Number of particles after substractig satellites  2322254
+Calculating force
+942
+Number of particles w/o substractig satellites  2328438
+Number of particles after substractig satellites  2322663
+Calculating force
+944
+Number of particles w/o substractig satellites  2328669
+Number of particles after substractig satellites  2322894
+Calculating force
+946
+Number of particles w/o substractig satellites  2328876
+Number of particles after substractig satellites  2323101
+Calculating force
+948
+Number of particles w/o substractig satellites  2329036
+Number of particles after substractig satellites  2323261
+Calculating force
+950
+Number of particles w/o substractig satellites  2329235
+Number of particles after substractig satellites  2323460
+Calculating force
+952
+Number of particles w/o substractig satellites  2330205
+Number of particles after substractig satellites  2324430
+Calculating force
+954
+Number of particles w/o substractig satellites  2331183
+Number of particles after substractig satellites  2325405
+Calculating force
+956
+Number of particles w/o substractig satellites  2331503
+Number of particles after substractig satellites  2325724
+Calculating force
+958
+Number of particles w/o substractig satellites  2332097
+Number of particles after substractig satellites  2326318
+Calculating force
+961
+Number of particles w/o substractig satellites  2332757
+Number of particles after substractig satellites  2326978
+Calculating force
+963
+Number of particles w/o substractig satellites  2333305
+Number of particles after substractig satellites  2327525
+Calculating force
+965
+Number of particles w/o substractig satellites  2334123
+Number of particles after substractig satellites  2328342
+Calculating force
+966
+Number of particles w/o substractig satellites  2334388
+Number of particles after substractig satellites  2328607
+Calculating force
+968
+Number of particles w/o substractig satellites  2334732
+Number of particles after substractig satellites  2328951
+Calculating force
+970
+Number of particles w/o substractig satellites  2335392
+Number of particles after substractig satellites  2329611
+Calculating force
+972
+Number of particles w/o substractig satellites  2335891
+Number of particles after substractig satellites  2330110
+Calculating force
+974
+Number of particles w/o substractig satellites  2336387
+Number of particles after substractig satellites  2330609
+Calculating force
+976
+Number of particles w/o substractig satellites  2336924
+Number of particles after substractig satellites  2331146
+Calculating force
+979
+Number of particles w/o substractig satellites  2337546
+Number of particles after substractig satellites  2331768
+Calculating force
+980
+Number of particles w/o substractig satellites  2337614
+Number of particles after substractig satellites  2331836
+Calculating force
+982
+Number of particles w/o substractig satellites  2337838
+Number of particles after substractig satellites  2332061
+Calculating force
+984
+Number of particles w/o substractig satellites  2337957
+Number of particles after substractig satellites  2332183
+Calculating force
+989
+Number of particles w/o substractig satellites  2339057
+Number of particles after substractig satellites  2333016
+Calculating force
+990
+Number of particles w/o substractig satellites  2339518
+Number of particles after substractig satellites  2333476
+Calculating force
+993
+Number of particles w/o substractig satellites  2340579
+Number of particles after substractig satellites  2334540
+Calculating force
+994
+Number of particles w/o substractig satellites  2340876
+Number of particles after substractig satellites  2334837
+Calculating force
+996
+Number of particles w/o substractig satellites  2341153
+Number of particles after substractig satellites  2335114
+Calculating force

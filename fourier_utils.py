@@ -77,13 +77,13 @@ class Fourier:
 
     #------------------accelerations-------------------
     
-    def apply_fourier_accelerations(self, comp):
+    def apply_fourier_accelerations(self, comp, nbins):
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         #print(np.shape(datos))
         index = 0
         for t,name in enumerate(snapshots_analysis):
             print(name)
-            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_22.csv",sep = ",")
+            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{nbins}.csv",sep = ",")
             Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
             for i in range(self.nbins):
              #   print([snapshots_analysis[t],lookback[t], Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i]))
@@ -126,13 +126,14 @@ class Fourier:
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
-            etiqueta = "disc_5Gyr_filt"
+            etiqueta = "disc_5Gyr_filt_noZ"
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
            # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-            dfA = snapshot.filter_disk_particles()
-            df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
+           # dfA = snapshot.filter_disk_particles()
+            #df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
+            df = snapshot.stars[(snapshot.stars["Age"]<5000)]
             print("Snapshot loaded!")
 
             #Apply fourier
