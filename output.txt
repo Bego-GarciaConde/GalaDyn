@@ -1,901 +1,901 @@
 520
-Number of particles w/o substractig satellites  1609695
-Number of particles after substractig satellites  1609181
+Number of particles w/o substractig satellites  4848830
+Number of particles after substractig satellites  4845343
 Calculating force
 /home/bego/anaconda3/lib/python3.8/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /home/bego/.config/yt/ytrc is deprecated in favor of /home/bego/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
 Deprecated since v4.0.0. This feature will be removed in v4.1.0
   from yt.config import ytcfg
 523
-Number of particles w/o substractig satellites  1632698
-Number of particles after substractig satellites  1632184
+Number of particles w/o substractig satellites  4849307
+Number of particles after substractig satellites  4845817
 Calculating force
 525
-Number of particles w/o substractig satellites  1650268
-Number of particles after substractig satellites  1649752
+Number of particles w/o substractig satellites  5098325
+Number of particles after substractig satellites  5094807
 Calculating force
 527
-Number of particles w/o substractig satellites  1660482
-Number of particles after substractig satellites  1659965
+Number of particles w/o substractig satellites  5104180
+Number of particles after substractig satellites  5100552
 Calculating force
 530
-Number of particles w/o substractig satellites  1667105
-Number of particles after substractig satellites  1666577
+Number of particles w/o substractig satellites  5111868
+Number of particles after substractig satellites  5107823
 Calculating force
 532
-Number of particles w/o substractig satellites  1675462
-Number of particles after substractig satellites  1674923
+Number of particles w/o substractig satellites  5118457
+Number of particles after substractig satellites  5113815
 Calculating force
 535
-Number of particles w/o substractig satellites  1692846
-Number of particles after substractig satellites  1688084
+Number of particles w/o substractig satellites  5317850
+Number of particles after substractig satellites  5303790
 Calculating force
 537
-Number of particles w/o substractig satellites  1691510
-Number of particles after substractig satellites  1690914
+Number of particles w/o substractig satellites  5147402
+Number of particles after substractig satellites  5141004
 Calculating force
 539
-Number of particles w/o substractig satellites  1707348
-Number of particles after substractig satellites  1706623
+Number of particles w/o substractig satellites  5169961
+Number of particles after substractig satellites  5161917
 Calculating force
 541
-Number of particles w/o substractig satellites  1716404
-Number of particles after substractig satellites  1715329
+Number of particles w/o substractig satellites  5178533
+Number of particles after substractig satellites  5169162
 Calculating force
 543
-Number of particles w/o substractig satellites  1739852
-Number of particles after substractig satellites  1735346
+Number of particles w/o substractig satellites  5199857
+Number of particles after substractig satellites  5186553
 Calculating force
 545
-Number of particles w/o substractig satellites  1753767
-Number of particles after substractig satellites  1748838
+Number of particles w/o substractig satellites  5210786
+Number of particles after substractig satellites  5194907
 Calculating force
 547
-Number of particles w/o substractig satellites  1767850
-Number of particles after substractig satellites  1762838
+Number of particles w/o substractig satellites  5218212
+Number of particles after substractig satellites  5200681
 Calculating force
 550
-Number of particles w/o substractig satellites  1793068
-Number of particles after substractig satellites  1788009
+Number of particles w/o substractig satellites  5228404
+Number of particles after substractig satellites  5209934
 Calculating force
 553
-Number of particles w/o substractig satellites  1821005
-Number of particles after substractig satellites  1815938
+Number of particles w/o substractig satellites  5236847
+Number of particles after substractig satellites  5217871
 Calculating force
 555
-Number of particles w/o substractig satellites  1827626
-Number of particles after substractig satellites  1822557
+Number of particles w/o substractig satellites  5240185
+Number of particles after substractig satellites  5221089
 Calculating force
 557
-Number of particles w/o substractig satellites  1842593
-Number of particles after substractig satellites  1837521
+Number of particles w/o substractig satellites  5244767
+Number of particles after substractig satellites  5225513
 Calculating force
 560
-Number of particles w/o substractig satellites  1854773
-Number of particles after substractig satellites  1849698
+Number of particles w/o substractig satellites  5536990
+Number of particles after substractig satellites  5517466
 Calculating force
 563
-Number of particles w/o substractig satellites  1857932
-Number of particles after substractig satellites  1852857
+Number of particles w/o substractig satellites  5258084
+Number of particles after substractig satellites  5238630
 Calculating force
 565
-Number of particles w/o substractig satellites  1864532
-Number of particles after substractig satellites  1859455
+Number of particles w/o substractig satellites  5517202
+Number of particles after substractig satellites  5497671
 Calculating force
 567
-Number of particles w/o substractig satellites  1873529
-Number of particles after substractig satellites  1868452
+Number of particles w/o substractig satellites  5527473
+Number of particles after substractig satellites  5507940
 Calculating force
 570
-Number of particles w/o substractig satellites  1903358
-Number of particles after substractig satellites  1898281
+Number of particles w/o substractig satellites  5539682
+Number of particles after substractig satellites  5520140
 Calculating force
 /home/bego/GARROTXA/GalaDyn/mesh_utils.py:234: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
   fig, ax = plt.subplots(1, 3, sharex=False, sharey=True,figsize = (15,4))
 573
-Number of particles w/o substractig satellites  1916406
-Number of particles after substractig satellites  1911329
+Number of particles w/o substractig satellites  5542180
+Number of particles after substractig satellites  5522634
 Calculating force
 575
-Number of particles w/o substractig satellites  1928686
-Number of particles after substractig satellites  1923608
+Number of particles w/o substractig satellites  5543583
+Number of particles after substractig satellites  5524035
 Calculating force
 577
-Number of particles w/o substractig satellites  1935311
-Number of particles after substractig satellites  1930233
+Number of particles w/o substractig satellites  5544443
+Number of particles after substractig satellites  5524895
 Calculating force
 580
-Number of particles w/o substractig satellites  1947349
-Number of particles after substractig satellites  1942271
+Number of particles w/o substractig satellites  5547060
+Number of particles after substractig satellites  5527505
 Calculating force
 583
-Number of particles w/o substractig satellites  1963794
-Number of particles after substractig satellites  1958716
+Number of particles w/o substractig satellites  5549614
+Number of particles after substractig satellites  5530058
 Calculating force
 585
-Number of particles w/o substractig satellites  1974425
-Number of particles after substractig satellites  1969346
+Number of particles w/o substractig satellites  5553541
+Number of particles after substractig satellites  5533983
 Calculating force
 587
-Number of particles w/o substractig satellites  1979762
-Number of particles after substractig satellites  1974683
+Number of particles w/o substractig satellites  5559353
+Number of particles after substractig satellites  5539795
 Calculating force
 590
-Number of particles w/o substractig satellites  1989545
-Number of particles after substractig satellites  1984466
+Number of particles w/o substractig satellites  6033118
+Number of particles after substractig satellites  6013538
 Calculating force
 592
-Number of particles w/o substractig satellites  1994899
-Number of particles after substractig satellites  1989820
+Number of particles w/o substractig satellites  5565100
+Number of particles after substractig satellites  5545540
 Calculating force
 594
-Number of particles w/o substractig satellites  2005997
-Number of particles after substractig satellites  2000918
+Number of particles w/o substractig satellites  5542221
+Number of particles after substractig satellites  5522658
 Calculating force
 596
-Number of particles w/o substractig satellites  2012735
-Number of particles after substractig satellites  2007656
+Number of particles w/o substractig satellites  5530669
+Number of particles after substractig satellites  5511103
 Calculating force
 598
-Number of particles w/o substractig satellites  2025188
-Number of particles after substractig satellites  2020109
+Number of particles w/o substractig satellites  5526936
+Number of particles after substractig satellites  5507371
 Calculating force
 600
-Number of particles w/o substractig satellites  2037194
-Number of particles after substractig satellites  2031134
+Number of particles w/o substractig satellites  5524891
+Number of particles after substractig satellites  5507891
 Calculating force
 602
-Number of particles w/o substractig satellites  2044935
-Number of particles after substractig satellites  2039139
+Number of particles w/o substractig satellites  5530749
+Number of particles after substractig satellites  5513748
 Calculating force
 604
-Number of particles w/o substractig satellites  2051929
-Number of particles after substractig satellites  2046133
+Number of particles w/o substractig satellites  5546962
+Number of particles after substractig satellites  5529960
 Calculating force
 608
-Number of particles w/o substractig satellites  2059172
-Number of particles after substractig satellites  2053376
+Number of particles w/o substractig satellites  5569032
+Number of particles after substractig satellites  5552029
 Calculating force
 610
-Number of particles w/o substractig satellites  2061408
-Number of particles after substractig satellites  2055612
+Number of particles w/o substractig satellites  5581114
+Number of particles after substractig satellites  5564112
 Calculating force
 612
-Number of particles w/o substractig satellites  2063321
-Number of particles after substractig satellites  2057525
+Number of particles w/o substractig satellites  5547404
+Number of particles after substractig satellites  5530404
 Calculating force
 614
-Number of particles w/o substractig satellites  2067307
-Number of particles after substractig satellites  2061511
+Number of particles w/o substractig satellites  5559293
+Number of particles after substractig satellites  5542293
 Calculating force
 616
-Number of particles w/o substractig satellites  2071991
-Number of particles after substractig satellites  2066195
+Number of particles w/o substractig satellites  5569687
+Number of particles after substractig satellites  5552688
 Calculating force
 618
-Number of particles w/o substractig satellites  2081746
-Number of particles after substractig satellites  2075950
+Number of particles w/o substractig satellites  5580099
+Number of particles after substractig satellites  5563103
 Calculating force
 620
-Number of particles w/o substractig satellites  2089784
-Number of particles after substractig satellites  2083988
+Number of particles w/o substractig satellites  5592543
+Number of particles after substractig satellites  5575550
 Calculating force
 622
-Number of particles w/o substractig satellites  2094816
-Number of particles after substractig satellites  2089020
+Number of particles w/o substractig satellites  5607330
+Number of particles after substractig satellites  5590338
 Calculating force
 624
-Number of particles w/o substractig satellites  2098232
-Number of particles after substractig satellites  2092436
+Number of particles w/o substractig satellites  5614213
+Number of particles after substractig satellites  5597222
 Calculating force
 626
-Number of particles w/o substractig satellites  2104579
-Number of particles after substractig satellites  2098782
+Number of particles w/o substractig satellites  5852574
+Number of particles after substractig satellites  5835564
 Calculating force
 629
-Number of particles w/o substractig satellites  2111174
-Number of particles after substractig satellites  2105377
+Number of particles w/o substractig satellites  5865924
+Number of particles after substractig satellites  5848914
 Calculating force
 630
-Number of particles w/o substractig satellites  2112568
-Number of particles after substractig satellites  2106771
+Number of particles w/o substractig satellites  5872052
+Number of particles after substractig satellites  5855043
 Calculating force
 632
-Number of particles w/o substractig satellites  2115413
-Number of particles after substractig satellites  2109616
+Number of particles w/o substractig satellites  5876837
+Number of particles after substractig satellites  5859828
 Calculating force
 634
-Number of particles w/o substractig satellites  2117935
-Number of particles after substractig satellites  2112138
+Number of particles w/o substractig satellites  5892619
+Number of particles after substractig satellites  5875612
 Calculating force
 636
-Number of particles w/o substractig satellites  2119673
-Number of particles after substractig satellites  2113876
+Number of particles w/o substractig satellites  5900010
+Number of particles after substractig satellites  5883002
 Calculating force
 639
-Number of particles w/o substractig satellites  2124887
-Number of particles after substractig satellites  2119090
+Number of particles w/o substractig satellites  5914676
+Number of particles after substractig satellites  5897670
 Calculating force
 640
-Number of particles w/o substractig satellites  2126350
-Number of particles after substractig satellites  2120553
+Number of particles w/o substractig satellites  5918719
+Number of particles after substractig satellites  5901715
 Calculating force
 642
-Number of particles w/o substractig satellites  2129909
-Number of particles after substractig satellites  2124112
+Number of particles w/o substractig satellites  5929543
+Number of particles after substractig satellites  5912565
 Calculating force
 644
-Number of particles w/o substractig satellites  2135179
-Number of particles after substractig satellites  2129384
+Number of particles w/o substractig satellites  5936865
+Number of particles after substractig satellites  5919942
 Calculating force
 646
-Number of particles w/o substractig satellites  2142912
-Number of particles after substractig satellites  2137126
+Number of particles w/o substractig satellites  5948346
+Number of particles after substractig satellites  5931541
 Calculating force
 648
-Number of particles w/o substractig satellites  2146827
-Number of particles after substractig satellites  2141053
+Number of particles w/o substractig satellites  5957268
+Number of particles after substractig satellites  5940601
 Calculating force
 650
-Number of particles w/o substractig satellites  2154196
-Number of particles after substractig satellites  2148434
+Number of particles w/o substractig satellites  5965381
+Number of particles after substractig satellites  5948865
 Calculating force
 652
-Number of particles w/o substractig satellites  2156993
-Number of particles after substractig satellites  2151246
+Number of particles w/o substractig satellites  5973736
+Number of particles after substractig satellites  5957351
 Calculating force
 654
-Number of particles w/o substractig satellites  2158474
-Number of particles after substractig satellites  2152734
+Number of particles w/o substractig satellites  5982772
+Number of particles after substractig satellites  5966525
 Calculating force
 656
-Number of particles w/o substractig satellites  2162277
-Number of particles after substractig satellites  2156541
+Number of particles w/o substractig satellites  5991530
+Number of particles after substractig satellites  5975413
 Calculating force
 658
-Number of particles w/o substractig satellites  2162522
-Number of particles after substractig satellites  2156786
+Number of particles w/o substractig satellites  5995290
+Number of particles after substractig satellites  5979236
 Calculating force
 660
-Number of particles w/o substractig satellites  2165927
-Number of particles after substractig satellites  2160192
+Number of particles w/o substractig satellites  6003253
+Number of particles after substractig satellites  5987332
 Calculating force
 662
-Number of particles w/o substractig satellites  2168503
-Number of particles after substractig satellites  2162787
+Number of particles w/o substractig satellites  6011817
+Number of particles after substractig satellites  5996029
 Calculating force
 664
-Number of particles w/o substractig satellites  2170904
-Number of particles after substractig satellites  2165190
+Number of particles w/o substractig satellites  6014473
+Number of particles after substractig satellites  5998750
 Calculating force
 666
-Number of particles w/o substractig satellites  2174444
-Number of particles after substractig satellites  2168735
+Number of particles w/o substractig satellites  6018635
+Number of particles after substractig satellites  6003036
 Calculating force
 668
-Number of particles w/o substractig satellites  2175832
-Number of particles after substractig satellites  2170127
+Number of particles w/o substractig satellites  6020616
+Number of particles after substractig satellites  6005069
 Calculating force
 670
-Number of particles w/o substractig satellites  2178772
-Number of particles after substractig satellites  2173074
+Number of particles w/o substractig satellites  6021236
+Number of particles after substractig satellites  6005798
 Calculating force
 672
-Number of particles w/o substractig satellites  2180496
-Number of particles after substractig satellites  2174808
+Number of particles w/o substractig satellites  6023371
+Number of particles after substractig satellites  6007994
 Calculating force
 674
-Number of particles w/o substractig satellites  2183345
-Number of particles after substractig satellites  2177663
+Number of particles w/o substractig satellites  6029363
+Number of particles after substractig satellites  6014090
 Calculating force
 676
-Number of particles w/o substractig satellites  2184757
-Number of particles after substractig satellites  2179076
+Number of particles w/o substractig satellites  6031396
+Number of particles after substractig satellites  6016166
 Calculating force
 679
-Number of particles w/o substractig satellites  2189594
-Number of particles after substractig satellites  2183914
+Number of particles w/o substractig satellites  6040098
+Number of particles after substractig satellites  6024954
 Calculating force
 681
-Number of particles w/o substractig satellites  2192722
-Number of particles after substractig satellites  2187042
+Number of particles w/o substractig satellites  6045631
+Number of particles after substractig satellites  6030528
 Calculating force
 682
-Number of particles w/o substractig satellites  2195263
-Number of particles after substractig satellites  2189585
+Number of particles w/o substractig satellites  6052635
+Number of particles after substractig satellites  6037571
 Calculating force
 684
-Number of particles w/o substractig satellites  2197652
-Number of particles after substractig satellites  2191974
+Number of particles w/o substractig satellites  6057885
+Number of particles after substractig satellites  6042849
 Calculating force
 687
-Number of particles w/o substractig satellites  2203277
-Number of particles after substractig satellites  2197602
+Number of particles w/o substractig satellites  6069306
+Number of particles after substractig satellites  6054319
 Calculating force
 689
-Number of particles w/o substractig satellites  2207554
-Number of particles after substractig satellites  2201882
+Number of particles w/o substractig satellites  6077418
+Number of particles after substractig satellites  6062456
 Calculating force
 690
-Number of particles w/o substractig satellites  2208711
-Number of particles after substractig satellites  2203039
+Number of particles w/o substractig satellites  6081658
+Number of particles after substractig satellites  6066706
 Calculating force
 692
-Number of particles w/o substractig satellites  2213125
-Number of particles after substractig satellites  2207453
+Number of particles w/o substractig satellites  6092974
+Number of particles after substractig satellites  6078040
 Calculating force
 694
-Number of particles w/o substractig satellites  2216193
-Number of particles after substractig satellites  2210521
+Number of particles w/o substractig satellites  6098159
+Number of particles after substractig satellites  6083230
 Calculating force
 698
-Number of particles w/o substractig satellites  2221083
-Number of particles after substractig satellites  2215410
+Number of particles w/o substractig satellites  6107845
+Number of particles after substractig satellites  6092929
 Calculating force
 704
-Number of particles w/o substractig satellites  2221436
-Number of particles after substractig satellites  2215763
+Number of particles w/o substractig satellites  5739649
+Number of particles after substractig satellites  5725346
 Calculating force
 706
-Number of particles w/o substractig satellites  2224868
-Number of particles after substractig satellites  2219195
+Number of particles w/o substractig satellites  5740415
+Number of particles after substractig satellites  5726095
 Calculating force
 708
-Number of particles w/o substractig satellites  2225457
-Number of particles after substractig satellites  2219784
+Number of particles w/o substractig satellites  5747694
+Number of particles after substractig satellites  5733366
 Calculating force
 711
-Number of particles w/o substractig satellites  2227698
-Number of particles after substractig satellites  2222022
+Number of particles w/o substractig satellites  5760633
+Number of particles after substractig satellites  5746270
 Calculating force
 712
-Number of particles w/o substractig satellites  2227562
-Number of particles after substractig satellites  2221887
+Number of particles w/o substractig satellites  5739713
+Number of particles after substractig satellites  5725370
 Calculating force
 714
-Number of particles w/o substractig satellites  2229566
-Number of particles after substractig satellites  2223878
+Number of particles w/o substractig satellites  5982008
+Number of particles after substractig satellites  5967342
 Calculating force
 716
-Number of particles w/o substractig satellites  2230064
-Number of particles after substractig satellites  2224376
+Number of particles w/o substractig satellites  5991806
+Number of particles after substractig satellites  5977127
 Calculating force
 718
-Number of particles w/o substractig satellites  2230670
-Number of particles after substractig satellites  2224981
+Number of particles w/o substractig satellites  6010666
+Number of particles after substractig satellites  5995968
 Calculating force
 720
-Number of particles w/o substractig satellites  2231268
-Number of particles after substractig satellites  2225576
+Number of particles w/o substractig satellites  6022164
+Number of particles after substractig satellites  6007452
 Calculating force
 722
-Number of particles w/o substractig satellites  2232087
-Number of particles after substractig satellites  2226394
+Number of particles w/o substractig satellites  6032212
+Number of particles after substractig satellites  6017488
 Calculating force
 724
-Number of particles w/o substractig satellites  2234928
-Number of particles after substractig satellites  2229235
+Number of particles w/o substractig satellites  6046990
+Number of particles after substractig satellites  6032239
 Calculating force
 726
-Number of particles w/o substractig satellites  2237009
-Number of particles after substractig satellites  2231315
+Number of particles w/o substractig satellites  6053856
+Number of particles after substractig satellites  6039084
 Calculating force
 728
-Number of particles w/o substractig satellites  2237126
-Number of particles after substractig satellites  2231432
+Number of particles w/o substractig satellites  6061711
+Number of particles after substractig satellites  6046915
 Calculating force
 731
-Number of particles w/o substractig satellites  2239283
-Number of particles after substractig satellites  2233588
+Number of particles w/o substractig satellites  6069626
+Number of particles after substractig satellites  6054810
 Calculating force
 732
-Number of particles w/o substractig satellites  2239675
-Number of particles after substractig satellites  2233980
+Number of particles w/o substractig satellites  6072371
+Number of particles after substractig satellites  6057543
 Calculating force
 734
-Number of particles w/o substractig satellites  2240488
-Number of particles after substractig satellites  2234793
+Number of particles w/o substractig satellites  6077546
+Number of particles after substractig satellites  6062701
 Calculating force
 736
-Number of particles w/o substractig satellites  2241218
-Number of particles after substractig satellites  2235521
+Number of particles w/o substractig satellites  6084246
+Number of particles after substractig satellites  6069376
 Calculating force
 739
-Number of particles w/o substractig satellites  2242334
-Number of particles after substractig satellites  2236637
+Number of particles w/o substractig satellites  6090789
+Number of particles after substractig satellites  6075893
 Calculating force
 740
-Number of particles w/o substractig satellites  2243398
-Number of particles after substractig satellites  2237698
+Number of particles w/o substractig satellites  6093149
+Number of particles after substractig satellites  6078240
 Calculating force
 742
-Number of particles w/o substractig satellites  2246171
-Number of particles after substractig satellites  2240467
+Number of particles w/o substractig satellites  6099344
+Number of particles after substractig satellites  6084409
 Calculating force
 744
-Number of particles w/o substractig satellites  2246816
-Number of particles after substractig satellites  2241111
+Number of particles w/o substractig satellites  6103197
+Number of particles after substractig satellites  6088248
 Calculating force
 746
-Number of particles w/o substractig satellites  2247733
-Number of particles after substractig satellites  2242027
+Number of particles w/o substractig satellites  6111045
+Number of particles after substractig satellites  6096073
 Calculating force
 748
-Number of particles w/o substractig satellites  2248714
-Number of particles after substractig satellites  2243007
+Number of particles w/o substractig satellites  6115121
+Number of particles after substractig satellites  6100129
 Calculating force
 751
-Number of particles w/o substractig satellites  2249350
-Number of particles after substractig satellites  2243643
+Number of particles w/o substractig satellites  6123656
+Number of particles after substractig satellites  6108635
 Calculating force
 752
-Number of particles w/o substractig satellites  2249494
-Number of particles after substractig satellites  2243787
+Number of particles w/o substractig satellites  6128687
+Number of particles after substractig satellites  6113652
 Calculating force
 755
-Number of particles w/o substractig satellites  2250361
-Number of particles after substractig satellites  2244652
+Number of particles w/o substractig satellites  6137173
+Number of particles after substractig satellites  6122100
 Calculating force
 756
-Number of particles w/o substractig satellites  2250632
-Number of particles after substractig satellites  2244922
+Number of particles w/o substractig satellites  6142633
+Number of particles after substractig satellites  6127545
 Calculating force
 758
-Number of particles w/o substractig satellites  2251428
-Number of particles after substractig satellites  2245718
+Number of particles w/o substractig satellites  6148632
+Number of particles after substractig satellites  6133528
 Calculating force
 761
-Number of particles w/o substractig satellites  2253975
-Number of particles after substractig satellites  2248262
+Number of particles w/o substractig satellites  6159745
+Number of particles after substractig satellites  6144600
 Calculating force
 763
-Number of particles w/o substractig satellites  2254548
-Number of particles after substractig satellites  2248836
+Number of particles w/o substractig satellites  6164181
+Number of particles after substractig satellites  6149019
 Calculating force
 764
-Number of particles w/o substractig satellites  2255194
-Number of particles after substractig satellites  2249480
+Number of particles w/o substractig satellites  6168867
+Number of particles after substractig satellites  6153694
 Calculating force
 766
-Number of particles w/o substractig satellites  2256149
-Number of particles after substractig satellites  2250433
+Number of particles w/o substractig satellites  6173925
+Number of particles after substractig satellites  6158737
 Calculating force
 768
-Number of particles w/o substractig satellites  2256627
-Number of particles after substractig satellites  2250911
+Number of particles w/o substractig satellites  5985610
+Number of particles after substractig satellites  5970565
 Calculating force
 770
-Number of particles w/o substractig satellites  2257732
-Number of particles after substractig satellites  2252016
+Number of particles w/o substractig satellites  5984763
+Number of particles after substractig satellites  5969695
 Calculating force
 772
-Number of particles w/o substractig satellites  2258294
-Number of particles after substractig satellites  2252577
+Number of particles w/o substractig satellites  5990649
+Number of particles after substractig satellites  5975553
 Calculating force
 774
-Number of particles w/o substractig satellites  2258950
-Number of particles after substractig satellites  2253233
+Number of particles w/o substractig satellites  5996506
+Number of particles after substractig satellites  5981390
 Calculating force
 776
-Number of particles w/o substractig satellites  2259689
-Number of particles after substractig satellites  2253971
+Number of particles w/o substractig satellites  6003204
+Number of particles after substractig satellites  5988063
 Calculating force
 778
-Number of particles w/o substractig satellites  2260522
-Number of particles after substractig satellites  2254804
+Number of particles w/o substractig satellites  6010583
+Number of particles after substractig satellites  5995422
 Calculating force
 780
-Number of particles w/o substractig satellites  2261500
-Number of particles after substractig satellites  2255782
+Number of particles w/o substractig satellites  6016154
+Number of particles after substractig satellites  6000970
 Calculating force
 782
-Number of particles w/o substractig satellites  2263019
-Number of particles after substractig satellites  2257301
+Number of particles w/o substractig satellites  6020356
+Number of particles after substractig satellites  6005147
 Calculating force
 784
-Number of particles w/o substractig satellites  2263794
-Number of particles after substractig satellites  2258075
+Number of particles w/o substractig satellites  6024873
+Number of particles after substractig satellites  6009641
 Calculating force
 786
-Number of particles w/o substractig satellites  2264244
-Number of particles after substractig satellites  2258524
+Number of particles w/o substractig satellites  6026040
+Number of particles after substractig satellites  6010798
 Calculating force
 788
-Number of particles w/o substractig satellites  2265164
-Number of particles after substractig satellites  2259444
+Number of particles w/o substractig satellites  6030881
+Number of particles after substractig satellites  6015621
 Calculating force
 790
-Number of particles w/o substractig satellites  2265771
-Number of particles after substractig satellites  2260047
+Number of particles w/o substractig satellites  6037618
+Number of particles after substractig satellites  6022330
 Calculating force
 792
-Number of particles w/o substractig satellites  2266248
-Number of particles after substractig satellites  2260524
+Number of particles w/o substractig satellites  6041885
+Number of particles after substractig satellites  6026580
 Calculating force
 794
-Number of particles w/o substractig satellites  2267952
-Number of particles after substractig satellites  2262228
+Number of particles w/o substractig satellites  6053732
+Number of particles after substractig satellites  6038405
 Calculating force
 797
-Number of particles w/o substractig satellites  2268924
-Number of particles after substractig satellites  2263200
+Number of particles w/o substractig satellites  6069679
+Number of particles after substractig satellites  6054320
 Calculating force
 798
-Number of particles w/o substractig satellites  2270389
-Number of particles after substractig satellites  2264665
+Number of particles w/o substractig satellites  6075816
+Number of particles after substractig satellites  6060440
 Calculating force
 802
-Number of particles w/o substractig satellites  2272906
-Number of particles after substractig satellites  2267182
+Number of particles w/o substractig satellites  6087095
+Number of particles after substractig satellites  6071668
 Calculating force
 805
-Number of particles w/o substractig satellites  2274507
-Number of particles after substractig satellites  2268781
+Number of particles w/o substractig satellites  6095191
+Number of particles after substractig satellites  6079735
 Calculating force
 806
-Number of particles w/o substractig satellites  2275033
-Number of particles after substractig satellites  2269307
+Number of particles w/o substractig satellites  6100529
+Number of particles after substractig satellites  6085053
 Calculating force
 808
-Number of particles w/o substractig satellites  2275195
-Number of particles after substractig satellites  2269469
+Number of particles w/o substractig satellites  6104023
+Number of particles after substractig satellites  6088533
 Calculating force
 810
-Number of particles w/o substractig satellites  2276134
-Number of particles after substractig satellites  2270406
+Number of particles w/o substractig satellites  6109094
+Number of particles after substractig satellites  6093570
 Calculating force
 812
-Number of particles w/o substractig satellites  2276821
-Number of particles after substractig satellites  2271093
+Number of particles w/o substractig satellites  6112065
+Number of particles after substractig satellites  6096525
 Calculating force
 814
-Number of particles w/o substractig satellites  2277997
-Number of particles after substractig satellites  2272269
+Number of particles w/o substractig satellites  6114841
+Number of particles after substractig satellites  6099280
 Calculating force
 816
-Number of particles w/o substractig satellites  2278488
-Number of particles after substractig satellites  2272762
+Number of particles w/o substractig satellites  6120345
+Number of particles after substractig satellites  6104765
 Calculating force
 818
-Number of particles w/o substractig satellites  2278853
-Number of particles after substractig satellites  2273127
+Number of particles w/o substractig satellites  6124198
+Number of particles after substractig satellites  6108598
 Calculating force
 820
-Number of particles w/o substractig satellites  2279886
-Number of particles after substractig satellites  2274161
+Number of particles w/o substractig satellites  6131224
+Number of particles after substractig satellites  6115604
 Calculating force
 822
-Number of particles w/o substractig satellites  2281060
-Number of particles after substractig satellites  2275335
+Number of particles w/o substractig satellites  6138022
+Number of particles after substractig satellites  6122382
 Calculating force
 824
-Number of particles w/o substractig satellites  2283157
-Number of particles after substractig satellites  2277438
+Number of particles w/o substractig satellites  6146271
+Number of particles after substractig satellites  6130616
 Calculating force
 826
-Number of particles w/o substractig satellites  2286801
-Number of particles after substractig satellites  2281061
+Number of particles w/o substractig satellites  6373972
+Number of particles after substractig satellites  6358171
 Calculating force
 828
-Number of particles w/o substractig satellites  2287517
-Number of particles after substractig satellites  2281776
+Number of particles w/o substractig satellites  6378191
+Number of particles after substractig satellites  6362370
 Calculating force
 830
-Number of particles w/o substractig satellites  2287960
-Number of particles after substractig satellites  2282220
+Number of particles w/o substractig satellites  6380688
+Number of particles after substractig satellites  6364863
 Calculating force
 832
-Number of particles w/o substractig satellites  2288333
-Number of particles after substractig satellites  2282594
+Number of particles w/o substractig satellites  6386729
+Number of particles after substractig satellites  6370884
 Calculating force
 834
-Number of particles w/o substractig satellites  2289952
-Number of particles after substractig satellites  2284213
+Number of particles w/o substractig satellites  6392439
+Number of particles after substractig satellites  6376567
 Calculating force
 836
-Number of particles w/o substractig satellites  2292430
-Number of particles after substractig satellites  2286691
+Number of particles w/o substractig satellites  6398838
+Number of particles after substractig satellites  6382943
 Calculating force
 839
-Number of particles w/o substractig satellites  2295064
-Number of particles after substractig satellites  2289326
+Number of particles w/o substractig satellites  6407404
+Number of particles after substractig satellites  6391486
 Calculating force
 840
-Number of particles w/o substractig satellites  2296152
-Number of particles after substractig satellites  2290413
+Number of particles w/o substractig satellites  6411398
+Number of particles after substractig satellites  6395474
 Calculating force
 842
-Number of particles w/o substractig satellites  2298929
-Number of particles after substractig satellites  2293190
+Number of particles w/o substractig satellites  6418758
+Number of particles after substractig satellites  6402810
 Calculating force
 844
-Number of particles w/o substractig satellites  2299864
-Number of particles after substractig satellites  2294127
+Number of particles w/o substractig satellites  6422201
+Number of particles after substractig satellites  6406247
 Calculating force
 846
-Number of particles w/o substractig satellites  2301190
-Number of particles after substractig satellites  2295452
+Number of particles w/o substractig satellites  6429949
+Number of particles after substractig satellites  6413979
 Calculating force
 848
-Number of particles w/o substractig satellites  2301319
-Number of particles after substractig satellites  2295579
+Number of particles w/o substractig satellites  6433493
+Number of particles after substractig satellites  6417517
 Calculating force
 850
-Number of particles w/o substractig satellites  2301575
-Number of particles after substractig satellites  2295835
+Number of particles w/o substractig satellites  6441973
+Number of particles after substractig satellites  6425983
 Calculating force
 853
-Number of particles w/o substractig satellites  2302596
-Number of particles after substractig satellites  2296856
+Number of particles w/o substractig satellites  6449065
+Number of particles after substractig satellites  6433062
 Calculating force
 855
-Number of particles w/o substractig satellites  2302933
-Number of particles after substractig satellites  2297193
+Number of particles w/o substractig satellites  6453186
+Number of particles after substractig satellites  6437172
 Calculating force
 856
-Number of particles w/o substractig satellites  2303213
-Number of particles after substractig satellites  2297476
+Number of particles w/o substractig satellites  6457182
+Number of particles after substractig satellites  6441157
 Calculating force
 858
-Number of particles w/o substractig satellites  2303667
-Number of particles after substractig satellites  2297930
+Number of particles w/o substractig satellites  6462127
+Number of particles after substractig satellites  6446096
 Calculating force
 860
-Number of particles w/o substractig satellites  2304229
-Number of particles after substractig satellites  2298492
+Number of particles w/o substractig satellites  6471555
+Number of particles after substractig satellites  6455498
 Calculating force
 862
-Number of particles w/o substractig satellites  2304589
-Number of particles after substractig satellites  2298852
+Number of particles w/o substractig satellites  6477231
+Number of particles after substractig satellites  6461163
 Calculating force
 864
-Number of particles w/o substractig satellites  2305047
-Number of particles after substractig satellites  2299309
+Number of particles w/o substractig satellites  6481883
+Number of particles after substractig satellites  6465809
 Calculating force
 867
-Number of particles w/o substractig satellites  2306170
-Number of particles after substractig satellites  2300424
+Number of particles w/o substractig satellites  6490514
+Number of particles after substractig satellites  6474423
 Calculating force
 870
-Number of particles w/o substractig satellites  2307054
-Number of particles after substractig satellites  2301307
+Number of particles w/o substractig satellites  6499333
+Number of particles after substractig satellites  6483219
 Calculating force
 872
-Number of particles w/o substractig satellites  2307901
-Number of particles after substractig satellites  2302153
+Number of particles w/o substractig satellites  6503793
+Number of particles after substractig satellites  6487671
 Calculating force
 875
-Number of particles w/o substractig satellites  2309823
-Number of particles after substractig satellites  2304074
+Number of particles w/o substractig satellites  6512026
+Number of particles after substractig satellites  6495881
 Calculating force
 877
-Number of particles w/o substractig satellites  2310626
-Number of particles after substractig satellites  2304877
+Number of particles w/o substractig satellites  6516070
+Number of particles after substractig satellites  6499918
 Calculating force
 879
-Number of particles w/o substractig satellites  2311646
-Number of particles after substractig satellites  2305897
+Number of particles w/o substractig satellites  6519780
+Number of particles after substractig satellites  6503619
 Calculating force
 881
-Number of particles w/o substractig satellites  2312629
-Number of particles after substractig satellites  2306874
+Number of particles w/o substractig satellites  6523379
+Number of particles after substractig satellites  6507209
 Calculating force
 883
-Number of particles w/o substractig satellites  2313350
-Number of particles after substractig satellites  2307595
+Number of particles w/o substractig satellites  6526463
+Number of particles after substractig satellites  6510277
 Calculating force
 884
-Number of particles w/o substractig satellites  2313731
-Number of particles after substractig satellites  2307976
+Number of particles w/o substractig satellites  6528908
+Number of particles after substractig satellites  6512711
 Calculating force
 888
-Number of particles w/o substractig satellites  2315224
-Number of particles after substractig satellites  2309466
+Number of particles w/o substractig satellites  6534973
+Number of particles after substractig satellites  6518759
 Calculating force
 890
-Number of particles w/o substractig satellites  2315990
-Number of particles after substractig satellites  2310232
+Number of particles w/o substractig satellites  6538313
+Number of particles after substractig satellites  6522089
 Calculating force
 892
-Number of particles w/o substractig satellites  2316537
-Number of particles after substractig satellites  2310779
+Number of particles w/o substractig satellites  6541392
+Number of particles after substractig satellites  6525161
 Calculating force
 894
-Number of particles w/o substractig satellites  2316903
-Number of particles after substractig satellites  2311144
+Number of particles w/o substractig satellites  6545401
+Number of particles after substractig satellites  6529159
 Calculating force
 898
-Number of particles w/o substractig satellites  2317942
-Number of particles after substractig satellites  2312179
+Number of particles w/o substractig satellites  6553701
+Number of particles after substractig satellites  6537441
 Calculating force
 900
-Number of particles w/o substractig satellites  2318424
-Number of particles after substractig satellites  2312661
+Number of particles w/o substractig satellites  6563547
+Number of particles after substractig satellites  6547274
 Calculating force
 902
-Number of particles w/o substractig satellites  2318733
-Number of particles after substractig satellites  2312970
+Number of particles w/o substractig satellites  6571079
+Number of particles after substractig satellites  6554799
 Calculating force
 904
-Number of particles w/o substractig satellites  2319432
-Number of particles after substractig satellites  2313668
+Number of particles w/o substractig satellites  6579070
+Number of particles after substractig satellites  6562781
 Calculating force
 907
-Number of particles w/o substractig satellites  2320089
-Number of particles after substractig satellites  2314324
+Number of particles w/o substractig satellites  6585333
+Number of particles after substractig satellites  6569031
 Calculating force
 908
-Number of particles w/o substractig satellites  2320615
-Number of particles after substractig satellites  2314850
+Number of particles w/o substractig satellites  6587932
+Number of particles after substractig satellites  6571623
 Calculating force
 910
-Number of particles w/o substractig satellites  2321050
-Number of particles after substractig satellites  2315282
+Number of particles w/o substractig satellites  6594272
+Number of particles after substractig satellites  6577950
 Calculating force
 912
-Number of particles w/o substractig satellites  2321269
-Number of particles after substractig satellites  2315501
+Number of particles w/o substractig satellites  6600002
+Number of particles after substractig satellites  6583673
 Calculating force
 915
-Number of particles w/o substractig satellites  2321295
-Number of particles after substractig satellites  2315527
+Number of particles w/o substractig satellites  6609229
+Number of particles after substractig satellites  6592890
 Calculating force
 916
-Number of particles w/o substractig satellites  2321059
-Number of particles after substractig satellites  2315291
+Number of particles w/o substractig satellites  6613645
+Number of particles after substractig satellites  6597297
 Calculating force
 918
-Number of particles w/o substractig satellites  2321334
-Number of particles after substractig satellites  2315566
+Number of particles w/o substractig satellites  6617789
+Number of particles after substractig satellites  6601436
 Calculating force
 921
-Number of particles w/o substractig satellites  2321942
-Number of particles after substractig satellites  2316172
+Number of particles w/o substractig satellites  6631149
+Number of particles after substractig satellites  6614782
 Calculating force
 922
-Number of particles w/o substractig satellites  2322182
-Number of particles after substractig satellites  2316410
+Number of particles w/o substractig satellites  6642976
+Number of particles after substractig satellites  6626604
 Calculating force
 924
-Number of particles w/o substractig satellites  2323101
-Number of particles after substractig satellites  2317329
+Number of particles w/o substractig satellites  6648602
+Number of particles after substractig satellites  6632226
 Calculating force
 927
-Number of particles w/o substractig satellites  2323896
-Number of particles after substractig satellites  2318124
+Number of particles w/o substractig satellites  6657538
+Number of particles after substractig satellites  6641148
 Calculating force
 929
-Number of particles w/o substractig satellites  2324072
-Number of particles after substractig satellites  2318300
+Number of particles w/o substractig satellites  6661741
+Number of particles after substractig satellites  6645346
 Calculating force
 930
-Number of particles w/o substractig satellites  2324196
-Number of particles after substractig satellites  2318421
+Number of particles w/o substractig satellites  6665662
+Number of particles after substractig satellites  6649264
 Calculating force
 932
-Number of particles w/o substractig satellites  2324489
-Number of particles after substractig satellites  2318714
+Number of particles w/o substractig satellites  6669600
+Number of particles after substractig satellites  6653198
 Calculating force
 934
-Number of particles w/o substractig satellites  2325111
-Number of particles after substractig satellites  2319336
+Number of particles w/o substractig satellites  6673377
+Number of particles after substractig satellites  6656965
 Calculating force
 937
-Number of particles w/o substractig satellites  2326055
-Number of particles after substractig satellites  2320280
+Number of particles w/o substractig satellites  6681434
+Number of particles after substractig satellites  6665014
 Calculating force
 939
-Number of particles w/o substractig satellites  2327506
-Number of particles after substractig satellites  2321731
+Number of particles w/o substractig satellites  6685213
+Number of particles after substractig satellites  6668791
 Calculating force
 941
-Number of particles w/o substractig satellites  2328029
-Number of particles after substractig satellites  2322254
+Number of particles w/o substractig satellites  6689195
+Number of particles after substractig satellites  6672767
 Calculating force
 942
-Number of particles w/o substractig satellites  2328438
-Number of particles after substractig satellites  2322663
+Number of particles w/o substractig satellites  6693173
+Number of particles after substractig satellites  6676734
 Calculating force
 944
-Number of particles w/o substractig satellites  2328669
-Number of particles after substractig satellites  2322894
+Number of particles w/o substractig satellites  6695618
+Number of particles after substractig satellites  6679172
 Calculating force
 946
-Number of particles w/o substractig satellites  2328876
-Number of particles after substractig satellites  2323101
+Number of particles w/o substractig satellites  6698794
+Number of particles after substractig satellites  6682338
 Calculating force
 948
-Number of particles w/o substractig satellites  2329036
-Number of particles after substractig satellites  2323261
+Number of particles w/o substractig satellites  6702690
+Number of particles after substractig satellites  6686229
 Calculating force
 950
-Number of particles w/o substractig satellites  2329235
-Number of particles after substractig satellites  2323460
+Number of particles w/o substractig satellites  6706920
+Number of particles after substractig satellites  6690455
 Calculating force
 952
-Number of particles w/o substractig satellites  2330205
-Number of particles after substractig satellites  2324430
+Number of particles w/o substractig satellites  6711237
+Number of particles after substractig satellites  6694764
 Calculating force
 954
-Number of particles w/o substractig satellites  2331183
-Number of particles after substractig satellites  2325405
+Number of particles w/o substractig satellites  6717423
+Number of particles after substractig satellites  6700947
 Calculating force
 956
-Number of particles w/o substractig satellites  2331503
-Number of particles after substractig satellites  2325724
+Number of particles w/o substractig satellites  6722663
+Number of particles after substractig satellites  6706179
 Calculating force
 958
-Number of particles w/o substractig satellites  2332097
-Number of particles after substractig satellites  2326318
+Number of particles w/o substractig satellites  6728027
+Number of particles after substractig satellites  6711540
 Calculating force
 961
-Number of particles w/o substractig satellites  2332757
-Number of particles after substractig satellites  2326978
+Number of particles w/o substractig satellites  6733035
+Number of particles after substractig satellites  6716541
 Calculating force
 963
-Number of particles w/o substractig satellites  2333305
-Number of particles after substractig satellites  2327525
+Number of particles w/o substractig satellites  6738174
+Number of particles after substractig satellites  6721672
 Calculating force
 965
-Number of particles w/o substractig satellites  2334123
-Number of particles after substractig satellites  2328342
+Number of particles w/o substractig satellites  6742892
+Number of particles after substractig satellites  6726384
 Calculating force
 966
-Number of particles w/o substractig satellites  2334388
-Number of particles after substractig satellites  2328607
+Number of particles w/o substractig satellites  6744867
+Number of particles after substractig satellites  6728356
 Calculating force
 968
-Number of particles w/o substractig satellites  2334732
-Number of particles after substractig satellites  2328951
+Number of particles w/o substractig satellites  6748629
+Number of particles after substractig satellites  6732114
 Calculating force
 970
-Number of particles w/o substractig satellites  2335392
-Number of particles after substractig satellites  2329611
+Number of particles w/o substractig satellites  6752508
+Number of particles after substractig satellites  6735989
 Calculating force
 972
-Number of particles w/o substractig satellites  2335891
-Number of particles after substractig satellites  2330110
+Number of particles w/o substractig satellites  6756398
+Number of particles after substractig satellites  6739865
 Calculating force
 974
-Number of particles w/o substractig satellites  2336387
-Number of particles after substractig satellites  2330609
+Number of particles w/o substractig satellites  6760651
+Number of particles after substractig satellites  6744105
 Calculating force
 976
-Number of particles w/o substractig satellites  2336924
-Number of particles after substractig satellites  2331146
+Number of particles w/o substractig satellites  6764799
+Number of particles after substractig satellites  6748243
 Calculating force
 979
-Number of particles w/o substractig satellites  2337546
-Number of particles after substractig satellites  2331768
+Number of particles w/o substractig satellites  6769273
+Number of particles after substractig satellites  6752708
 Calculating force
 980
-Number of particles w/o substractig satellites  2337614
-Number of particles after substractig satellites  2331836
+Number of particles w/o substractig satellites  6771711
+Number of particles after substractig satellites  6755144
 Calculating force
 982
-Number of particles w/o substractig satellites  2337838
-Number of particles after substractig satellites  2332061
+Number of particles w/o substractig satellites  6777108
+Number of particles after substractig satellites  6760539
 Calculating force
 984
-Number of particles w/o substractig satellites  2337957
-Number of particles after substractig satellites  2332183
+Number of particles w/o substractig satellites  6779949
+Number of particles after substractig satellites  6763376
 Calculating force
 989
-Number of particles w/o substractig satellites  2339057
-Number of particles after substractig satellites  2333016
+Number of particles w/o substractig satellites  6791973
+Number of particles after substractig satellites  6775389
 Calculating force
 990
-Number of particles w/o substractig satellites  2339518
-Number of particles after substractig satellites  2333476
+Number of particles w/o substractig satellites  6795399
+Number of particles after substractig satellites  6778809
 Calculating force
 993
-Number of particles w/o substractig satellites  2340579
-Number of particles after substractig satellites  2334540
+Number of particles w/o substractig satellites  6804291
+Number of particles after substractig satellites  6787690
 Calculating force
 994
-Number of particles w/o substractig satellites  2340876
-Number of particles after substractig satellites  2334837
+Number of particles w/o substractig satellites  6808555
+Number of particles after substractig satellites  6791953
 Calculating force
 996
-Number of particles w/o substractig satellites  2341153
-Number of particles after substractig satellites  2335114
+Number of particles w/o substractig satellites  6813057
+Number of particles after substractig satellites  6796452
 Calculating force

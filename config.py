@@ -8,12 +8,12 @@ import numpy as np
 
 ac_satellites_as_points =     0 
 ac_satellites_ids =           0  
-ac_dm =                       0  
+ac_dm =                       0 
 ac_gas =                      0  
 ac_stars =                    0 
 ac_all_sat =                  0
 
-limit = 22 #limit for acceleration mesh
+limit = 40 #limit for acceleration mesh
 G= 1.3273e11
 kpc_to_km= 3.086e16
 softening = 0
@@ -21,7 +21,7 @@ softening = 0
 #-------
 fourier_acceleration_dm=      0
 fourier_acceleration_gas=     0
-fourier_acceleration_stars=     1
+fourier_acceleration_stars=     0
 fourier_acceleration_satellites = 0
 
 #--------
@@ -31,6 +31,7 @@ fourier_vz =                  0
 fourier_vr =                  0 
 fourier_vphi =                0  
 
+fourier_bar  =1
 #-------
 comparison_plots =            0
 
@@ -54,6 +55,7 @@ snapshots_analysis = [520,523,525, 527,530,532,535, 537,539,541,
 939, 941,942, 944, 946, 948, 950, 952, 954,956, 
 958, 961, 963, 965, 966, 968, 970, 972, 974, 976, 979,
 980, 982, 984, 989, 990, 993, 994, 996]
+#snapshots_analysis = [798]
 
 #snapshots_analysis = [622]
 # ---------------------------------------------------------------------------

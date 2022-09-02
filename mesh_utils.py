@@ -188,7 +188,9 @@ class mesh:
     def acceleration_in_mesh_comp (self, comp, mode_stars, tidal = False):
         print(self.name)
         if comp == "dm" or comp=="stars":
-            DM = pd.read_csv(path_csv + f"{self.name}_{comp}_Rvir.csv", sep = ",")
+            DM_r = pd.read_csv(path_csv + f"{self.name}_{comp}_Rvir.csv", sep = ",")
+            DM = DM_r[(np.abs(DM_r["Z"])>0.005)]
+            print("number", len(DM))
             arania = pd.read_csv(path_crossmatch + f"arania_{self.name}_crossmatch_{comp}.csv", sep = ",")
             grillo = pd.read_csv(path_crossmatch + f"grillo_{self.name}_crossmatch_{comp}.csv", sep = ",")
             mosquito = pd.read_csv(path_crossmatch + f"mosquito_{self.name}_crossmatch_{comp}.csv", sep = ",")
@@ -258,9 +260,9 @@ class mesh:
 
         plt.subplots_adjust(left=0.125,bottom=0.1, right=0.9, top=0.9, wspace=0.3,hspace=0.35)
         if mode_stars is not None:
-            plt.savefig(path_figures + f"acceleration_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
+            plt.savefig(path_figures + f"{comp}/acceleration_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
         else:
-            plt.savefig(path_figures + f"acceleration_{comp}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
+            plt.savefig(path_figures + f"{comp}/acceleration_{comp}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
         
         gc.collect()
 

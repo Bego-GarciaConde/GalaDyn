@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from snapshot_definition import Snapshot
 
 class Fourier:
-    def __init__(self, snapshots_analysis, lookback, maximo = 22, minimo = 0,nbins = 22, maxmode = 3):
+    def __init__(self, snapshots_analysis, lookback, maximo = 22, minimo = 0,nbins = 22, maxmode = 2):
         self.maximo = maximo
         self.minimo = minimo
         self.nbins = nbins
@@ -23,7 +23,7 @@ class Fourier:
             in galactic disks, minimo and maximo measured in kpc  """
 
         # Matrix of values of amplitudes for each mode and radial bin
-        AA =  np.zeros((self.maxmode+1,self.nbins), dtype=np.float32)
+        AA =  np.zeros((self.maxmode+1,self.nbins))
         armangle =  np.zeros((self.maxmode+1,self.nbins))
         steparm = (self.maximo-self.minimo)/self.nbins
         radarm = np.arange(self.minimo,self.maximo + steparm, steparm )
@@ -58,8 +58,8 @@ class Fourier:
                 else:
                     peso_i=peso[indr==i]
                     if m ==0:
-                        A[m] = np.sum(peso_i*np.cos(m*a))
-                        B[m] = np.sum(peso_i*np.sin(m*a))
+                        A[m] = np.sum(np.cos(m*a))
+                        B[m] = np.sum(np.sin(m*a))
                     else :
                         A[m] = np.sum(2*peso_i*np.cos(m*a))
                         B[m] = np.sum(2*peso_i*np.sin(m*a))
@@ -75,6 +75,10 @@ class Fourier:
 
         return rcenter, nparticles, AA, armangle
 
+
+
+
+
     #------------------accelerations-------------------
     
     def apply_fourier_accelerations(self, comp, nbins):
@@ -84,6 +88,12 @@ class Fourier:
         for t,name in enumerate(snapshots_analysis):
             print(name)
             df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{nbins}.csv",sep = ",")
+            limite = 1e-14
+            for j,la in enumerate(df["az"]):
+                if df["az"][j]>limite:
+                    df["az"][j]=limite
+                elif df["az"][j]< -limite:
+                    df["az"][j]=limite
             Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
             for i in range(self.nbins):
              #   print([snapshots_analysis[t],lookback[t], Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i]))
@@ -126,7 +136,7 @@ class Fourier:
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
-            etiqueta = "disc_5Gyr_filt_noZ"
+            etiqueta = "disc_5Gyr"
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
@@ -148,6 +158,39 @@ class Fourier:
         self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso)
         
 
+    def apply_fourier_on_bar (self, peso=None):
+        print(f"Analyzing fourierograms of {peso}")
+        #Initializing data 
+        datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
+        etiqueta = "bar_35_percentile_Gyr"
+        index = 0
+        #Iterating over snapshots
+        for t,name in enumerate(snapshots_analysis):
+            print(name)
+            snapshot = Snapshot(name)
+            snapshot.load_stars()
+            snapshot.load_disk()
+            df = snapshot.stars[~snapshot.stars['ID'].isin(snapshot.disk["ID"])]
+            edad_a = np.percentile(df["Age"], 35)
+            df = df[(df['Age']< edad_a)].copy()
+            df = df[(df["R"]< 7)&(df["Z"]< 5)&(df["Z"]> -5)]
+           # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
+           # dfA = snapshot.filter_disk_particles()
+          #  df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
+           # df = snapshot.stars[(snapshot.stars["Age"]<5000)]
+            print("Bar loaded")
+            #print(f"The bar has {}")
+
+            #Apply fourier
+            if peso == None:
+                Rcenters, nparticles, amplitudes, phases = self.fourier_method(X= df["X"],Y = df["Y"])
+            else:
+                Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df[f"{peso}"])
+            for i in range(self.nbins):
+                datos[index] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes[:,i]) + list(phases[:,i])
+                index = index +1
+
+        self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso)
 
         
     def save_fourierogram(self, datos, etiqueta, peso):

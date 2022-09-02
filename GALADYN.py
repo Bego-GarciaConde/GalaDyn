@@ -92,7 +92,15 @@ def main ():
         fourier.apply_fourier_on_disk(peso = "Vphi")
 
 
-
+    if fourier_bar == 1:
+        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 6, minimo = 0,nbins = 12, maxmode = 2)
+        
+        fourier.apply_fourier_on_bar()
+        print("density Fourier applied")
+        fourier.apply_fourier_on_bar(peso = "Z")
+        print("Z Fourier applied")
+        fourier.apply_fourier_on_bar(peso = "VZ")
+        print("VZ Fourier applied")
 
 
     #Third step: comparison
