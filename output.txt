@@ -31,3 +31,8 @@ number 1667914
 Number of particles w/o substractig satellites  1667914
 Number of particles after substractig satellites  1667375
 Calculating force
+535
+number 1685430
+Number of particles w/o substractig satellites  1685430
+Number of particles after substractig satellites  1680669
+Calculating force

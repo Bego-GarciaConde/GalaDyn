@@ -41,11 +41,11 @@ class Fourier:
                 X_i=X[indr==i] 
                 Y_i=Y[indr==i]
 
-                A[m] = 0
-                B[m] = 0
+               # A[m] = 0
+               # B[m] = 0
                 a = np.arctan2(Y_i, X_i)
               #  b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
-                if peso is None:
+                if peso is None:  #no weight
                     if m == 0:
                         A[m] = np.sum(np.cos(m*a))
                         B[m] = np.sum(np.sin(m*a))
@@ -54,7 +54,7 @@ class Fourier:
                         B[m] = np.sum(2*np.sin(m*a))
 
                 else:
-                    peso_i=peso[indr==i]
+                    peso_i=peso[indr==i]  #with weights
                     if m ==0:
                         A[m] = np.sum(np.cos(m*a))
                         B[m] = np.sum(np.sin(m*a))
