@@ -42,7 +42,8 @@ def main ():
             mesh_snapshot.plot_acceleration_components("ac_gas")
         
         if ac_stars == 1:
-            stars_z, stars_r, stars_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars = "disk", tidal = False)
+            #stars_z, stars_r, stars_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars = "disk", tidal = False)
+            stars_z, stars_r, stars_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars = None, tidal = False)
             mesh_snapshot.ac_stars_disk= [stars_z, stars_r, stars_phi]
             mesh_snapshot.plot_acceleration_components("ac_stars", mode_stars="disk")
 
@@ -68,16 +69,23 @@ def main ():
         fourier_ac.apply_fourier_accelerations(comp="gas", nbins=40)
     
     if fourier_acceleration_satellites ==1:
-        fourier_ac.apply_fourier_sat()
+       # fourier_ac.apply_fourier_sat(sat_name = "all")
+        fourier_ac.apply_fourier_sat(sat_name = "arania")
+        fourier_ac.apply_fourier_sat(sat_name = "grillo")
+        fourier_ac.apply_fourier_sat(sat_name = "mosquito")
 
     fourier_ac_stars= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=22, minimo = 0, nbins = 22)
     if fourier_acceleration_stars ==1:
-        fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk", nbins=22)
+     #   fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk", nbins=22)
+        fourier_ac_stars.apply_fourier_accelerations(comp="stars", nbins=22)
 
 
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)
     if fourier_density == 1:
-        fourier.apply_fourier_on_disk()
+        fourier.apply_fourier_on_bar()
+
+  #  if fourier_acceleration_dm_inner == 1:
+   #     fourier.apply_fourier_on_disk()
 
     if fourier_z == 1:
         fourier.apply_fourier_on_disk(peso = "Z")
@@ -94,13 +102,15 @@ def main ():
 
     if fourier_bar == 1:
         fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 6, minimo = 0,nbins = 12, maxmode = 2)
-        
-        fourier.apply_fourier_on_bar()
+        fourier.apply_fourier_on_bar(stars_or_dm="stars")
         print("density Fourier applied")
         fourier.apply_fourier_on_bar(peso = "Z")
         print("Z Fourier applied")
         fourier.apply_fourier_on_bar(peso = "VZ")
         print("VZ Fourier applied")
+    if fourier_acceleration_dm_inner   ==1 :
+        fourier.apply_fourier_on_bar(stars_or_dm="dm")
+
 
 
     #Third step: comparison

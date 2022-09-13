@@ -43,10 +43,8 @@ class Fourier:
 
                 A[m] = 0
                 B[m] = 0
-                a = []
-                b = []
                 a = np.arctan2(Y_i, X_i)
-                b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
+              #  b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
                 if peso is None:
                     if m == 0:
                         A[m] = np.sum(np.cos(m*a))
@@ -69,8 +67,9 @@ class Fourier:
                     armangle[m,i] = np.arctan2(B[m],A[m])
                 elif m == 0:
                     armangle[m,i] = 0
-                if m ==0:
                     nparticles[i]= len(a)
+         #       if m ==0:
+                    
 
 
         return rcenter, nparticles, AA, armangle
@@ -104,13 +103,13 @@ class Fourier:
 
     #------------------satellites-------------------
     
-    def apply_fourier_sat(self):
+    def apply_fourier_sat(self, sat_name):
         datos_c = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         datos_s = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
 
         index = 0
         for t,name in enumerate(snapshots_analysis):
-            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{name}_all_satellites_id_ytRS.csv" ,sep = ",")
+            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{name}_{sat_name}_satellites_id_ytRS.csv" ,sep = ",")
             Rcenters_s, npart_s, Amp_s, phases_s = self.fourier_method(df["X"],df["Y"],peso=df["az_stream"])
             Rcenters_c, npart_c, Amp_c, phases_c = self.fourier_method(df["X"],df["Y"],peso=df["az_core"])
             for i in range(self.nbins):
@@ -120,8 +119,8 @@ class Fourier:
             #  datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],npart_c[i], Amp_s[:,i]]], axis = 0)
                 index = index +1
 
-        self.save_fourierogram(datos_c, etiqueta=f"sat_prog", peso = "az_core")
-        self.save_fourierogram(datos_s, etiqueta=f"sat_streams", peso = "az_stream")
+        self.save_fourierogram(datos_c, etiqueta=f"sat_prog_{sat_name}", peso = "az_core")
+        self.save_fourierogram(datos_s, etiqueta=f"sat_streams_{sat_name}", peso = "az_stream")
        # return datos_c, datos_s
 
 
@@ -158,22 +157,27 @@ class Fourier:
         self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso)
         
 
-    def apply_fourier_on_bar (self, peso=None):
+    def apply_fourier_on_bar (self, stars_or_dm = "stars", peso=None):
         print(f"Analyzing fourierograms of {peso}")
         #Initializing data 
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
-        etiqueta = "bar_35_percentile_Gyr"
+        etiqueta = "dm_inner"
         index = 0
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
             snapshot = Snapshot(name)
-            snapshot.load_stars()
-            snapshot.load_disk()
-            df = snapshot.stars[~snapshot.stars['ID'].isin(snapshot.disk["ID"])]
-            edad_a = np.percentile(df["Age"], 35)
-            df = df[(df['Age']< edad_a)].copy()
-            df = df[(df["R"]< 7)&(df["Z"]< 5)&(df["Z"]> -5)]
+            if stars_or_dm == "stars":
+                snapshot.load_stars()
+                snapshot.load_disk()
+                df = snapshot.stars[~snapshot.stars['ID'].isin(snapshot.disk["ID"])]
+                edad_a = np.percentile(df["Age"], 35)
+                df = df[(df['Age']< edad_a)].copy()
+                df = df[(df["R"]< 7)&(df["Z"]< 5)&(df["Z"]> -5)]
+            if stars_or_dm == "dm":
+                snapshot.load_dm()
+                df = snapshot.dm[(snapshot.dm["R"]< 7)&(snapshot.dm["Z"]< 5)&(snapshot.dm["Z"]> -5)]
+
            # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
            # dfA = snapshot.filter_disk_particles()
           #  df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]

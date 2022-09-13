@@ -10,7 +10,7 @@ ac_satellites_as_points =     0
 ac_satellites_ids =           0  
 ac_dm =                       0 
 ac_gas =                      0  
-ac_stars =                    0 
+ac_stars =                    1 
 ac_all_sat =                  0
 
 limit = 40 #limit for acceleration mesh
@@ -20,6 +20,7 @@ softening = 0
 
 #-------
 fourier_acceleration_dm=      0
+fourier_acceleration_dm_inner = 0
 fourier_acceleration_gas=     0
 fourier_acceleration_stars=     0
 fourier_acceleration_satellites = 0
@@ -31,7 +32,7 @@ fourier_vz =                  0
 fourier_vr =                  0 
 fourier_vphi =                0  
 
-fourier_bar  =1
+fourier_bar  =0
 #-------
 comparison_plots =            0
 
