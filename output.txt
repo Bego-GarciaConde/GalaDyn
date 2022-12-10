@@ -1,38 +1,11 @@
-520
-number 1602808
-Number of particles w/o substractig satellites  1602808
-Number of particles after substractig satellites  1602294
-Calculating force
 /home/bego/anaconda3/lib/python3.8/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /home/bego/.config/yt/ytrc is deprecated in favor of /home/bego/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
 Deprecated since v4.0.0. This feature will be removed in v4.1.0
   from yt.config import ytcfg
-523
-number 1625663
-Number of particles w/o substractig satellites  1625663
-Number of particles after substractig satellites  1625149
-Calculating force
-525
-number 1643159
-Number of particles w/o substractig satellites  1643159
-Number of particles after substractig satellites  1642643
-Calculating force
-527
-number 1653212
-Number of particles w/o substractig satellites  1653212
-Number of particles after substractig satellites  1652695
-Calculating force
-530
-number 1659678
-Number of particles w/o substractig satellites  1659678
-Number of particles after substractig satellites  1659150
-Calculating force
-532
-number 1667914
-Number of particles w/o substractig satellites  1667914
-Number of particles after substractig satellites  1667375
-Calculating force
-535
-number 1685430
-Number of particles w/o substractig satellites  1685430
-Number of particles after substractig satellites  1680669
-Calculating force
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_core_sat_all.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_stream_sat_all.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_core_sat_arania.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_stream_sat_arania.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_core_sat_grillo.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_stream_sat_grillo.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_core_sat_mosquito.csv
+Saving data as /home/bego/GARROTXA/GalaDyn/results/ fourier_40_az_stream_sat_mosquito.csv

@@ -56,7 +56,7 @@ class Satellite:
         R_sat = np.sqrt((all_data["X"] - self.coord[0])**2 + (all_data["Y"] - self.coord[1])**2 + (all_data["Z"] - self.coord[2])**2)
         all_data["R_sat"]= R_sat
         DM_core =  all_data[(all_data['R_sat']<= 5*self.tidalR)].copy()
-        DM_stream =  all_data[(all_data['R_sat']> 5*self.tidalR)].copy()
+        DM_stream =  all_data[(all_data['R_sat']> 5*self.tidalR)&(np.abs(all_data["Z"])>2)].copy()
         self.core = DM_core
         self.stream = DM_stream
 

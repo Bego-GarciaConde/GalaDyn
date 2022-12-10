@@ -8,7 +8,10 @@ import numpy as np
 from yt.units import G
 import array
 import pandas as pd
+import matplotlib.pylab as plt
 
+from sklearn.linear_model import LinearRegression
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 #global datos_edades
 datos_edades = pd.read_csv(path_datos + "edades.csv", sep = ",",index_col = 0)
 #global angular_momentum_ref
@@ -34,6 +37,9 @@ class Snapshot:
         self.gas = None
         self.stars = None
         self.disk = None
+        self.disk_filt = None
+        self.bending_breathing_mode = None
+      
 
 
         def read_lb():
@@ -84,9 +90,69 @@ class Snapshot:
 
     def filter_disk_particles(self):
         dfA = self.stars[self.stars['ID'].isin(self.disk["ID"])]
-        df = dfA[(dfA['R']< 25)].copy()
+        df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
         df["Phi"] = np.mod(np.arctan2(df["Y"], df["X"]), 2*np.pi)
         df["R"] = np.sqrt(df["X"]**2 + df["Y"]**2)
+        self.disk_filt = df
         return df
 
+    def calculate_bending_breathing (self):
+        xbins = np.linspace(-25, 25, 70)
+        indx = np.digitize(self.disk_filt["X"], bins = xbins)
+        binx_means = [self.disk_filt["X"][indx == i].mean() for i in range(1, len(xbins))]
 
+        ybins = np.linspace(-25, 25, 70)
+        indy = np.digitize(self.disk_filt["Y"], bins = ybins)
+        biny_means = [self.disk_filt["Y"][indy == i].mean() for i in range(1, len(ybins))]
+        pos_x = []
+        pos_y = []
+        A = []
+        B = []
+
+        Z = np.array(self.disk_filt["Z"])
+        VZ = np.array(self.disk_filt["VZ"])
+
+        X = np.array(self.disk_filt["X"])
+        Y = np.array(self.disk_filt["Y"])
+        for i in range(1, len(xbins)):
+            for j in range(1, len(ybins)):
+                
+                indr = np.where((indx==i)&(indy==j))
+                Z_i = Z[indr[0]]
+                VZ_i = VZ[indr[0]]
+                X_i = X[indr[0]]
+                Y_i = Y[indr[0]]
+                pos_x.append(np.mean(X_i))
+                pos_y.append(np.mean(Y_i))
+                if len(Z_i)<2:
+                    B.append(0)
+                    A.append(0)
+                else:
+                    Z_i = Z_i.reshape((-1, 1))
+                    model = LinearRegression().fit(Z_i, VZ_i)
+                    B.append(model.intercept_)
+                    A.append(model.coef_)
+        
+        data = {"X": pos_x, "Y":pos_y,"Bending": np.array(B), "Breathing":np.array(A)}
+        self.bending_breathing_mode=  pd.DataFrame(data)
+        #return  self.bending_breathing_mode
+
+
+    def plot_bending_breathing(self):
+        df=self.bending_breathing_mode
+        fig, ax = plt.subplots(1,2,figsize = (12,5))
+
+
+        bplot = ax[0].scatter(df["X"], df["Y"],c =df["Bending"], cmap = "seismic", vmin = -20, vmax = 20)
+        divider = make_axes_locatable(ax[0])
+        cax = divider.append_axes('right', size='5%', pad=0.05)
+        cb = fig.colorbar(bplot, cax=cax, orientation='vertical')
+        cb.set_label(label = "Bending",fontsize = 14)
+
+
+        aplot = ax[1].scatter(df["X"], df["Y"],c =df["Breathing"], cmap = "seismic", vmin = -20, vmax = 20)
+        divider = make_axes_locatable(ax[1])
+        cax = divider.append_axes('right', size='5%', pad=0.05)
+        cb = fig.colorbar(aplot, cax=cax, orientation='vertical')
+        cb.set_label(label = "Breathing",fontsize = 14)
+        plt.savefig(path_figures_bending +f"{self.name}.png", dpi = 100, bbox_inches='tight', facecolor = "white" )

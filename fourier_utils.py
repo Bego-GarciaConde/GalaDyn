@@ -50,17 +50,17 @@ class Fourier:
                         A[m] = np.sum(np.cos(m*a))
                         B[m] = np.sum(np.sin(m*a))
                     else :
-                        A[m] = np.sum(2*np.cos(m*a))
-                        B[m] = np.sum(2*np.sin(m*a))
+                        A[m] = 2*np.sum(np.cos(m*a))
+                        B[m] = 2*np.sum(np.sin(m*a))
 
                 else:
                     peso_i=peso[indr==i]  #with weights
                     if m ==0:
-                        A[m] = np.sum(np.cos(m*a))
-                        B[m] = np.sum(np.sin(m*a))
+                        A[m] = np.sum(peso_i*np.cos(m*a))
+                        B[m] = np.sum(peso_i*np.sin(m*a))
                     else :
-                        A[m] = np.sum(2*peso_i*np.cos(m*a))
-                        B[m] = np.sum(2*peso_i*np.sin(m*a))
+                        A[m] = 2*np.sum(peso_i*np.cos(m*a))
+                        B[m] = 2*np.sum(peso_i*np.sin(m*a))
                 
                 AA[m,i] = np.sqrt(A[m]**2+ B[m]**2)
                 if m > 0:
@@ -86,19 +86,24 @@ class Fourier:
         index = 0
         for t,name in enumerate(snapshots_analysis):
             print(name)
+          #  if comp == "stars" or "gas":
             df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{nbins}.csv",sep = ",")
-            limite = 1e-14
+            limite = 4.8e-14 #This limit is calculated with MG/z**2, bening Mthe maximum mass a 
+            #star particle can have an z the minimum resolution of the simulation (108 pc, 54pc in absolute value)
             for j,la in enumerate(df["az"]):
                 if df["az"][j]>limite:
                     df["az"][j]=limite
                 elif df["az"][j]< -limite:
-                    df["az"][j]=limite
-            Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
+                    df["az"][j]=-limite
+            if torque==1:
+                Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"]*np.sqrt(df["X"]**2 +df["Y"]**2 ))
+            else:
+                Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
             for i in range(self.nbins):
              #   print([snapshots_analysis[t],lookback[t], Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i]))
                 datos[index] = [snapshots_analysis[t],lookback[t],Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index + 1
-        self.save_fourierogram(datos, etiqueta=f"acceleration_{comp}", peso = "az")
+        self.save_fourierogram(datos, etiqueta=f"acceleration_{comp}_torque", peso = "az")
 
 
     #------------------satellites-------------------
@@ -119,14 +124,14 @@ class Fourier:
             #  datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],npart_c[i], Amp_s[:,i]]], axis = 0)
                 index = index +1
 
-        self.save_fourierogram(datos_c, etiqueta=f"sat_prog_{sat_name}", peso = "az_core")
-        self.save_fourierogram(datos_s, etiqueta=f"sat_streams_{sat_name}", peso = "az_stream")
+        self.save_fourierogram(datos_c, etiqueta=f"sat_{sat_name}", peso = "az_core")
+        self.save_fourierogram(datos_s, etiqueta=f"sat_{sat_name}", peso = "az_stream")
        # return datos_c, datos_s
 
 
     #------------------disk-------------------
 
-    def apply_fourier_on_disk (self, peso=None):
+    def apply_fourier_on_disk (self, peso=None, breathing = False):
         print(f"Analyzing fourierograms of {peso}")
         #Initializing data 
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
@@ -135,21 +140,26 @@ class Fourier:
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
-            etiqueta = "disc_5Gyr"
+            etiqueta = "disk_factor2"
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
-           # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-           # dfA = snapshot.filter_disk_particles()
+          #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
+            dfA = snapshot.filter_disk_particles()
+            df = dfA[(dfA["Z"]< 2.5)&(dfA["Z"]> -2.5)]
             #df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
-            df = snapshot.stars[(snapshot.stars["Age"]<5000)]
+        #    df = snapshot.stars[(snapshot.stars["Age"]<5000)]
             print("Snapshot loaded!")
 
             #Apply fourier
             if peso == None:
                 Rcenters, nparticles, amplitudes, phases = self.fourier_method(X= df["X"],Y = df["Y"])
             else:
-                Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df[f"{peso}"])
+                if breathing == True:
+                    Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = np.abs(df[f"{peso}"]))
+                   # etiqueta = etiqueta + "_breathing"
+                else:
+                 Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df[f"{peso}"])
             for i in range(self.nbins):
                 datos[index] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index +1
@@ -161,7 +171,7 @@ class Fourier:
         print(f"Analyzing fourierograms of {peso}")
         #Initializing data 
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
-        etiqueta = "dm_inner"
+        etiqueta = f"{stars_or_dm}_inner_structure"
         index = 0
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
@@ -176,13 +186,13 @@ class Fourier:
                 df = df[(df["R"]< 7)&(df["Z"]< 5)&(df["Z"]> -5)]
             if stars_or_dm == "dm":
                 snapshot.load_dm()
-                df = snapshot.dm[(snapshot.dm["R"]< 7)&(snapshot.dm["Z"]< 5)&(snapshot.dm["Z"]> -5)]
+                df = snapshot.dm[(snapshot.dm["R"]< 40)&(snapshot.dm["Z"]< 5)&(snapshot.dm["Z"]> -5)]
 
            # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
            # dfA = snapshot.filter_disk_particles()
           #  df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
            # df = snapshot.stars[(snapshot.stars["Age"]<5000)]
-            print("Bar loaded")
+          #  print("Bar loaded")
             #print(f"The bar has {}")
 
             #Apply fourier
@@ -195,6 +205,45 @@ class Fourier:
                 index = index +1
 
         self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso)
+
+
+
+    def apply_fourier_on_bending_breathing(self):
+        print(f"Analyzing fourierograms of bending and breathing")
+        #Initializing data 
+        datos_bending  = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
+        datos_breathing  = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
+    
+        index_bending = 0
+        index_breathing = 0
+        #Iterating over snapshots
+        for t,name in enumerate(snapshots_analysis):
+            print(name)
+         #   etiqueta = "bending_and_breathing"
+            snapshot = Snapshot(name)
+            snapshot.load_stars()
+            snapshot.load_disk()
+          #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
+            snapshot.filter_disk_particles()
+            snapshot.calculate_bending_breathing()
+            df = snapshot.bending_breathing_mode
+            snapshot.plot_bending_breathing()
+            print("Snapshot loaded!")
+
+            #Apply fourier
+
+            Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df["Bending"])
+            for i in range(self.nbins):
+                datos_bending[index_bending ] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes[:,i]) + list(phases[:,i])
+                index_bending  = index_bending  +1
+            Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df["Breathing"])
+            for i in range(self.nbins):
+                datos_breathing[index_breathing ] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes[:,i]) + list(phases[:,i])
+                index_breathing  = index_breathing  +1
+
+
+        self.save_fourierogram(datos_bending, etiqueta="", peso = "bending")
+        self.save_fourierogram(datos_breathing, etiqueta="", peso = "breathing")
 
         
     def save_fourierogram(self, datos, etiqueta, peso):
