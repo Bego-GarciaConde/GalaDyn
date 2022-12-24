@@ -27,7 +27,7 @@ def main ():
 #     TO DO: INICIALIZACION, COMPROBAR QUE EXISTEN TODOS LOS DIRECTORIOS 
 #     TO DO: LEER LA CONFIGURACIÓN 
 #    read_parameters()
-#     COMPROBAR QUE EXISTE EL CROSSMATCHS Y ARCHIVOS DE CADA COMPONENTE
+
     if ac_calculate ==1:
         for name in snapshots_analysis:
         #First step accelerations
@@ -102,14 +102,11 @@ def main ():
     if fourier_density == 1:
         fourier.apply_fourier_on_disk()
 
-  #  if fourier_acceleration_dm_inner == 1:
-   #     fourier.apply_fourier_on_disk()
-
     if fourier_z == 1:
-        fourier.apply_fourier_on_disk(peso = "Z", breathing = False)
+        fourier.apply_fourier_on_disk(peso = "Z")
 
     if fourier_vz ==1: 
-        fourier.apply_fourier_on_disk(peso = "VZ", breathing = False)
+        fourier.apply_fourier_on_disk(peso = "VZ")
 
     if fourier_vr ==1: 
         fourier.apply_fourier_on_disk(peso = "Vr")
@@ -134,6 +131,7 @@ def main ():
         fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = None)
         #fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = "Z")
         #fourier.apply_fourier_on_bar(stars_or_dm="dm")
+
 
 
 

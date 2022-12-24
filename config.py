@@ -27,18 +27,18 @@ fourier_acceleration_dm_inner = 0
 fourier_acceleration_gas=     0
 fourier_acceleration_stars=     0
 fourier_acceleration_satellites = 0
-torque = 1
+torque = 0
 
 #--------
-fourier_bending_breathing = 0
-fourier_density =             0
-fourier_z =                   0
-fourier_vz =                  0
-fourier_vr =                  0 
-fourier_vphi =                0  
+fourier_bending_breathing =   1
+fourier_density =             1
+fourier_z =                   1
+fourier_vz =                  1
+fourier_vr =                  1 
+fourier_vphi =                1  
 
-fourier_bar  =0
-fourier_dm = 1
+fourier_bar  =                0
+fourier_dm   =                 0
 #-------
 comparison_plots =            0
 

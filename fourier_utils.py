@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from snapshot_definition import Snapshot
 
 class Fourier:
-    def __init__(self, snapshots_analysis, lookback, maximo = 22, minimo = 0,nbins = 22, maxmode = 2):
+    def __init__(self, snapshots_analysis, lookback, maximo = 22, minimo = 0,nbins = 22, maxmode = 4):
         self.maximo = maximo
         self.minimo = minimo
         self.nbins = nbins
@@ -88,22 +88,24 @@ class Fourier:
             print(name)
           #  if comp == "stars" or "gas":
             df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{nbins}.csv",sep = ",")
-            limite = 4.8e-14 #This limit is calculated with MG/z**2, bening Mthe maximum mass a 
+            limite = 4.8e-14 #This limit is calculated with MG/z**2, being M the maximum mass a 
             #star particle can have an z the minimum resolution of the simulation (108 pc, 54pc in absolute value)
-            for j,la in enumerate(df["az"]):
+            for j, la in enumerate(df["az"]):
                 if df["az"][j]>limite:
                     df["az"][j]=limite
                 elif df["az"][j]< -limite:
                     df["az"][j]=-limite
             if torque==1:
                 Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"]*np.sqrt(df["X"]**2 +df["Y"]**2 ))
+                etiqueta = f"acceleration_{comp}"
             else:
                 Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
+                etiqueta = f"acceleration_{comp}"
             for i in range(self.nbins):
              #   print([snapshots_analysis[t],lookback[t], Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i]))
                 datos[index] = [snapshots_analysis[t],lookback[t],Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index + 1
-        self.save_fourierogram(datos, etiqueta=f"acceleration_{comp}_torque", peso = "az")
+        self.save_fourierogram(datos, etiqueta=etiqueta, peso = "az", subfolder = "accelerations")
 
 
     #------------------satellites-------------------
@@ -124,14 +126,14 @@ class Fourier:
             #  datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],npart_c[i], Amp_s[:,i]]], axis = 0)
                 index = index +1
 
-        self.save_fourierogram(datos_c, etiqueta=f"sat_{sat_name}", peso = "az_core")
-        self.save_fourierogram(datos_s, etiqueta=f"sat_{sat_name}", peso = "az_stream")
+        self.save_fourierogram(datos_c, etiqueta=f"sat_{sat_name}", peso = "az_core", subfolder = "satellites")
+        self.save_fourierogram(datos_s, etiqueta=f"sat_{sat_name}", peso = "az_stream", subfolder = "satellites")
        # return datos_c, datos_s
 
 
     #------------------disk-------------------
 
-    def apply_fourier_on_disk (self, peso=None, breathing = False):
+    def apply_fourier_on_disk (self, peso=None):
         print(f"Analyzing fourierograms of {peso}")
         #Initializing data 
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
@@ -140,7 +142,7 @@ class Fourier:
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
-            etiqueta = "disk_factor2"
+            etiqueta = "disc_a2"
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
@@ -155,16 +157,12 @@ class Fourier:
             if peso == None:
                 Rcenters, nparticles, amplitudes, phases = self.fourier_method(X= df["X"],Y = df["Y"])
             else:
-                if breathing == True:
-                    Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = np.abs(df[f"{peso}"]))
-                   # etiqueta = etiqueta + "_breathing"
-                else:
-                 Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df[f"{peso}"])
+                Rcenters, nparticles, amplitudes, phases = self.fourier_method(X = df["X"],Y= df["Y"], peso = df[f"{peso}"])
             for i in range(self.nbins):
                 datos[index] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index +1
 
-        self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso)
+        self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso, subfolder = "disc")
         
 
     def apply_fourier_on_bar (self, stars_or_dm = "stars", peso=None):
@@ -204,7 +202,7 @@ class Fourier:
                 datos[index] = [snapshots_analysis[t], lookback[t], Rcenters[i], nparticles[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index +1
 
-        self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso)
+        self.save_fourierogram(datos, etiqueta=etiqueta, peso = peso, subfolder = "bar")
 
 
 
@@ -242,11 +240,11 @@ class Fourier:
                 index_breathing  = index_breathing  +1
 
 
-        self.save_fourierogram(datos_bending, etiqueta="", peso = "bending")
-        self.save_fourierogram(datos_breathing, etiqueta="", peso = "breathing")
+        self.save_fourierogram(datos_bending, etiqueta="", peso = "bending", subfolder = "disc")
+        self.save_fourierogram(datos_breathing, etiqueta="", peso = "breathing", subfolder = "disc")
 
         
-    def save_fourierogram(self, datos, etiqueta, peso):
+    def save_fourierogram(self, datos, etiqueta, peso, subfolder):
 
         column_names = ['snapshot_t','lookbacktime','Rcenters','Nparticles']
         for numero_modo in range(0, self.maxmode +1):
@@ -258,4 +256,4 @@ class Fourier:
         datos = pd.DataFrame(datos, columns=column_names)
         
         print(f"Saving data as {path_results} fourier_{self.nbins}_{peso}_{etiqueta}.csv")
-        datos.to_csv(path_results + f'fourier_{self.nbins}_{peso}_{etiqueta}.csv', sep = ',', index = False)
+        datos.to_csv(path_results + f'{subfolder}/fourier_{self.nbins}_{peso}_{etiqueta}.csv', sep = ',', index = False)

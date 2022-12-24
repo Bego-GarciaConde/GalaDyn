@@ -137,22 +137,9 @@ class Snapshot:
         self.bending_breathing_mode=  pd.DataFrame(data)
         #return  self.bending_breathing_mode
 
-
-    def plot_bending_breathing(self):
-        df=self.bending_breathing_mode
-        fig, ax = plt.subplots(1,2,figsize = (12,5))
-
-
-        bplot = ax[0].scatter(df["X"], df["Y"],c =df["Bending"], cmap = "seismic", vmin = -20, vmax = 20)
-        divider = make_axes_locatable(ax[0])
-        cax = divider.append_axes('right', size='5%', pad=0.05)
-        cb = fig.colorbar(bplot, cax=cax, orientation='vertical')
-        cb.set_label(label = "Bending",fontsize = 14)
-
-
-        aplot = ax[1].scatter(df["X"], df["Y"],c =df["Breathing"], cmap = "seismic", vmin = -20, vmax = 20)
-        divider = make_axes_locatable(ax[1])
-        cax = divider.append_axes('right', size='5%', pad=0.05)
-        cb = fig.colorbar(aplot, cax=cax, orientation='vertical')
-        cb.set_label(label = "Breathing",fontsize = 14)
-        plt.savefig(path_figures_bending +f"{self.name}.png", dpi = 100, bbox_inches='tight', facecolor = "white" )
+    
+    def load_accelerations(self):
+        self.az_dm = pd.read_csv(path_acceleration + f"mesh_aceleracion_dm_{name}_ytRS_40.csv", sep = ",")
+        self.az_gas =  pd.read_csv(path_acceleration + f"mesh_aceleracion_gas_{name}_ytRS_40.csv", sep = ",")
+        
+ 
