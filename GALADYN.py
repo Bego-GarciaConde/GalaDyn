@@ -75,16 +75,15 @@ def main ():
     #Thirs step: fourier 
     fourier_ac= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=40, minimo = 0, nbins = 40)
     if fourier_acceleration_dm ==1:
-        fourier_ac.apply_fourier_accelerations(comp="dm", nbins=40)
+        fourier_ac.apply_fourier_accelerations(comp="dm")
 
     if fourier_acceleration_gas ==1:
-        fourier_ac.apply_fourier_accelerations(comp="gas", nbins=40)
+        fourier_ac.apply_fourier_accelerations(comp="gas")
 
     if fourier_acceleration_total ==1:
-        fourier_ac.apply_fourier_accelerations(comp="total", nbins=40)
+        fourier_ac.apply_fourier_accelerations(comp="total")
     if fourier_acceleration_stars ==1:
-     #   fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk", nbins=22)
-        fourier_ac.apply_fourier_accelerations(comp="stars", nbins=40)
+        fourier_ac.apply_fourier_accelerations(comp="stars")
     
     if fourier_acceleration_satellites ==1:
         fourier_ac.apply_fourier_sat(sat_name = "all")
@@ -118,7 +117,7 @@ def main ():
         fourier.apply_fourier_on_bending_breathing()
         
     if fourier_bar == 1:
-        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 6, minimo = 0,nbins = 12, maxmode = 2)
+        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 6, minimo = 0,nbins = 12, maxmode = 4)
         fourier.apply_fourier_on_bar(stars_or_dm="stars")
         print("density Fourier applied")
         fourier.apply_fourier_on_bar(peso = "Z")

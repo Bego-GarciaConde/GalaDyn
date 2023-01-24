@@ -20,22 +20,21 @@ seconds_to_Myr = 3.15576e+16
 softening = 0
 
 #-------
-
+fourier_acceleration_dm=      1
+fourier_acceleration_gas=     1
 fourier_acceleration_total=    0
-fourier_acceleration_dm=      0
 fourier_acceleration_dm_inner = 0
-fourier_acceleration_gas=     0
 fourier_acceleration_stars=     0
 fourier_acceleration_satellites = 0
 torque = 0
 
 #--------
-fourier_bending_breathing =   1
-fourier_density =             1
-fourier_z =                   1
-fourier_vz =                  1
-fourier_vr =                  1 
-fourier_vphi =                1  
+fourier_bending_breathing =   0
+fourier_density =             0
+fourier_z =                   0
+fourier_vz =                  0
+fourier_vr =                  0 
+fourier_vphi =                0  
 
 fourier_bar  =                0
 fourier_dm   =                 0
@@ -83,13 +82,5 @@ path_figures_bending = "/home/bego/GARROTXA/BendingBreathing/"
 satelites = ["arania", "grillo", "mosquito", "all"]
 
 
-global lookback
-lookback = np.zeros(len(snapshots_analysis))
-global datos_edades
 datos_edades = pd.read_csv(path_datos + "edades.csv", sep = ",",index_col = 0)
-for i,name in enumerate(snapshots_analysis):
-        lb = datos_edades.loc[datos_edades['Snapshot'] == name, 'Lookback'].iloc[0]
-        lookback[i]=lb
-
-
-
+lookback = [datos_edades.loc[datos_edades['Snapshot'] == name, 'Lookback'].iloc[0] for name in snapshots_analysis]

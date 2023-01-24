@@ -80,14 +80,14 @@ class Fourier:
 
     #------------------accelerations-------------------
     
-    def apply_fourier_accelerations(self, comp, nbins):
+    def apply_fourier_accelerations(self, comp):
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         #print(np.shape(datos))
         index = 0
         for t,name in enumerate(snapshots_analysis):
             print(name)
           #  if comp == "stars" or "gas":
-            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{nbins}.csv",sep = ",")
+            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{self.nbins}.csv",sep = ",")
             limite = 4.8e-14 #This limit is calculated with MG/z**2, being M the maximum mass a 
             #star particle can have an z the minimum resolution of the simulation (108 pc, 54pc in absolute value)
             for j, la in enumerate(df["az"]):

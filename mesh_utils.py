@@ -334,7 +334,7 @@ class mesh:
         return az_re, a_r, a_phi
 
 
-    def satellites_acceleration_id (self, sat, plot = True, rango=1e-17):
+    def satellites_acceleration_id (self, sat):
             
             if sat == "all":
                 sat_arania =  Satellite(self.name, "arania")

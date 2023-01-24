@@ -45,7 +45,7 @@ snapshots_analysis =[600,
 930, 932, 934, 937,
 939, 941,942, 944, 946, 948, 950, 952, 954,956, 
 958, 961, 963, 965, 966, 968, 970, 972, 974, 976, 979,
-980, 982, 984, 989, 990, 993, 994, 996]
+980, 982, 984, 989, 990, 993, 994, 996, 999]
 path_datos =  "/home/bego/GARROTXA_copia/datos_GARROTXA_resim/"
 path_csv =  "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/snapshots_resim_new/"
 datos_edades = pd.read_csv(path_datos + "edades.csv", index_col = 0, sep = ",")
@@ -55,7 +55,7 @@ iniciar = 1
 
 if iniciar == 1:
     dato_vacio = []
-    df_vacio = pd.DataFrame(dato_vacio, columns=['Snapshot',  "Lookback", "Minf_25", "Minf_30" ])
+    df_vacio = pd.DataFrame(dato_vacio, columns=['Snapshot',  "Lookback", "Minf_20", "Minf_25", "Minf_30", "Minf_35", "Minf_40" ])
     df_vacio.to_csv( "inflow_mass.csv", sep = ",")
 
 
@@ -64,23 +64,32 @@ for name in snapshots_analysis:
     lb = datos_edades.loc[datos_edades['Snapshot'] == name, 'Lookback'].iloc[0]
     gas = pd.read_csv(path_csv +"Gas_%s.csv" %name, sep = ",")
     gas["R_sph"] = np.sqrt(gas["X"]**2 + gas["Y"]**2 + gas["Z"]**2)
-    gas_cold = gas[(gas['Temperature']<10000)].copy()
+    gas["Vr_sph"] = (gas["X"]*gas["VX"] + gas["Y"]*gas["VY"] +gas["Z"]*gas["VZ"])/gas["R_sph"]
+    gas_cold_in = gas[(gas['Temperature']<10000)&(gas["Vr_sph"]<-5)].copy()
 
 
     # gas_15 = gas[(gas["R_sph"]<15)&(gas["R_sph"]>14)&(gas["Vr"]<-5)]
     # mass_15 = np.sum(gas_15["Mass"])
 
-    # gas_20 = gas[(gas["R_sph"]<20)&(gas["R_sph"]>19)&(gas["Vr"]<-5)]
-    # mass_20 = np.sum(gas_20["Mass"])
+    gas_20 = gas_cold_in[(gas_cold_in["R_sph"]<20)&(gas_cold_in["R_sph"]>15)]
+    mass_20 = np.sum(gas_20["Mass"])
 
-    gas_25 = gas[(gas["R_sph"]<25)&(gas["R_sph"]>20)]
+    gas_25 = gas_cold_in[(gas_cold_in["R_sph"]<25)&(gas_cold_in["R_sph"]>20)]
     mass_25 = np.sum(gas_25["Mass"])
 
-    gas_30 = gas[(gas["R_sph"]<30)&(gas["R_sph"]>25)]
+    gas_30 = gas_cold_in[(gas_cold_in["R_sph"]<30)&(gas_cold_in["R_sph"]>25)]
     mass_30 = np.sum(gas_30["Mass"])
+
+    gas_35 = gas_cold_in[(gas_cold_in["R_sph"]<35)&(gas_cold_in["R_sph"]>30)]
+    mass_35 = np.sum(gas_35["Mass"])
+
+
+    gas_40 = gas_cold_in[(gas_cold_in["R_sph"]<40)&(gas_cold_in["R_sph"]>35)]
+    mass_40 = np.sum(gas_40["Mass"])
+
 
 
     datos_SFH = pd.read_csv(path_results + "inflow_mass.csv", index_col = 0, sep = ",")
-    new_row = {'Snapshot':name,  "Lookback": lb,  "Minf_25":mass_25 , "Minf_30":mass_30  }#
+    new_row = {'Snapshot':name,  "Lookback": lb,  "Minf_20": mass_20, "Minf_25":mass_25 , "Minf_30":mass_30, "Minf_35":mass_35, "Minf_40":mass_40 }#
     datos_SFH = datos_SFH.append(new_row, ignore_index = True)
     datos_SFH.to_csv(path_results + "inflow_mass.csv", sep = ",")
