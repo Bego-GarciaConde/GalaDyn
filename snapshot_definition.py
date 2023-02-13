@@ -139,7 +139,7 @@ class Snapshot:
 
     
     def load_accelerations(self):
-        self.az_dm = pd.read_csv(path_acceleration + f"mesh_aceleracion_dm_{name}_ytRS_40.csv", sep = ",")
-        self.az_gas =  pd.read_csv(path_acceleration + f"mesh_aceleracion_gas_{name}_ytRS_40.csv", sep = ",")
+        self.az_dm = pd.read_csv(path_acceleration + f"mesh_aceleracion_dm_{self.name}_ytRS_40.csv", sep = ",")
+        self.az_gas =  pd.read_csv(path_acceleration + f"mesh_aceleracion_gas_{self.name}_ytRS_40.csv", sep = ",")
         
  

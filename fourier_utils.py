@@ -40,35 +40,44 @@ class Fourier:
             for i in range(1,self.nbins):
                 X_i=X[indr==i] 
                 Y_i=Y[indr==i]
-
-               # A[m] = 0
-               # B[m] = 0
                 a = np.arctan2(Y_i, X_i)
-              #  b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
-                if peso is None:  #no weight
-                    if m == 0:
-                        A[m] = np.sum(np.cos(m*a))
-                        B[m] = np.sum(np.sin(m*a))
-                    else :
-                        A[m] = 2*np.sum(np.cos(m*a))
-                        B[m] = 2*np.sum(np.sin(m*a))
 
+                if peso is None:
+                    factor = 1 if m == 0 else 2
+                    A[m] = factor * np.sum(np.cos(m * a))
+                    B[m] = factor * np.sum(np.sin(m * a))
                 else:
-                    peso_i=peso[indr==i]  #with weights
-                    if m ==0:
-                        A[m] = np.sum(peso_i*np.cos(m*a))
-                        B[m] = np.sum(peso_i*np.sin(m*a))
-                    else :
-                        A[m] = 2*np.sum(peso_i*np.cos(m*a))
-                        B[m] = 2*np.sum(peso_i*np.sin(m*a))
+                    peso_i = peso[indr == i]
+                    factor = 1 if m == 0 else 2
+                    A[m] = factor * np.sum(peso_i * np.cos(m * a))
+                    B[m] = factor * np.sum(peso_i * np.sin(m * a))
+              #  b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
+                # if peso is None:  #no weight
+                #     if m == 0:
+                #         A[m] = np.sum(np.cos(m*a))
+                #         B[m] = np.sum(np.sin(m*a))
+                #     else :
+                #         A[m] = 2*np.sum(np.cos(m*a))
+                #         B[m] = 2*np.sum(np.sin(m*a))
+
+                # else:
+                #     peso_i=peso[indr==i]  #with weights
+                #     if m ==0:
+                #         A[m] = np.sum(peso_i*np.cos(m*a))
+                #         B[m] = np.sum(peso_i*np.sin(m*a))
+                #     else :
+                #         A[m] = 2*np.sum(peso_i*np.cos(m*a))
+                #         B[m] = 2*np.sum(peso_i*np.sin(m*a))
                 
-                AA[m,i] = np.sqrt(A[m]**2+ B[m]**2)
-                if m > 0:
-                    armangle[m,i] = np.arctan2(B[m],A[m])
-                elif m == 0:
-                    armangle[m,i] = 0
-                    nparticles[i]= len(a)
-         #       if m ==0:
+                AA[m,i] = np.sqrt(A[m]**2+ B[m]**2) 
+                armangle[m,i] = np.arctan2(B[m], A[m]) if m > 0 else 0
+                nparticles[i] = len(a) if m == 0 else nparticles[i]
+        #         if m > 0:
+        #             armangle[m,i] = np.arctan2(B[m],A[m])  if m > 0 else 0
+        #         elif m == 0:
+        #             armangle[m,i] = 0
+        #             nparticles[i]= len(a) if m == 0 else nparticles[i]
+        #  #       if m ==0:
                     
 
 
