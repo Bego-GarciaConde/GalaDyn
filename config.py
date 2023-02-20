@@ -20,8 +20,8 @@ seconds_to_Myr = 3.15576e+16
 softening = 0
 
 #-------
-fourier_acceleration_dm=      1
-fourier_acceleration_gas=     1
+fourier_acceleration_dm=      0
+fourier_acceleration_gas=     0
 fourier_acceleration_total=    0
 fourier_acceleration_dm_inner = 0
 fourier_acceleration_stars=     0
@@ -29,8 +29,9 @@ fourier_acceleration_satellites = 0
 torque = 0
 
 #--------
-fourier_bending_breathing =   0
+fourier_bending_breathing =   1
 fourier_density =             0
+fourier_mass =                0
 fourier_z =                   0
 fourier_vz =                  0
 fourier_vr =                  0 

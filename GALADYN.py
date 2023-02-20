@@ -9,7 +9,7 @@ Created on 24/04/2022
 #from fourier_analysis_functions import *
 #from accelerations import * 
 from config import *
-from VEL_CIRC.mesh_utils import *
+from mesh_utils import *
 from satellites_utils import *
 from fourier_utils import Fourier
 from snapshot_definition import Snapshot
@@ -98,8 +98,12 @@ def main ():
 
 
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)
+
     if fourier_density == 1:
         fourier.apply_fourier_on_disk()
+
+    if fourier_mass == 1:
+        fourier.apply_fourier_on_disk(peso = "Mass")
 
     if fourier_z == 1:
         fourier.apply_fourier_on_disk(peso = "Z")

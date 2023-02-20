@@ -124,7 +124,7 @@ class Snapshot:
                 Y_i = Y[indr[0]]
                 pos_x.append(np.mean(X_i))
                 pos_y.append(np.mean(Y_i))
-                if len(Z_i)<2:
+                if len(Z_i)<10:
                     B.append(0)
                     A.append(0)
                 else:

@@ -234,7 +234,7 @@ class Fourier:
             snapshot.filter_disk_particles()
             snapshot.calculate_bending_breathing()
             df = snapshot.bending_breathing_mode
-            snapshot.plot_bending_breathing()
+           # snapshot.plot_bending_breathing()
             print("Snapshot loaded!")
 
             #Apply fourier
@@ -249,8 +249,8 @@ class Fourier:
                 index_breathing  = index_breathing  +1
 
 
-        self.save_fourierogram(datos_bending, etiqueta="", peso = "bending", subfolder = "disc")
-        self.save_fourierogram(datos_breathing, etiqueta="", peso = "breathing", subfolder = "disc")
+        self.save_fourierogram(datos_bending, etiqueta="", peso = "bending_re", subfolder = "disc")
+        self.save_fourierogram(datos_breathing, etiqueta="", peso = "breathing_re", subfolder = "disc")
 
         
     def save_fourierogram(self, datos, etiqueta, peso, subfolder):
