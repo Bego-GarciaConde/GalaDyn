@@ -65,7 +65,7 @@ for name in snapshots_analysis:
     gas = pd.read_csv(path_csv +"Gas_%s.csv" %name, sep = ",")
     gas["R_sph"] = np.sqrt(gas["X"]**2 + gas["Y"]**2 + gas["Z"]**2)
     gas["Vr_sph"] = (gas["X"]*gas["VX"] + gas["Y"]*gas["VY"] +gas["Z"]*gas["VZ"])/gas["R_sph"]
-    gas_cold_in = gas[(gas['Temperature']<10000)&(gas["Vr_sph"]<-5)].copy()
+    gas_cold_in = gas[(gas['Temperature']<30000)&(gas["Vr_sph"]<-10)].copy()
 
 
     # gas_15 = gas[(gas["R_sph"]<15)&(gas["R_sph"]>14)&(gas["Vr"]<-5)]

@@ -34,7 +34,6 @@ def main ():
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
-        #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
             dfA = snapshot.filter_disk_particles()
             dfA = dfA[(dfA["Z"]<1)&(dfA["Z"]>-1)]
             mesh_snapshot = mesh(name,dfA)
@@ -59,10 +58,10 @@ def main ():
             # mesh_snapshot.plot_acceleration_components("ac_stars", mode_stars=None)
 
             if ac_all_sat == 1:
-                mesh_snapshot.satellites_acceleration_id("all")
+              #  mesh_snapshot.satellites_acceleration_id("all")
                 mesh_snapshot.satellites_acceleration_id("arania")
-                mesh_snapshot.satellites_acceleration_id("grillo")
-                mesh_snapshot.satellites_acceleration_id("mosquito")
+               # mesh_snapshot.satellites_acceleration_id("grillo")
+               # mesh_snapshot.satellites_acceleration_id("mosquito")
     else:
         pass
 
@@ -86,10 +85,10 @@ def main ():
         fourier_ac.apply_fourier_accelerations(comp="stars")
     
     if fourier_acceleration_satellites ==1:
-        fourier_ac.apply_fourier_sat(sat_name = "all")
+       # fourier_ac.apply_fourier_sat(sat_name = "all")
         fourier_ac.apply_fourier_sat(sat_name = "arania")
-        fourier_ac.apply_fourier_sat(sat_name = "grillo")
-        fourier_ac.apply_fourier_sat(sat_name = "mosquito")
+        #fourier_ac.apply_fourier_sat(sat_name = "grillo")
+        #fourier_ac.apply_fourier_sat(sat_name = "mosquito")
 
     #fourier_ac_stars= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=22, minimo = 0, nbins = 22)
    # if fourier_acceleration_stars ==1:
@@ -121,18 +120,18 @@ def main ():
         fourier.apply_fourier_on_bending_breathing()
         
     if fourier_bar == 1:
-        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 6, minimo = 0,nbins = 12, maxmode = 4)
-        fourier.apply_fourier_on_bar(stars_or_dm="stars")
+        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 20, minimo = 0,nbins = 40, maxmode = 4)
+        fourier.apply_fourier_on_bar(stars_or_dm="dm")
         print("density Fourier applied")
         fourier.apply_fourier_on_bar(peso = "Z")
         print("Z Fourier applied")
         fourier.apply_fourier_on_bar(peso = "VZ")
         print("VZ Fourier applied")
     if fourier_dm   ==1 :
-        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback,maximo=40, minimo = 0, nbins = 40)
+        fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback,maximo=20, minimo = 0, nbins = 40)
         #fourier.apply_fourier_on_bar(stars_or_dm="dm")
-        fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = None)
-        #fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = "Z")
+        #fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = None)
+        fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = "Z")
         #fourier.apply_fourier_on_bar(stars_or_dm="dm")
 
 

@@ -24,6 +24,14 @@ def cartesian_to_cylindrical (df):
     df["VR"] = (df["X"]*df["VX"] + df["Y"]*df["VY"])/df["R"]
     return df
 
+def cartesian_to_spherical (df):
+    XsqPlusYsq = df["X"]**2 + df["Y"]**2
+    df["Phi_sph"] =  np.arctan2(df["Y"],df["X"])
+    df["R_sph"] = np.sqrt(XsqPlusYsq + df["Z"]**2) 
+    df["Theta_sph"] = np.arctan2(df["Z"],np.sqrt(XsqPlusYsq))  
+    df["Vr_sph"] = (df["X"]*df["VX"] + df["Y"]*df["VY"] +df["Z"]*df["VZ"])/df["R_sph"]
+    return df
+
 
 class Snapshot:
     def __init__(self, name):
@@ -86,16 +94,47 @@ class Snapshot:
         self.gas = cartesian_to_cylindrical(self.gas)
 
     def load_disk(self):
-        self.disk = pd.read_csv(path_disk + f"Stars_disco_{self.name}.csv")
+        #self.disk
+        a = pd.read_csv(path_disk + f"cla_disco_{self.name}.csv")
+        self.disk = a[a["cos_alpha"]>0.7]
 
     def filter_disk_particles(self):
         dfA = self.stars[self.stars['ID'].isin(self.disk["ID"])]
+        age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        print("Age of stars since merger")
+        dfA = dfA[dfA['Age']< age_since_merger]
         df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
-        df["Phi"] = np.mod(np.arctan2(df["Y"], df["X"]), 2*np.pi)
-        df["R"] = np.sqrt(df["X"]**2 + df["Y"]**2)
+       # df = df[df["Age"]<5000]
         self.disk_filt = df
         return df
 
+    def filter_disk_particles_by_age(self):
+        age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        print("Age of stars since merger")
+        dfA = self.stars[self.stars['Age']< age_since_merger]
+        df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
+       # df = df[df["Age"]<5000]
+        self.disk_filt = df
+        return df
+
+    def filter_young(self):
+      #  age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        print("Age of stars since merger")
+        dfA = self.stars[self.stars['Age']< 2000]
+        df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
+       # df = df[df["Age"]<5000]
+        self.disk_filt = df
+        return df
+
+    def filter_intermediate(self):
+      #  age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        print("Age of stars since merger")
+        dfA = self.stars[(self.stars['Age']> 2000)&(self.stars['Age']< 5000)]
+        df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
+       # df = df[df["Age"]<5000]
+        self.disk_filt = df
+        return df
+        
     def calculate_bending_breathing (self):
         xbins = np.linspace(-25, 25, 70)
         indx = np.digitize(self.disk_filt["X"], bins = xbins)

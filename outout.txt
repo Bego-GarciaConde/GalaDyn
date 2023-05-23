@@ -1,0 +1,81 @@
+Initializing snapshot 622
+Lookback time: 5.957324003606695 Gyr
+622
+Calculating force
+/home/bego/anaconda3/lib/python3.8/site-packages/yt/utilities/logger.py:4: VisibleDeprecationWarning: The configuration file /home/bego/.config/yt/ytrc is deprecated in favor of /home/bego/.config/yt/yt.toml. Currently, both are present. Please manually remove the deprecated one to silence this warning.
+Deprecated since v4.0.0. This feature will be removed in v4.1.0
+  from yt.config import ytcfg
+Initializing snapshot 624
+Lookback time: 5.9365639909968575 Gyr
+624
+Calculating force
+Initializing snapshot 626
+Lookback time: 5.894811696137233 Gyr
+626
+Calculating force
+Initializing snapshot 629
+Lookback time: 5.85272746861963 Gyr
+629
+Calculating force
+Initializing snapshot 630
+Lookback time: 5.829423163299706 Gyr
+630
+Calculating force
+Initializing snapshot 632
+Lookback time: 5.806019824366869 Gyr
+632
+Calculating force
+Initializing snapshot 634
+Lookback time: 5.758847580686567 Gyr
+634
+Calculating force
+Initializing snapshot 636
+Lookback time: 5.735113676933862 Gyr
+636
+Calculating force
+Initializing snapshot 639
+Lookback time: 5.687351268637958 Gyr
+639
+Calculating force
+Initializing snapshot 640
+Lookback time: 5.674282004200253 Gyr
+640
+Calculating force
+Initializing snapshot 642
+Lookback time: 5.63487750476342 Gyr
+642
+Calculating force
+Initializing snapshot 644
+Lookback time: 5.607096887071627 Gyr
+644
+Calculating force
+Initializing snapshot 646
+Lookback time: 5.563197273837341 Gyr
+646
+Calculating force
+Initializing snapshot 648
+Lookback time: 5.532228479342441 Gyr
+648
+Calculating force
+Initializing snapshot 650
+Lookback time: 5.499580009312712 Gyr
+Traceback (most recent call last):
+  File "GALADYN.py", line 145, in <module>
+    main()
+  File "GALADYN.py", line 36, in main
+    snapshot.load_disk()
+  File "/home/bego/GARROTXA/GalaDyn/snapshot_definition.py", line 89, in load_disk
+    self.disk = pd.read_csv(path_disk + f"Stars_disco_{self.name}.csv")
+  File "/home/bego/anaconda3/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/bego/anaconda3/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/bego/anaconda3/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/bego/anaconda3/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 934, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/bego/anaconda3/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1218, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/home/bego/anaconda3/lib/python3.8/site-packages/pandas/io/common.py", line 786, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/bego/GARROTXA/disco/Stars_disco_650.csv'

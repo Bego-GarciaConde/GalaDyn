@@ -6,7 +6,7 @@ from multiprocessing import Pool
 from config import *
 import matplotlib.pyplot as plt
 from snapshot_definition import Snapshot
-
+from snapshot_definition import cartesian_to_spherical
 class Fourier:
     def __init__(self, snapshots_analysis, lookback, maximo = 22, minimo = 0,nbins = 22, maxmode = 4):
         self.maximo = maximo
@@ -51,40 +51,14 @@ class Fourier:
                     factor = 1 if m == 0 else 2
                     A[m] = factor * np.sum(peso_i * np.cos(m * a))
                     B[m] = factor * np.sum(peso_i * np.sin(m * a))
-              #  b= np.arcsin(Y_i/np.sqrt(Y_i**2 + X_i**2))
-                # if peso is None:  #no weight
-                #     if m == 0:
-                #         A[m] = np.sum(np.cos(m*a))
-                #         B[m] = np.sum(np.sin(m*a))
-                #     else :
-                #         A[m] = 2*np.sum(np.cos(m*a))
-                #         B[m] = 2*np.sum(np.sin(m*a))
 
-                # else:
-                #     peso_i=peso[indr==i]  #with weights
-                #     if m ==0:
-                #         A[m] = np.sum(peso_i*np.cos(m*a))
-                #         B[m] = np.sum(peso_i*np.sin(m*a))
-                #     else :
-                #         A[m] = 2*np.sum(peso_i*np.cos(m*a))
-                #         B[m] = 2*np.sum(peso_i*np.sin(m*a))
                 
                 AA[m,i] = np.sqrt(A[m]**2+ B[m]**2) 
                 armangle[m,i] = np.arctan2(B[m], A[m]) if m > 0 else 0
                 nparticles[i] = len(a) if m == 0 else nparticles[i]
-        #         if m > 0:
-        #             armangle[m,i] = np.arctan2(B[m],A[m])  if m > 0 else 0
-        #         elif m == 0:
-        #             armangle[m,i] = 0
-        #             nparticles[i]= len(a) if m == 0 else nparticles[i]
-        #  #       if m ==0:
                     
 
-
         return rcenter, nparticles, AA, armangle
-
-
-
 
 
     #------------------accelerations-------------------
@@ -125,6 +99,7 @@ class Fourier:
 
         index = 0
         for t,name in enumerate(snapshots_analysis):
+            print(name)
             df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{name}_{sat_name}_satellites_id_ytRS.csv" ,sep = ",")
             Rcenters_s, npart_s, Amp_s, phases_s = self.fourier_method(df["X"],df["Y"],peso=df["az_stream"])
             Rcenters_c, npart_c, Amp_c, phases_c = self.fourier_method(df["X"],df["Y"],peso=df["az_core"])
@@ -151,15 +126,14 @@ class Fourier:
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
-            etiqueta = "disc_a2"
+            etiqueta = f"disc_{tag}"
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
           #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-            dfA = snapshot.filter_disk_particles()
-            df = dfA[(dfA["Z"]< 2.5)&(dfA["Z"]> -2.5)]
-            #df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
-        #    df = snapshot.stars[(snapshot.stars["Age"]<5000)]
+            df = snapshot.filter_disk_particles()
+        #    df = dfA[(dfA["Z"]< 2.5)&(dfA["Z"]> -2.5)]
+
             print("Snapshot loaded!")
 
             #Apply fourier
@@ -178,7 +152,7 @@ class Fourier:
         print(f"Analyzing fourierograms of {peso}")
         #Initializing data 
         datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 +2*self.maxmode), dtype = np.float32)
-        etiqueta = f"{stars_or_dm}_inner_structure"
+        etiqueta = f"{stars_or_dm}_inner_structure_20kpc"
         index = 0
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
@@ -193,7 +167,12 @@ class Fourier:
                 df = df[(df["R"]< 7)&(df["Z"]< 5)&(df["Z"]> -5)]
             if stars_or_dm == "dm":
                 snapshot.load_dm()
-                df = snapshot.dm[(snapshot.dm["R"]< 40)&(snapshot.dm["Z"]< 5)&(snapshot.dm["Z"]> -5)]
+                df = cartesian_to_spherical(snapshot.dm)
+               # df = df[df["R_sph"]<8].copy()
+                limit_AB =20
+                df = df[(df["R_sph"]<limit_AB)&(np.abs(df["Z"])<10)].copy()
+               # df = df[(df["R_sph"]<limit_AB)&(np.abs(df["Z"])<10)].copy()
+               # df = snapshot.dm[(snapshot.dm["R"]< 40)&(snapshot.dm["Z"]< 5)&(snapshot.dm["Z"]> -5)]
 
            # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
            # dfA = snapshot.filter_disk_particles()
@@ -229,9 +208,11 @@ class Fourier:
          #   etiqueta = "bending_and_breathing"
             snapshot = Snapshot(name)
             snapshot.load_stars()
-            snapshot.load_disk()
+           # snapshot.load_disk()
           #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-            snapshot.filter_disk_particles()
+           # snapshot.filter_disk_particles_by_age()
+            snapshot.filter_intermediate()
+            print(len(snapshot.disk_filt))
             snapshot.calculate_bending_breathing()
             df = snapshot.bending_breathing_mode
            # snapshot.plot_bending_breathing()
@@ -249,8 +230,8 @@ class Fourier:
                 index_breathing  = index_breathing  +1
 
 
-        self.save_fourierogram(datos_bending, etiqueta="", peso = "bending_re", subfolder = "disc")
-        self.save_fourierogram(datos_breathing, etiqueta="", peso = "breathing_re", subfolder = "disc")
+        self.save_fourierogram(datos_bending, etiqueta=tag, peso = "bending", subfolder = "disc")
+        self.save_fourierogram(datos_breathing, etiqueta=tag, peso = "breathing", subfolder = "disc")
 
         
     def save_fourierogram(self, datos, etiqueta, peso, subfolder):
