@@ -7,7 +7,9 @@ from config import *
 import matplotlib.pyplot as plt
 from snapshot_definition import Snapshot
 from snapshot_definition import cartesian_to_spherical
+
 class Fourier:
+
     def __init__(self, snapshots_analysis, lookback, maximo = 22, minimo = 0,nbins = 22, maxmode = 4):
         self.maximo = maximo
         self.minimo = minimo
@@ -64,31 +66,48 @@ class Fourier:
     #------------------accelerations-------------------
     
     def apply_fourier_accelerations(self, comp):
-        datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
-        #print(np.shape(datos))
+       datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         index = 0
+        print("Componmente: ", comp)
         for t,name in enumerate(snapshots_analysis):
             print(name)
-          #  if comp == "stars" or "gas":
-            df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{self.nbins}.csv",sep = ",")
-            limite = 4.8e-14 #This limit is calculated with MG/z**2, being M the maximum mass a 
+            if comp == "dm" or comp == "gas":
+                print(comp)
+                df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{self.nbins}.csv",sep = ",")
+            elif comp == "sum":
+              df_dm = pd.read_csv(path_acceleration + f"mesh_aceleracion_dm_{name}_ytRS_{self.nbins}.csv",sep = ",")
+              df_gas = pd.read_csv(path_acceleration + f"mesh_aceleracion_gas_{name}_ytRS_{self.nbins}.csv",sep = ",")
+              df = df_dm.copy()
+              df["az"] = np.array(df_dm["az"]) + np.array(df_gas["az"])
+            elif comp == "stars_ellipsoid":
+                df = pd.read_csv(path_acceleration + f"mesh_aceleracion_{comp}_{name}_ytRS_{self.nbins}.csv",sep = ",")
+                limite = 4.8e-14
+              
+        #    limite = 4.8e-14 #This limit is calculated with MG/z**2, being M the maximum mass a 
             #star particle can have an z the minimum resolution of the simulation (108 pc, 54pc in absolute value)
+            if comp == "gas":
+                limite = 4.8e-14
+            elif comp == "dm" or comp == "sum":
+              limite = 4.8e-15
+
             for j, la in enumerate(df["az"]):
                 if df["az"][j]>limite:
                     df["az"][j]=limite
                 elif df["az"][j]< -limite:
                     df["az"][j]=-limite
+
             if torque==1:
                 Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"]*np.sqrt(df["X"]**2 +df["Y"]**2 ))
                 etiqueta = f"acceleration_{comp}"
             else:
                 Rcenters, npart, amplitudes, phases =self.fourier_method(df["X"],df["Y"],peso=df["az"])
-                etiqueta = f"acceleration_{comp}"
+                etiqueta = f"acceleration_{comp}_noise"
+
             for i in range(self.nbins):
-             #   print([snapshots_analysis[t],lookback[t], Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i]))
                 datos[index] = [snapshots_analysis[t],lookback[t],Rcenters[i],npart[i]] + list(amplitudes[:,i]) + list(phases[:,i])
                 index = index + 1
         self.save_fourierogram(datos, etiqueta=etiqueta, peso = "az", subfolder = "accelerations")
+
 
 
     #------------------satellites-------------------
@@ -106,8 +125,7 @@ class Fourier:
             for i in range(self.nbins):
                 datos_c[index] = [snapshots_analysis[t],lookback[t],Rcenters_c[i],npart_s[i]]+ list(Amp_c[:,i]) + list(phases_c[:,i]) 
                 datos_s[index] = [snapshots_analysis[t],lookback[t],Rcenters_s[i],npart_c[i]]+ list(Amp_s[:,i]) +  list(phases_s[:,i])
-            #  datos_c = np.append(datos_c,[[snapshots_analysis[t],Rcenters_c[i],npart_s[i], Amp_c[:,i]]], axis = 0)
-            #  datos_s = np.append(datos_s,[[snapshots_analysis[t],Rcenters_s[i],npart_c[i], Amp_s[:,i]]], axis = 0)
+  
                 index = index +1
 
         self.save_fourierogram(datos_c, etiqueta=f"sat_{sat_name}", peso = "az_core", subfolder = "satellites")
@@ -130,9 +148,9 @@ class Fourier:
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
-          #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-            df = snapshot.filter_disk_particles()
-        #    df = dfA[(dfA["Z"]< 2.5)&(dfA["Z"]> -2.5)]
+             df =  filter_disk_particles_by_age()
+          #  df = snapshot.filter_disk_particles()
+
 
             print("Snapshot loaded!")
 
@@ -171,15 +189,6 @@ class Fourier:
                # df = df[df["R_sph"]<8].copy()
                 limit_AB =20
                 df = df[(df["R_sph"]<limit_AB)&(np.abs(df["Z"])<10)].copy()
-               # df = df[(df["R_sph"]<limit_AB)&(np.abs(df["Z"])<10)].copy()
-               # df = snapshot.dm[(snapshot.dm["R"]< 40)&(snapshot.dm["Z"]< 5)&(snapshot.dm["Z"]> -5)]
-
-           # df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-           # dfA = snapshot.filter_disk_particles()
-          #  df = dfA[(dfA["R"]< 25)&(dfA["Z"]< 2.7)&(dfA["Z"]> -2.7) &(dfA["Age"]<5000)]
-           # df = snapshot.stars[(snapshot.stars["Age"]<5000)]
-          #  print("Bar loaded")
-            #print(f"The bar has {}")
 
             #Apply fourier
             if peso == None:
@@ -205,18 +214,12 @@ class Fourier:
         #Iterating over snapshots
         for t,name in enumerate(snapshots_analysis):
             print(name)
-         #   etiqueta = "bending_and_breathing"
+
             snapshot = Snapshot(name)
             snapshot.load_stars()
-           # snapshot.load_disk()
-          #  df = snapshot.stars[(snapshot.stars["R"]< 25)&(snapshot.stars["Z"]< 2.7)&(snapshot.stars["Z"]> -2.7) &(snapshot.stars["Age"]<5000)]
-           # snapshot.filter_disk_particles_by_age()
-            snapshot.filter_intermediate()
-            print(len(snapshot.disk_filt))
+            print("Snapshot loaded!")
             snapshot.calculate_bending_breathing()
             df = snapshot.bending_breathing_mode
-           # snapshot.plot_bending_breathing()
-            print("Snapshot loaded!")
 
             #Apply fourier
 

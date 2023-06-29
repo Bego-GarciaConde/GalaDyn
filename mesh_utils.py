@@ -42,9 +42,7 @@ def force_in_mesh (x_sat0, y_sat0, z_sat0, mass_sat0,  x_bin, y_bin, z_bin):
     #In this version:
     #a = GM/(r²)   #weighed by Npart  <----
     #F = GMm/(r²)   #weighed by Npart
-  #  x_bin = mesh_x[i]
-  #  y_bin = mesh_y[i]
-  #  z_bin  = mesh_z[i]
+
     X_resta = (x_sat0 - x_bin)
     Y_resta = (y_sat0 - y_bin)
     Z_resta = (z_sat0 - z_bin)
@@ -58,8 +56,8 @@ def force_in_mesh (x_sat0, y_sat0, z_sat0, mass_sat0,  x_bin, y_bin, z_bin):
     return G*np.sum(ax)/(kpc_to_km**2),G*np.sum(ay)/(kpc_to_km**2),G*np.sum(az)/(kpc_to_km**2)
 
 
-class mesh:
-    def __init__(self, name, df):
+class Mesh:
+    def __init__(self, name):
         self.name = name
         self.lb = None
         self.x = None
@@ -74,49 +72,10 @@ class mesh:
         self.ac_sat = None
 
         def snapshot_to_grid (nbins = 100):
-        #     #limit = 20
-        #     mesh_x = np.zeros(nbins**2, dtype = np.float32)
-        #     mesh_y =  np.zeros(nbins**2, dtype = np.float32)
-        #     mesh_r = np.zeros(nbins**2, dtype = np.float32)
-        #     mesh_z  = np.zeros(nbins**2, dtype = np.float32)
-        #     #x_array = y_array = np.linspace(-limit, +limit, nbins)
-        #     # nbins = 100
-        #     # bin_size = limit*2/nbins
-        #     # rangex=[-limit-bin_size/2, limit+bin_size/2 ]
-        #     # rangey=[-limit-bin_size/2, limit+bin_size/2 ]
-        #     # #rangex=[-limit-,limit]
-        #     # #rangey=[-limit,limit]
-        #     # binsx= nbins 
-        #     # binsy= nbins 
-        #     # seconds_to_Myr =   3.15576e+16   
-  
-        #     # H, xedges, yedges, binnumber=stats.binned_statistic_2d(df["X"] , df["Y"] , df['Z']*df["Mass"]/np.mean(df["Mass"]), 
-        #     #         statistic='mean', bins=(binsx,binsy), 
-        #     #         range=[rangex,rangey])
-        #     # H=np.nan_to_num(H)
-        #     # xedgesi =(xedges[:-1] +xedges[1:]) / 2 
-        #     # yedgesi =(yedges[:-1] +yedges[1:]) / 2 
-        #     # XX, YY = np.meshgrid(xedgesi, yedgesi)
-        #     # mesh_x = XX.reshape(-1)
-        #     # mesh_y = YY.reshape(-1)
-        #     # mesh_z = H.T.reshape(-1)
-            
-        #     #mesh_r = np.sqrt(mesh_x**2 + mesh_y**2)
-        #     mesh_r = np.sqrt(mesh_x**2 + mesh_y**2)
-        #     res = [idx for idx, val in enumerate(mesh_r) if val < limit]
-        #     self.x = mesh_x[res]
-        #     self.y = mesh_y[res]
-        #     self.z = mesh_z[res]
-        #     self.R = mesh_r[res]
-        #     print(np.max((self.R)))
-        #     self.phi = np.mod(np.arctan2(self.y,self.x), 2*np.pi)
-            
+   
 
         # snapshot_to_grid()
 
-
-        #         def snapshot_to_grid (nbins = 100):
-        #     #limit = 20
             mesh_x = np.zeros(nbins**2, dtype = np.float32)
             mesh_y =  np.zeros(nbins**2, dtype = np.float32)
             mesh_r = np.zeros(nbins**2, dtype = np.float32)
@@ -139,6 +98,7 @@ class mesh:
             self.phi = np.mod(np.arctan2(self.y,self.x), 2*np.pi)
 
         snapshot_to_grid()
+
     def calculate_force_sat (self, DM):
         ax_halo = np.zeros(len(self.y), dtype = np.float64)
         ay_halo = np.zeros(len(self.y), dtype = np.float64)
@@ -149,7 +109,6 @@ class mesh:
         z_sat0 = np.array(DM["Z"], dtype = np.float64)
         mass_sat0 = np.array(DM["Mass"], dtype = np.float64)
 
-
         print("Calculating acceleration in the center")
         R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
         #ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
@@ -157,12 +116,7 @@ class mesh:
         #az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
            
         for i in range(len(self.y)):
-        #    for i in range(20):
-            #try:
             ax_halo[i],ay_halo[i],az_halo[i] =force_in_mesh(x_sat0, y_sat0, z_sat0, mass_sat0,  self.x[i], self.y[i],  self.z[i])
-
-           # except:
-            #    az_halo[i] = 0
 
        # ax_halo = ax_halo -ax_0
        # ay_halo = ay_halo -ay_0
@@ -189,7 +143,7 @@ class mesh:
 
 
         pool = Pool(6)
-    # res =pool.map(force_in_mesh, [i for i in range(len(mesh_y))])
+
         coord = []
         for k in range(len(self.x)):
             coord.append([self.x[k], self.y[k], self.z[k]])
@@ -197,31 +151,10 @@ class mesh:
                 repeat(z_sat0, len(self.x)),repeat(mass_sat0, len(self.x)))
 
         az_halo = pool.starmap(force_in_mesh_gen, a)
-        #ax_halo = [item[0] for item in res]
-        #ay_halo = [item[1] for item in res]
-      #  az_halo = [item[2] for item in res]
+
         pool.close()
         pool.join()
 
-        # if tidal ==True:
-        #     #----Acceleration in 0,0 ------
-        #     R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
-        #     ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
-        #     ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
-        #     az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
-
-        #   #  ax_0 = np.sum(G*mass_sat0*x_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
-        #   #  ay_0 = np.sum(G*mass_sat0*y_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
-        #   #  az_0 = np.sum(G*mass_sat0*z_sat0/(np.power((R+softening),2)*R*(kpc_to_km**2)))
-
-        #     #------------------------------
-        #     ax_halo = ax_halo - ax_0
-        #     ay_halo = ay_halo - ay_0
-        #     az_halo = az_halo - az_0
-
-
-        #a_r_halo = ax_halo*np.cos(self.phi) + ay_halo*np.sin(self.phi)
-        #a_phi_halo = ax_halo*(np.sin(self.phi)) - ay_halo*np.cos(self.phi)
         
         data ={'X':self.x, 'Y':self.y,  'Z':self.z, 'R':self.R,'Phi':self.phi, 'az': az_halo}
 
@@ -231,88 +164,33 @@ class mesh:
 
     def acceleration_in_mesh_comp (self, comp, mode_stars, tidal = False):
         print(self.name)
-        if comp == "dm" or comp=="stars":
-            DM = pd.read_csv(path_csv + f"{self.name}_{comp}_Rvir.csv", sep = ",")
-            #DM = DM_r[(np.abs(DM_r["Z"])>0.005)]
-            # print("number", len(DM))
-            # arania = pd.read_csv(path_crossmatch + f"arania_{self.name}_crossmatch_{comp}.csv", sep = ",")
-            # grillo = pd.read_csv(path_crossmatch + f"grillo_{self.name}_crossmatch_{comp}.csv", sep = ",")
-            # mosquito = pd.read_csv(path_crossmatch + f"mosquito_{self.name}_crossmatch_{comp}.csv", sep = ",")
-            # print("Number of particles w/o substractig satellites ",len(DM["ID"]))
-            # DM = DM[~ DM['ID'].isin(arania["ID"])]
-            # DM = DM[~ DM['ID'].isin(grillo["ID"])]
-            # DM = DM[~ DM['ID'].isin(mosquito["ID"])]
-            # print("Number of particles after substractig satellites ", len(DM["ID"]))
-
+        snapshot = Snapshot(self.name)
+        if comp == "dm":   
+            snapshot.load_dm()
+            data_acceleration = snapshot.dm
         
-        else:
-          DM = pd.read_csv(path_csv + f"Gas_{self.name}.csv", sep = ",")
+        if comp == "gas":
+            snapshot.load_gas()
+            data_acceleration= snapshot.gas
 
         if mode_stars =="disk":
-            disc_IDs = pd.read_csv(path_disk + f"Stars_disco_{self.name}.csv", sep = ",")
-            DM  = DM[DM['ID'].isin(disc_IDs["ID"])]
-            DM= DM[(DM["Z"]<1)&(DM["Z"]>-1)]
-          #  DM = DM[np.abs(DM["Z"]<3)&np.abs(DM["R"]<25)]
-        elif mode_stars == "nodisk":
-            disc_IDs = pd.read_csv(path_disk + f"Stars_disco_{self.name}.csv", sep = ",")
-           # DM_r  = DM[DM['ID'].isin(disc_IDs["ID"])]
-           # DM_r = DM_r[np.abs(DM_r["Z"]<3)&np.abs(DM_r["R"]<25)]
-            DM = DM[~DM['ID'].isin(disc_IDs["ID"])]
-        
-        mesh_completa = self.calculate_force(DM,multiprocess = True, tidal = tidal)        
+            snapshot.load_stars()
+            data_acceleration= snapshot.filter_disk_particles_by_age()
+   
+        elif mode_stars == "ellipsoid":
+            snapshot.load_stars()
+            data_acceleration = snapshot.filter_stellar_ellipsoid()
+
+        mesh_completa = self.calculate_force(data_acceleration,multiprocess = True, tidal = tidal)        
 
 
         if mode_stars is not None:
             mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.csv", sep = ",")
         else:
-            mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{self.name}_ytRS_{limit}_with_sat.csv" , sep = ",")
+            mesh_completa.to_csv(path_acceleration + f"mesh_aceleracion_{comp}_{self.name}_ytRS_{limit}.csv" , sep = ",")
+        
         return mesh_completa["az"]*seconds_to_Myr
-
             
-    def plot_acceleration_components (self, comp, rango_z=200, mode_stars=None):
-        if mode_stars is not None:
-            acceleration_values = getattr(self, f"{comp}_{mode_stars}" )
-        else:
-            acceleration_values = getattr(self, f"{comp}" )
-        
-        plt.style.use('dark_background')
-        size = 5
-        ancho = limit + 5
-        fig, ax = plt.subplots(1, 1, sharex=False, sharey=True,figsize = (5,4))
-        az = ax.scatter(self.x, self.y, marker='s', c=acceleration_values[0], 
-                    cmap= "seismic", s = size, vmin =-rango_z, vmax = rango_z)
-        #ax.set_title(Snapshot)
-        cbar_az_ax = fig.add_axes([0.36, 0.1, 0.01,0.85 ])
-        fig.colorbar(az,cbar_az_ax )
-
-        # ar = ax[1].scatter(self.x, self.y, marker='s', 
-        #             c=acceleration_values[1], cmap= "seismic", s =size, vmin =-rango_r, vmax =rango_r)
-
-        # cbar_ar_ax = fig.add_axes([0.63, 0.1, 0.01,0.85 ])
-        # fig.colorbar(ar,cbar_ar_ax )
-
-        # aphi = ax[2].scatter(self.x, self.y, marker='s',
-        #             c=acceleration_values[2], cmap= "seismic", s = size,vmin =-rango_phi, vmax = rango_phi)
-
-        # cbar_aphi_ax = fig.add_axes([0.91,0.1, 0.01,0.85 ])
-        # fig.colorbar(ar,cbar_aphi_ax )
-
-     #   for k in range(3):
-        ax.set_xlabel("X [kpc]")
-        ax.set_ylabel("Y [kpc]")
-        ax.set_xlim(-ancho,ancho)
-        ax.set_ylim(-ancho,ancho)
-
-        #plt.subplots_adjust(left=0.125,bottom=0.1, right=0.9, top=0.9, wspace=0.3,hspace=0.35)
-        if mode_stars is not None:
-            plt.savefig(path_figures + f"{comp}/acceleration_{comp}_{mode_stars}_{self.name}_ytRS_{limit}.png", format='png', dpi=150, bbox_inches='tight')
-        else:
-            plt.savefig(path_figures + f"{comp}/acceleration_{comp}_{self.name}_ytRS_{limit}_with_sat.png", format='png', dpi=150, bbox_inches='tight')
-        
-        gc.collect()
-
-
-
     def acceleration_satellite_as_point (self, satelite, tidal = True):
         R = np.sqrt(satelite.coord[0]**2, satelite.coord[1]**2,satelite.coord[2]**2)
         #a = GM/(r² Npart)     <----
@@ -327,12 +205,10 @@ class mesh:
             ay_re = ay_re - ay_0
             az_re = az_re - az_0
     
-        
         a_r = ax_re*np.cos(self.phi) + ay_re*np.sin(self.phi)
         a_phi = +ax_re*(np.sin(self.phi)) - ay_re*np.cos(self.phi)
         
         return az_re, a_r, a_phi
-
 
     def satellites_acceleration_id (self, sat):
             
@@ -355,14 +231,11 @@ class mesh:
         #---------------------PROGENITOR------------------------------------
             print(f"calculating ac in core of {sat}  in {self.name}")
             mesh_core = self.calculate_force_sat(DM_core_i)
-            #az_mean_prog = np.mean(np.abs(az_core))
 
         #---------------------STREAMS------------------------------
 
             mesh_stream= self.calculate_force_sat(DM_stream_i)
-        # az_mean_stream = np.mean(np.abs(az_stream))
-
-
+ 
             data ={'X':self.x, 'Y':self.y,  'Z':self.z,  'az_core': mesh_core["az"],'az_stream': mesh_stream["az"] }
 
             mesh_completa = pd.DataFrame(data)

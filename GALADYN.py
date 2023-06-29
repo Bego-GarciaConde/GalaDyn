@@ -6,14 +6,12 @@ Created on 24/04/2022
 """
 
 
-#from fourier_analysis_functions import *
-#from accelerations import * 
 from config import *
 from mesh_utils import *
 from satellites_utils import *
 from fourier_utils import Fourier
 from snapshot_definition import Snapshot
-#import ConfigParser
+
 
 
         ##################################################
@@ -24,40 +22,27 @@ from snapshot_definition import Snapshot
         ##################################################
 
 def main ():
-#     TO DO: INICIALIZACION, COMPROBAR QUE EXISTEN TODOS LOS DIRECTORIOS 
-#     TO DO: LEER LA CONFIGURACIÓN 
-#    read_parameters()
 
-    if ac_calculate ==1:
+
+    if AC_CALCULATE ==1:
         for name in snapshots_analysis:
-        #First step accelerations
-            snapshot = Snapshot(name)
-            snapshot.load_stars()
-            snapshot.load_disk()
-            dfA = snapshot.filter_disk_particles()
-            dfA = dfA[(dfA["Z"]<1)&(dfA["Z"]>-1)]
-            mesh_snapshot = mesh(name,dfA)
-            if ac_dm == 1:  
+            mesh_snapshot = Mesh(name)
+
+            if AC_DM == 1:  
                 dm_z = mesh_snapshot.acceleration_in_mesh_comp(comp = "dm", mode_stars = None, tidal = False)
                 mesh_snapshot.ac_dm = dm_z
-            #    mesh_snapshot.plot_acceleration_components("ac_dm")
 
-            if ac_gas == 1:
+            if AC_GAS == 1:
                 gas_z = mesh_snapshot.acceleration_in_mesh_comp(comp = "gas", mode_stars = None, tidal = False)
                 mesh_snapshot.ac_gas = gas_z
-            #   mesh_snapshot.plot_acceleration_components("ac_gas")
             
-            if ac_stars == 1:
-                #stars_z, stars_r, stars_phi = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars = "disk", tidal = False)
-                stars_z = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars =None, tidal = False)
-                mesh_snapshot.ac_stars= stars_z
-
-
+            if AC_STARS == 1:
                 stars_z = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars ="disk", tidal = False)
-                #mesh_snapshot.ac_stars= stars_z
-            # mesh_snapshot.plot_acceleration_components("ac_stars", mode_stars=None)
 
-            if ac_all_sat == 1:
+            if AC_STARS_ELLIPSOID == 1:
+                stars_z = mesh_snapshot.acceleration_in_mesh_comp(comp = "stars", mode_stars ="ellipsoid", tidal = False)
+
+            if AC_ALL_SAT == 1:
               #  mesh_snapshot.satellites_acceleration_id("all")
                 mesh_snapshot.satellites_acceleration_id("arania")
                # mesh_snapshot.satellites_acceleration_id("grillo")
@@ -65,22 +50,17 @@ def main ():
     else:
         pass
 
-
-      # if ac_satellites_as_points == 1:
-     #   if ac_satellites_ids ==1 :
-      #     satellites_acceleration_id (name, "all", plot = True)
-
-
-    #Thirs step: fourier 
+    #Third step: fourier 
     fourier_ac= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=40, minimo = 0, nbins = 40)
-    if fourier_acceleration_dm ==1:
+    if FOURIER_ACCELERATION_DM ==1:
         fourier_ac.apply_fourier_accelerations(comp="dm")
 
-    if fourier_acceleration_gas ==1:
+    if FOURIER_ACCELERATION_GAS ==1:
         fourier_ac.apply_fourier_accelerations(comp="gas")
 
     if fourier_acceleration_total ==1:
         fourier_ac.apply_fourier_accelerations(comp="total")
+
     if fourier_acceleration_stars ==1:
         fourier_ac.apply_fourier_accelerations(comp="stars")
     
@@ -90,36 +70,31 @@ def main ():
         #fourier_ac.apply_fourier_sat(sat_name = "grillo")
         #fourier_ac.apply_fourier_sat(sat_name = "mosquito")
 
-    #fourier_ac_stars= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=22, minimo = 0, nbins = 22)
-   # if fourier_acceleration_stars ==1:
-     #   fourier_ac_stars.apply_fourier_accelerations(comp="stars_disk", nbins=22)
-   #     fourier_ac_stars.apply_fourier_accelerations(comp="stars", nbins=22)
-
 
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)
 
-    if fourier_density == 1:
+    if FOURIER_DENSITY == 1:
         fourier.apply_fourier_on_disk()
 
-    if fourier_mass == 1:
+    if FOURIER_MASS == 1:
         fourier.apply_fourier_on_disk(peso = "Mass")
 
-    if fourier_z == 1:
+    if FOURIER_Z == 1:
         fourier.apply_fourier_on_disk(peso = "Z")
 
-    if fourier_vz ==1: 
+    if FOURIER_VZ ==1: 
         fourier.apply_fourier_on_disk(peso = "VZ")
 
-    if fourier_vr ==1: 
+    if FOURIER_VR ==1: 
         fourier.apply_fourier_on_disk(peso = "Vr")
 
-    if fourier_vphi ==1: 
+    if FOURIER_VPHI ==1: 
         fourier.apply_fourier_on_disk(peso = "Vphi")
 
-    if fourier_bending_breathing ==1:
+    if FOURIER_BENDING_BREATHING ==1:
         fourier.apply_fourier_on_bending_breathing()
         
-    if fourier_bar == 1:
+    if FOURIER_BAR == 1:
         fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo = 20, minimo = 0,nbins = 40, maxmode = 4)
         fourier.apply_fourier_on_bar(stars_or_dm="dm")
         print("density Fourier applied")
@@ -127,18 +102,22 @@ def main ():
         print("Z Fourier applied")
         fourier.apply_fourier_on_bar(peso = "VZ")
         print("VZ Fourier applied")
-    if fourier_dm   ==1 :
+
+    if FOURIER_DM   ==1 :
         fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback,maximo=20, minimo = 0, nbins = 40)
         #fourier.apply_fourier_on_bar(stars_or_dm="dm")
         #fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = None)
         fourier.apply_fourier_on_bar(stars_or_dm="dm",peso = "Z")
         #fourier.apply_fourier_on_bar(stars_or_dm="dm")
 
-
-
+    if CALCULATE_2ND_ALIGNMENT==1:
+            for t,name in enumerate(snapshots_analysis):
+                print(name)
+                snapshot = Snapshot(name)
+                snapshot.load_stars()
+                snapshot.second_alignment()
 
     #Third step: comparison
-
 
 if __name__ == "__main__":
     main()

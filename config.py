@@ -5,54 +5,54 @@ import numpy as np
         #                     Settings                   #
         ##################################################
 
-ac_calculate = 0
-ac_satellites_as_points =     0 
-#ac_satellites_ids =           1  
-ac_dm =                        0
-ac_gas =                      0
-ac_stars =                    0
-ac_all_sat =                  0
+CALCULATE_2ND_ALIGNMENT = 0
+APPLY_ALIGNMENT = 1
+ALIGN_RADIUS = 15  #7 kpc or 15kpc
 
-limit = 40 #limit for acceleration mesh
-G= 1.3273e11
-kpc_to_km= 3.086e16
-seconds_to_Myr = 3.15576e+16
-softening = 0
+AC_CALCULATE = 0
+AC_SATELLITES_AS_POINTS =     0 
+#AC_SATELLITES_IDS =           1  
+AC_DM =                        0
+AC_GAS =                      0
+AC_STARS =                    0
+AC_STARS_ELLIPSOID =           0
+AC_ALL_SAT =                  0
 
-#-------
-tag = "intermediate_2-5Gyr"
-
-fourier_acceleration_dm=      0
-fourier_acceleration_gas=     0
-fourier_acceleration_total=    0
-fourier_acceleration_dm_inner = 0
-fourier_acceleration_stars=     0
-fourier_acceleration_satellites = 1
-torque = 0
+LIMIT = 40 #LIMIT FOR ACCELERATION MESH
+G= 1.3273E11
+KPC_TO_KM= 3.086E16
+SECONDS_TO_MYR = 3.15576E+16
+SOFTENING = 0
 
 #-------
-fourier_bending_breathing =   0
-fourier_density =             0
-fourier_mass =                0
-fourier_z =                   0
-fourier_vz =                  0
-fourier_vr =                  0 
-fourier_vphi =                0  
+tag= f"align_{ALIGN_RADIUS}kpc"
 
-fourier_bar  =                0
-fourier_dm   =                 0
+FOURIER_ACCELERATION_DM=      0
+FOURIER_ACCELERATION_GAS=     0
+FOURIER_ACCELERATION_SUM =      0
+FOURIER_ACCELERATION_TOTAL=    0
+FOURIER_ACCELERATION_DM_INNER = 0
+FOURIER_ACCELERATION_STARS=     0
+FOURIER_ACCELERATION_STELLAR_ELLIPSOID=     0
+FOURIER_ACCELERATION_SATELLITES = 0
+TORQUE = 0
+
 #-------
-comparison_plots =            0
+FOURIER_BENDING_BREATHING =   0
+FOURIER_DENSITY =             0
+FOURIER_MASS =                1
+FOURIER_Z =                   1
+FOURIER_VZ =                  1
+FOURIER_VR =                  1 
+FOURIER_VPHI =                1  
+
+FOURIER_BAR  =                0
+FOURIER_DM   =                 0
+#-------
 
 
-# snapshots_analysis = [520,523,525, 527,530,532,535, 537,539,541,
-# 543, 545,547, 550, 553, 555,557, 
-# 560, 563, 565, 567,570,573, 575, 577, 580,
-# 583, 585,587,590, 592,594,596,598,
-# snapshots_analysis= [#600, 602, 604, 608, 610, 612, 614, 616, 618,620]
-#  622, 624, 626, 
-#  629, 630, 632, 634, 636, 639, 640, 642, 644, 646, 648, 650, 652, 654, 656, 658, 660, 662, 
-#  664, 666] 
+
+
 
 snapshots_analysis= [
  #       520,523,525, 527,530,532,535, 537,539,541,
@@ -75,21 +75,21 @@ snapshots_analysis= [
 939, 941,942, 944, 946, 948, 950, 952, 954,956, 
 958, 961, 963, 965, 966, 968, 970, 972, 974, 976, 979,
 980, 982, 984, 989, 990, 993, 994, 996, 999]
-#snapshots_analysis = [892]
 
-lb_ref = 0.01321
+
+LB_REF = 0.01321
 
 # ---------------------------------------------------------------------------
 #path_satellite_models = "/media/temp1/bego/snapshots/modelos_satelites/"
-path_csv = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/snapshots_resim_new/"
-path_datos = "/home/bego/GARROTXA_copia/datos_GARROTXA_resim/"
-path_crossmatch = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/satelites_crossmatch/"
-path_figures_acceleration = "/home/bego/GARROTXA/aceleration_figures/"
-path_figures = "/home/bego/GARROTXA/acceleration_figures/"
-path_acceleration = "/home/bego/GARROTXA/acceleration/"
-path_disk = "/home/bego/GARROTXA/disco/"
-path_results = "/home/bego/GARROTXA/GalaDyn/results/"
-path_figures_bending = "/home/bego/GARROTXA/BendingBreathing/"
+#PATH_CSV = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/snapshots_resim_new/"
+PATH_CSV = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/snapshots_resim_1step/"
+PATH_DATOS = "/home/bego/GARROTXA_copia/datos_GARROTXA_resim/"
+PATH_2ND_ALIGNMENT = "/home/bego/GARROTXA/rotation_matrix_1step/"
+PATH_CROSSMATCH = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/satelites_crossmatch/"
+PATH_ACCELERATION = f"/home/bego/GARROTXA/acceleration_1step_{ALIGN_RADIUS}kpc/"
+PATH_DISK = "/home/bego/GARROTXA/disco/"
+PATH_RESULTS = f"/home/bego/GARROTXA/GalaDyn/results/results_{ALIGN_RADIUS}kpc/"
+PATH_FIGURES_BENDING = "/home/bego/GARROTXA/BendingBreathing/"
 
 #----------------------------------------------------------------------------
 satelites = ["arania", "grillo", "mosquito", "all"]
