@@ -18,7 +18,7 @@ datos_edades = pd.read_csv(PATH_DATOS + "edades.csv", sep = ",",index_col = 0)
 def cartesian_to_cylindrical (df):
     df["Phi"] =  np.mod(np.arctan2(df["Y"],df["X"]), 2*np.pi)
     df["R"] = np.sqrt(df["X"]**2 + df["Y"]**2)
-    df["Vphi"] = (df["X"]*df["VY"] - df["Y"]*df["VX"])/df["R"] #todo revisar signos de phi y vphi
+    df["Vphi"] = (df["X"]*df["VY"] - df["Y"]*df["VX"])/df["R"] 
     df["VR"] = (df["X"]*df["VX"] + df["Y"]*df["VY"])/df["R"]
     return df
 
@@ -147,19 +147,19 @@ class Snapshot:
 
         
     def load_stars (self):
-        self.stars = pd.read_csv(path_csv + f"{self.name}_stars_Rvir.csv",sep = ",")
+        self.stars = pd.read_csv(PATH_CSV + f"{self.name}_stars_Rvir.csv",sep = ",")
         if APPLY_ALIGNMENT == 1:
             self.stars = self.apply_align(self.stars)
         self.stars = cartesian_to_cylindrical(self.stars)
 
     def load_dm (self):
-        self.dm = pd.read_csv(path_csv + f"{self.name}_dm_Rvir.csv",sep = ",")
+        self.dm = pd.read_csv(PATH_CSV + f"{self.name}_dm_Rvir.csv",sep = ",")
         if APPLY_ALIGNMENT == 1:
             self.dm = self.apply_align(self.dm)
         self.dm = cartesian_to_cylindrical(self.dm)
 
     def load_gas (self):
-        self.gas = pd.read_csv(path_csv + f"Gas_{self.name}.csv",sep = ",")
+        self.gas = pd.read_csv(PATH_CSV + f"Gas_{self.name}.csv",sep = ",")
         if APPLY_ALIGNMENT == 1:
             self.gas = self.apply_align(self.gas)
         self.gas = cartesian_to_cylindrical(self.gas)
@@ -177,7 +177,7 @@ class Snapshot:
 
     def filter_disk_particles(self):
         dfA = self.stars[self.stars['ID'].isin(self.disk["ID"])]
-        age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        age_since_merger = 9000 - (self.lb - LB_REF)*1000
         print("Age of stars since merger")
         dfA = dfA[dfA['Age']< age_since_merger]
         df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
@@ -185,7 +185,7 @@ class Snapshot:
         return df
 
     def filter_disk_particles_by_age(self):
-        age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        age_since_merger = 9000 - (self.lb - LB_REF)*1000
         print("Age of stars since merger")
         dfA = self.stars[self.stars['Age']< age_since_merger]
         df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
@@ -207,7 +207,7 @@ class Snapshot:
 
     
     def filter_stellar_ellipsoid(self):
-        age_since_merger = 9000 - (self.lb - lb_ref)*1000
+        age_since_merger = 9000 - (self.lb - LB_REF)*1000
         print("Age of stars since merger")
         dfA = self.stars[self.stars['Age']> age_since_merger]
         a = pd.read_csv(path_disk + f"cla_disco_{self.name}.csv")
@@ -235,6 +235,11 @@ class Snapshot:
             
     
     def calculate_bending_breathing (self):
+        """
+        Calculate bending and breathing modes with linear regression o f Vz(Z)
+        Bending: intercept
+        Breathing: slope
+        """
         xbins = np.linspace(-25, 25, 70)
         indx = np.digitize(self.disk_filt["X"], bins = xbins)
         binx_means = [self.disk_filt["X"][indx == i].mean() for i in range(1, len(xbins))]

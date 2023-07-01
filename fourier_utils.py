@@ -66,7 +66,7 @@ class Fourier:
     #------------------accelerations-------------------
     
     def apply_fourier_accelerations(self, comp):
-       datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
+        datos = np.zeros((len(snapshots_analysis)*self.nbins, 6 + 2*self.maxmode))
         index = 0
         print("Componmente: ", comp)
         for t,name in enumerate(snapshots_analysis):
@@ -148,7 +148,7 @@ class Fourier:
             snapshot = Snapshot(name)
             snapshot.load_stars()
             snapshot.load_disk()
-             df =  filter_disk_particles_by_age()
+            df =  filter_disk_particles_by_age()
           #  df = snapshot.filter_disk_particles()
 
 

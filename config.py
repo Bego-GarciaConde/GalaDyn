@@ -7,7 +7,7 @@ import numpy as np
 
 CALCULATE_2ND_ALIGNMENT = 0
 APPLY_ALIGNMENT = 1
-ALIGN_RADIUS = 15  #7 kpc or 15kpc
+ALIGN_RADIUS = 7  #7 kpc or 15kpc
 
 AC_CALCULATE = 0
 AC_SATELLITES_AS_POINTS =     0 
@@ -95,5 +95,5 @@ PATH_FIGURES_BENDING = "/home/bego/GARROTXA/BendingBreathing/"
 satelites = ["arania", "grillo", "mosquito", "all"]
 
 
-datos_edades = pd.read_csv(path_datos + "edades.csv", sep = ",",index_col = 0)
+datos_edades = pd.read_csv(PATH_DATOS + "edades.csv", sep = ",",index_col = 0)
 lookback = [datos_edades.loc[datos_edades['Snapshot'] == name, 'Lookback'].iloc[0] for name in snapshots_analysis]
