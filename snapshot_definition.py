@@ -108,6 +108,7 @@ class Snapshot:
         self.disk_filt = None
         self.bending_breathing_mode = None
         self.mC = None
+        self.classification = None
       
 
 
@@ -164,16 +165,18 @@ class Snapshot:
             self.gas = self.apply_align(self.gas)
         self.gas = cartesian_to_cylindrical(self.gas)
 
-    def load_disk(self):
-        #self.disk
-        a = pd.read_csv(path_disk + f"cla_disco_{self.name}.csv")
-        self.disk = a[a["cos_alpha"]>0.7]
-
     def apply_align(self, df):
         df["X"],df["Y"],df["Z"] = apply_transformation_matrix(self.mC,df["X"] ,df["Y"],df["Z"])
         df["VX"],df["VY"],df["VZ"] = apply_transformation_matrix(self.mC,df["VX"] ,df["VY"],df["VZ"])
         return df
 
+    def load_classification(self):
+        self.classification = pd.read_csv(PATH_DISK + f"cla_disco_{self.name}.csv")
+
+    def filter_all_disk(self):
+        a = self.classification[self.classification["cos_alpha"]>0.7]
+        dfA = self.stars[self.stars['ID'].isin(a["ID"])]
+        return dfA
 
     def filter_disk_particles(self):
         dfA = self.stars[self.stars['ID'].isin(self.disk["ID"])]
@@ -186,7 +189,7 @@ class Snapshot:
 
     def filter_disk_particles_by_age(self):
         age_since_merger = 9000 - (self.lb - LB_REF)*1000
-        print("Age of stars since merger")
+      #  print("Age of stars since merger")
         dfA = self.stars[self.stars['Age']< age_since_merger]
         df = dfA[(dfA['R']< 25) &(dfA['Z']< 2.5)&(dfA['Z']>-2.5)].copy()
         self.disk_filt = df
@@ -205,16 +208,26 @@ class Snapshot:
         self.disk_filt = df
         return df
 
-    
-    def filter_stellar_ellipsoid(self):
+    def filter_old_disk(self):
+        self.load_classification
         age_since_merger = 9000 - (self.lb - LB_REF)*1000
-        print("Age of stars since merger")
+        print("Age of stars since merger ", age_since_merger)
         dfA = self.stars[self.stars['Age']> age_since_merger]
-        a = pd.read_csv(path_disk + f"cla_disco_{self.name}.csv")
-        a = a[a["cos_alpha"]<0.7]
+        dfA = dfA[(dfA['R']< 30)].copy()
+        a = self.classification[self.classification["cos_alpha"]>0.7]
         dfA = dfA[dfA['ID'].isin(a["ID"])]
         return dfA
+    
         
+    def filter_stellar_ellipsoid(self):
+        self.load_classification()
+      #  age_since_merger = 9000 - (self.lb - LB_REF)*1000
+      #  print("Age of stars since merger ", age_since_merger)
+       # dfA = self.stars[self.stars['Age']> age_since_merger]
+        a = self.classification[self.classification["cos_alpha"]<0.7]
+        dfA = self.stars[self.stars['ID'].isin(a["ID"])]
+        return dfA
+    
     def calculate_second_alignment(self):
         """
         The second alignment further aligns the galaxy with a selected R
