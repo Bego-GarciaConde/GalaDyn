@@ -16,6 +16,9 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 datos_edades = pd.read_csv(PATH_DATOS + "edades.csv", sep = ",",index_col = 0)
 
 def cartesian_to_cylindrical (df):
+    """
+    Cartesian to cylindrical coordinates transformation
+    """"
     df["Phi"] =  np.mod(np.arctan2(df["Y"],df["X"]), 2*np.pi)
     df["R"] = np.sqrt(df["X"]**2 + df["Y"]**2)
     df["Vphi"] = (df["X"]*df["VY"] - df["Y"]*df["VX"])/df["R"] 
@@ -23,6 +26,9 @@ def cartesian_to_cylindrical (df):
     return df
 
 def cartesian_to_spherical (df):
+    """
+    Cartesian to spherical coordinates transformation
+    """"
     XsqPlusYsq = df["X"]**2 + df["Y"]**2
     df["Phi_sph"] =  np.arctan2(df["Y"],df["X"])
     df["R_sph"] = np.sqrt(XsqPlusYsq + df["Z"]**2) 
@@ -31,6 +37,9 @@ def cartesian_to_spherical (df):
     return df
 
 def centering(pos0,vel0,mass, ind,means=True,medians=False,L=True):
+    """
+    Change of basis algorithm for alignment
+    """"
     pos=pos0.copy()
     vel=vel0.copy()
     
@@ -88,12 +97,18 @@ def centering(pos0,vel0,mass, ind,means=True,medians=False,L=True):
  
     
 def apply_transformation_matrix(matriz_trans, X,Y,Z):
+    """
+    Matrix transformation
+    """"
     X_re= X*matriz_trans[0,0]+ Y*matriz_trans[0,1] + Z*matriz_trans[0,2]       
     Y_re= X*matriz_trans[1,0]+ Y*matriz_trans[1,1] + Z*matriz_trans[1,2]
     Z_re= X*matriz_trans[2,0]+ Y*matriz_trans[2,1] + Z*matriz_trans[2,2]
     return X_re, Y_re, Z_re
 
 class Snapshot:
+    """
+    Snapshot initialization to load stars, gas, dm, applying filters for particles
+    """"
     def __init__(self, name):
         self.name = name
         self.path_snapshot = None

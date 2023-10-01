@@ -16,6 +16,10 @@ from scipy import stats
 
 
 def force_in_mesh_gen (coord, x_sat0, y_sat0, z_sat0, mass_sat0):
+    """
+    Calculation of the acceleration in the z direction by particles in the position
+    x_sat0, y_sat0, z_sat0
+    """"
     #a = GM/(r²)     <----
 
     X_resta = (x_sat0 - coord[0])
@@ -36,27 +40,10 @@ def force_in_mesh_gen (coord, x_sat0, y_sat0, z_sat0, mass_sat0):
    # return G*np.sum(ax)/(kpc_to_km**2),G*np.sum(ay)/(kpc_to_km**2),G*np.sum(az)/(kpc_to_km**2)
     return G*np.sum(az)/(kpc_to_km**2)
 
-def force_in_mesh (x_sat0, y_sat0, z_sat0, mass_sat0,  x_bin, y_bin, z_bin):
-    # ToDo: meter las otras variables en la def
-
-    #In this version:
-    #a = GM/(r²)   #weighed by Npart  <----
-    #F = GMm/(r²)   #weighed by Npart
-
-    X_resta = (x_sat0 - x_bin)
-    Y_resta = (y_sat0 - y_bin)
-    Z_resta = (z_sat0 - z_bin)
-    
-    dist_sat_part = np.sqrt(X_resta**2 + Y_resta**2 + Z_resta**2)
-
-    ax = (mass_sat0*X_resta/np.power(dist_sat_part,3)).astype(np.float64)
-    ay = (mass_sat0*Y_resta/np.power(dist_sat_part,3)).astype(np.float64)
-    az =(mass_sat0*Z_resta/np.power(dist_sat_part,3)).astype(np.float64)
-
-    return G*np.sum(ax)/(kpc_to_km**2),G*np.sum(ay)/(kpc_to_km**2),G*np.sum(az)/(kpc_to_km**2)
-
-
 class Mesh:
+    """
+    Initialization of the mesh in which we will calcualte the accelerations
+    """"
     def __init__(self, name):
         self.name = name
         self.lb = None
@@ -99,39 +86,12 @@ class Mesh:
 
         snapshot_to_grid()
 
-    def calculate_force_sat (self, DM):
-        ax_halo = np.zeros(len(self.y), dtype = np.float64)
-        ay_halo = np.zeros(len(self.y), dtype = np.float64)
-        az_halo = np.zeros(len(self.y), dtype = np.float64)
-
-        x_sat0 = np.array(DM["X"], dtype = np.float64)
-        y_sat0 = np.array(DM["Y"], dtype = np.float64)
-        z_sat0 = np.array(DM["Z"], dtype = np.float64)
-        mass_sat0 = np.array(DM["Mass"], dtype = np.float64)
-
-        print("Calculating acceleration in the center")
-        R = np.sqrt(x_sat0**2 + y_sat0**2 +z_sat0**2)
-        #ax_0 = np.sum(G*mass_sat0*x_sat0/((R**3)*(kpc_to_km**2)))
-        #ay_0 = np.sum(G*mass_sat0*y_sat0/((R**3)*(kpc_to_km**2)))
-        #az_0 = np.sum(G*mass_sat0*z_sat0/((R**3)*(kpc_to_km**2)))
-           
-        for i in range(len(self.y)):
-            ax_halo[i],ay_halo[i],az_halo[i] =force_in_mesh(x_sat0, y_sat0, z_sat0, mass_sat0,  self.x[i], self.y[i],  self.z[i])
-
-       # ax_halo = ax_halo -ax_0
-       # ay_halo = ay_halo -ay_0
-       # az_halo = az_halo -az_0
-       # a_r_halo = ax_halo*np.cos(self.phi) + ay_halo*np.sin(self.phi)
-       # a_phi_halo = ax_halo*(np.sin(self.phi)) -ay_halo*np.cos(self.phi)
-
-        data ={'X':self.x, 'Y':self.y,  'Z':self.z, 'R':self.R,'Phi':self.phi, 'az': az_halo}
-        mesh_completa = pd.DataFrame(data)
-        return mesh_completa
 
     def calculate_force(self, DM, tidal=False, multiprocess = False):
+    """
+    Multiprocessed calculation of accelerations
+    """"
 
-      #  ax_halo = np.zeros(len(self.x), dtype = np.float64)
-      #  ay_halo = np.zeros(len(self.y), dtype = np.float64)
         az_halo = np.zeros(len(self.z), dtype = np.float64)
 
         x_sat0 = np.array(DM["X"], dtype = np.float32)
@@ -163,6 +123,9 @@ class Mesh:
 
 
     def acceleration_in_mesh_comp (self, comp, mode_stars, tidal = False):
+    """
+    General function to call snapshot and proceed to calculation of accelerations
+    """"
         print(self.name)
         snapshot = Snapshot(self.name)
         if comp == "dm":   
@@ -192,6 +155,9 @@ class Mesh:
         return mesh_completa["az"]*seconds_to_Myr
             
     def acceleration_satellite_as_point (self, satelite, tidal = True):
+    """
+    Calculate acceleration if individial satellite as points
+    """"
         R = np.sqrt(satelite.coord[0]**2, satelite.coord[1]**2,satelite.coord[2]**2)
         #a = GM/(r² Npart)     <----
         ax_re, ay_re, az_re = force_in_mesh_gen (satelite.coord[0], satelite.coord[1],satelite.coord[2],satelite.mass)
@@ -211,6 +177,9 @@ class Mesh:
         return az_re, a_r, a_phi
 
     def satellites_acceleration_id (self, sat):
+    """
+    Calculate acceleration if individial satellite by separating them by ID
+    """"
             
             if sat == "all":
                 sat_arania =  Satellite(self.name, "arania")
@@ -230,11 +199,11 @@ class Mesh:
 
         #---------------------PROGENITOR------------------------------------
             print(f"calculating ac in core of {sat}  in {self.name}")
-            mesh_core = self.calculate_force_sat(DM_core_i)
+            mesh_core = self.calculate_force(DM_core_i, multiprocess = True)
 
         #---------------------STREAMS------------------------------
 
-            mesh_stream= self.calculate_force_sat(DM_stream_i)
+            mesh_stream= self.calculate_force(DM_stream_i, multiprocess = True, tidal = tidal)
  
             data ={'X':self.x, 'Y':self.y,  'Z':self.z,  'az_core': mesh_core["az"],'az_stream': mesh_stream["az"] }
 
