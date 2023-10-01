@@ -1,5 +1,5 @@
-from snapshot_definition import Snapshot
-from satellites_utils import Satellite
+from snapshot import Snapshot
+from satellites import Satellite
 import numpy as np
 import pandas as pd
 import gc

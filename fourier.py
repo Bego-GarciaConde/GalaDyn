@@ -5,8 +5,8 @@ import gc
 from multiprocessing import Pool
 from config import *
 import matplotlib.pyplot as plt
-from snapshot_definition import Snapshot
-from snapshot_definition import cartesian_to_spherical
+from snapshot import Snapshot
+from snapshot import cartesian_to_spherical
 
 class Fourier:
 

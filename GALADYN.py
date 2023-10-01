@@ -7,10 +7,10 @@ Created on 24/04/2022
 
 
 from config import *
-from mesh_utils import *
-from satellites_utils import *
-from fourier_utils import Fourier
-from snapshot_definition import Snapshot
+from mesh import *
+from satellites import *
+from fourier import Fourier
+from snapshot import Snapshot
 
 
 
