@@ -23,7 +23,7 @@ from snapshot import Snapshot
 
 def main ():
 
-
+#Calculate accelerations on mesh situated at Z=0
     if AC_CALCULATE ==1:
         for name in snapshots_analysis:
             mesh_snapshot = Mesh(name)
@@ -50,7 +50,7 @@ def main ():
     else:
         pass
 
-    #Third step: fourier 
+    #Fourier decomposition of accelerations
     fourier_ac= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback, maximo=40, minimo = 0, nbins = 40)
     if FOURIER_ACCELERATION_DM ==1:
         fourier_ac.apply_fourier_accelerations(comp="dm")
@@ -58,19 +58,19 @@ def main ():
     if FOURIER_ACCELERATION_GAS ==1:
         fourier_ac.apply_fourier_accelerations(comp="gas")
 
-    if fourier_acceleration_total ==1:
+    if FOURIER_ACCELERATION_TOTAL ==1:
         fourier_ac.apply_fourier_accelerations(comp="total")
 
-    if fourier_acceleration_stars ==1:
+    if FOURIER_ACCELERATION_TOTAL ==1:
         fourier_ac.apply_fourier_accelerations(comp="stars")
-    
-    if fourier_acceleration_satellites ==1:
+
+    if FOURIER_ACCELERATION_SATELLITES==1:
        # fourier_ac.apply_fourier_sat(sat_name = "all")
         fourier_ac.apply_fourier_sat(sat_name = "arania")
         #fourier_ac.apply_fourier_sat(sat_name = "grillo")
         #fourier_ac.apply_fourier_sat(sat_name = "mosquito")
 
-
+    #Fourier decomposition of disk characterisrics
     fourier= Fourier(snapshots_analysis=snapshots_analysis, lookback=lookback)
 
     if FOURIER_DENSITY == 1:
@@ -117,7 +117,7 @@ def main ():
                 snapshot.load_stars()
                 snapshot.second_alignment()
 
-    #Third step: comparison
+
 
 if __name__ == "__main__":
     main()

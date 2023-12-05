@@ -87,7 +87,10 @@ PATH_DATOS = "/home/bego/GARROTXA_copia/datos_GARROTXA_resim/"
 PATH_2ND_ALIGNMENT = "/home/bego/GARROTXA/rotation_matrix_1step/"
 PATH_CROSSMATCH = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/satelites_crossmatch/"
 PATH_ACCELERATION = f"/home/bego/GARROTXA/acceleration_1step_{ALIGN_RADIUS}kpc/"
-PATH_DISK = "/home/bego/GARROTXA/disco/"
+if ALIGN_RADIUS == 7:
+        PATH_DISK = "/mnt/usb-TOSHIBA_EXTERNAL_USB_20220124010088F-0:0-part2/disk_1step/" #Aligned with 7 kpc
+elif ALIGN_RADIUS == 15:
+        PATH_DISK = "/home/bego/GARROTXA/disco/"#Aligned with 15 kpc
 PATH_RESULTS = f"/home/bego/GARROTXA/GalaDyn/results/results_{ALIGN_RADIUS}kpc/"
 PATH_FIGURES_BENDING = "/home/bego/GARROTXA/BendingBreathing/"
 
